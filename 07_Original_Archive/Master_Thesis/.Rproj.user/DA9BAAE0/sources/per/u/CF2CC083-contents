@@ -1,0 +1,22 @@
+# library(dplyr)
+# file.list = list.files(pattern= "*.csv" , recursive = T)
+# data_csv = lapply(file.list[229:length(file.list)] , read.csv)
+# df = bind_rows(data_csv)
+# df2 = bind_rows(data_csv)
+# df_final = bind_rows(df , df2)
+library(tidyverse)
+
+df1397 = dd %>% filter( == )
+
+write.csv(dd[1:1000000] , file = "1401_part1.csv")
+write.csv(dd[1000001:2000000] , file = "1401_part2.csv")
+write.csv(dd[2000001:3000000] , file = "test_part3.csv")
+write.csv(dd[3000001:nrow(dd)] , file = "test_part3.csv")
+dd = 1:100
+
+save(dd ,"TOTAL.RData")
+media fire
+
+
+
+read.csv(file = "test.csv")

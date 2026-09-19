@@ -1,0 +1,39 @@
+\section{CONCLUSION}\label{SC:CONCLUSION}\label{sec:conclusion}
+This study presents SAD for insurance fraud screening. The original
+framework combines anomaly detection, expert verification and supervised
+learning in successive partitions. Its simple and multilayered structures
+share the update cycle but differ in the use of entropy during initial
+candidate selection. Algorithms 1--3 describe these structures explicitly.
+
+The revised experiments compare the three architectural variants on
+Carclaims and a second Insurance Claims benchmark, add a frozen-model
+ablation and broaden the supervised comparisons.
+\input{generated/results_conclusion.tex}
+Architecture selection should therefore consider detection performance
+together with the available investigation capacity.
+
+\paragraph{Limitations and future research.}
+The partitions are retrospective and random, not chronological. Stored
+labels simulate expert decisions without investigation delay, errors or
+monetary cost. Random audits provide verified negatives and some missed
+frauds, but do not eliminate acquisition bias. The second benchmark has a
+documented Kaggle access source but unverified collecting-insurer provenance.
+It supports replication under a different schema and prevalence;
+prospective validation at an independent insurer remains necessary.
+Its smaller size also limits generalization. AP values across
+different prevalences should not be interpreted as directly comparable
+measures of task difficulty.
+
+The feature screen can discard useful variables; SMOTE on encoded
+categorical predictors can produce fractional values; and ranking scores
+need not be calibrated probabilities. The classifier comparisons share
+the Simple-B acquisition policy. Recent deep and graph-based insurance
+systems requiring additional relationships or proprietary data have not
+been reproduced. The adapted PSO comparator and two threshold settings do
+not constitute exhaustive state-of-the-art benchmarking or optimization.
+
+Future research should evaluate chronological claims with documented
+provenance, actual review costs, matched investigation budgets,
+categorical-aware resampling, calibration and prospectively fixed model
+selection. The accompanying code, data, prediction records and figure
+sources support reproduction of the results reported here.

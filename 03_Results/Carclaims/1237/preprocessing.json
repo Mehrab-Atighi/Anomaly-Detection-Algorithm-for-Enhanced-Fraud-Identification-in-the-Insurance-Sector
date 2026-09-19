@@ -1,0 +1,42 @@
+{
+  "numeric": [
+    "WeekOfMonth",
+    "WeekOfMonthClaimed",
+    "Age",
+    "RepNumber",
+    "DriverRating",
+    "Year"
+  ],
+  "categorical": [
+    "DayOfWeek",
+    "Make",
+    "AccidentArea",
+    "DayOfWeekClaimed",
+    "Sex",
+    "MaritalStatus",
+    "Fault",
+    "PolicyType",
+    "VehicleCategory",
+    "VehiclePrice",
+    "PastNumberOfClaims",
+    "AgeOfVehicle",
+    "AgeOfPolicyHolder",
+    "NumberOfSuppliments",
+    "AddressChange-Claim",
+    "NumberOfCars",
+    "BasePolicy"
+  ],
+  "dropped": {
+    "Month": "categorical Gini=0.9163",
+    "MonthClaimed": "categorical Gini=0.9161",
+    "PolicyNumber": "identifier/high-cardinality",
+    "Deductible": "near-zero variance",
+    "Days:Policy-Accident": "categorical Gini=0.0237",
+    "Days:Policy-Claim": "categorical Gini=0.0108",
+    "PoliceReportFiled": "categorical Gini=0.0545",
+    "WitnessPresent": "categorical Gini=0.0119",
+    "AgentType": "categorical Gini=0.0304"
+  },
+  "encoded_predictors": 103,
+  "anomaly_seconds": 2.2637312189999648
+}

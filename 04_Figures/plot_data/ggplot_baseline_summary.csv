@@ -1,0 +1,45 @@
+"Dataset","Classifier","Metric","Mean","SD"
+"Carclaims","Simple-B","Fraud F1",22.4360847069354,0.913181654354982
+"Insurance Claims","Simple-B","Fraud F1",56.0124926839972,2.76403148246592
+"Carclaims","PSO-XGB-adapted","Fraud F1",11.629842228259,7.29701832780382
+"Insurance Claims","PSO-XGB-adapted","Fraud F1",59.873824064404,2.6418913389539
+"Carclaims","BalancedRF","Fraud F1",23.0866160612847,1.219455946158
+"Insurance Claims","BalancedRF","Fraud F1",59.5158457905168,2.45328985725055
+"Carclaims","ANN","Fraud F1",18.7718102016286,1.05243749952244
+"Insurance Claims","ANN","Fraud F1",40.4022445781329,3.25672554545152
+"Carclaims","AdaBoost","Fraud F1",21.5866730272559,1.19013960855352
+"Insurance Claims","AdaBoost","Fraud F1",55.7989879654726,2.99350100845493
+"Carclaims","KNN","Fraud F1",17.1520687904338,0.750545729054588
+"Insurance Claims","KNN","Fraud F1",41.3159056008943,1.26624035485756
+"Carclaims","RF","Fraud F1",3.91160953065337,1.46514219256685
+"Insurance Claims","RF","Fraud F1",53.7277853137993,3.16251278119505
+"Carclaims","NB","Fraud F1",15.5396264333367,2.22554233853644
+"Insurance Claims","NB","Fraud F1",50.0347326808279,2.2010055772278
+"Carclaims","XGB","Fraud F1",7.58062932001012,1.73783189500348
+"Insurance Claims","XGB","Fraud F1",55.1280496761303,3.2594125372932
+"Carclaims","SVM","Fraud F1",21.7017893496329,0.796823462027788
+"Insurance Claims","SVM","Fraud F1",50.1320861207694,3.74838532737376
+"Carclaims","LR","Fraud F1",22.1125135053828,0.706305844819788
+"Insurance Claims","LR","Fraud F1",50.7534268783938,2.08887268881352
+"Carclaims","Simple-B","Average precision",15.2929685189484,0.818101643095411
+"Insurance Claims","Simple-B","Average precision",49.0975088914929,3.89535605362308
+"Carclaims","PSO-XGB-adapted","Average precision",15.7886478748821,0.973866028754246
+"Insurance Claims","PSO-XGB-adapted","Average precision",52.2140017230642,3.2285886705357
+"Carclaims","BalancedRF","Average precision",16.7999004192353,0.684043711288253
+"Insurance Claims","BalancedRF","Average precision",49.6653592528355,2.90288821167076
+"Carclaims","ANN","Average precision",14.038921583027,0.972314023143536
+"Insurance Claims","ANN","Average precision",35.9695355207635,4.55588372029048
+"Carclaims","AdaBoost","Average precision",14.3661042239184,0.56436299897073
+"Insurance Claims","AdaBoost","Average precision",51.1744471921297,3.64913722009299
+"Carclaims","KNN","Average precision",10.1197809246328,0.4959633950666
+"Insurance Claims","KNN","Average precision",29.5851942494704,2.55794523590083
+"Carclaims","RF","Average precision",16.0859984887239,0.628425174623113
+"Insurance Claims","RF","Average precision",51.100604566532,4.60075867908308
+"Carclaims","NB","Average precision",10.1024203989203,1.6211154536466
+"Insurance Claims","NB","Average precision",46.0440466838457,2.19773800665294
+"Carclaims","XGB","Average precision",15.9389841081521,0.939926498002826
+"Insurance Claims","XGB","Average precision",49.6807230975022,3.59827038347587
+"Carclaims","SVM","Average precision",13.6538236460386,0.719388849346135
+"Insurance Claims","SVM","Average precision",45.5093483921388,3.5878153235361
+"Carclaims","LR","Average precision",14.2644018735239,0.781702409946305
+"Insurance Claims","LR","Average precision",46.055062002862,3.52601273378282

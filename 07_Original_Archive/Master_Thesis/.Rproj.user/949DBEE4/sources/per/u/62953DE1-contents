@@ -1,0 +1,8 @@
+d1 = read.csv("Result_of_carclaims.csv")
+d2 = read.csv("Result_of_fraud_oracle.csv")
+d3 = read.csv("Result_of_insurance fraud claims.csv")
+d4 = read.csv("Result_of_carclaims_nn.csv")
+d5 = read.csv("Result_of_fraud_oracle_nn.csv")
+d6 = read.csv("Result_of_insurance fraud claims_nn.csv")
+data_for_power_bi_nn = rbind(d4,d5,d6)
+write.csv(data_for_power_bi_nn , "data_for_powerBi_nn.csv")

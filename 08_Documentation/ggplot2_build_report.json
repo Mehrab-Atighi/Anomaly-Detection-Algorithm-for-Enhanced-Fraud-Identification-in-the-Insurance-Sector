@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "implementation": "Actual executed R / ggplot2",
+  "R_version": "R version 4.3.3 (2024-02-29)",
+  "ggplot2_version": "3.4.4",
+  "script_md5": "48323b090647be3fde7364fc12427de5",
+  "results_directory": "03_Results",
+  "input_md5": {
+    "/workspace/scratch/565c6d6b7721/SAD_Submission_Final/03_Results/metrics_by_seed.csv": "61fe265b71f093c7cdaa15cb4d592567"
+  },
+  "original_style_source": "07_Original_Archive/Submitted_V5_Confirmed/Pictures/FiguresCode.R",
+  "scope": "Same audited Python results; no re-fitting or new threshold grid. Original workflow PNGs are copied verbatim.",
+  "axis_ranges": {
+    "performance_percent": [0, 80],
+    "workload_percent": [0, 55],
+    "ROC_PR": [0, 1]
+  },
+  "figures": {
+    "02_architecture_performance": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 3.4,
+      "files_md5": {
+        "02_architecture_performance.png": "f2fc055a511c63fa7b00ef5479fe43d6",
+        "02_architecture_performance.pdf": "046bb64099edbe935d99da98dc7412a7",
+        "02_architecture_performance.svg": "0ffb5ed56ba15909d4eef1c3242c246e",
+        "02_architecture_performance.eps": "895497255990a758cadd5252d7e0b58b"
+      }
+    },
+    "03_partition_progress": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 3.4,
+      "files_md5": {
+        "03_partition_progress.png": "c5521b4248b906bce296838df86c1f7c",
+        "03_partition_progress.pdf": "f14e9a6d38fb0ca605fe16c57dd89004",
+        "03_partition_progress.svg": "35ca3420f65667d625e0f7785cd146c7",
+        "03_partition_progress.eps": "60f76d33c799ad6e3eec6a3c91cfb07c"
+      }
+    },
+    "04_workload": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 3.4,
+      "files_md5": {
+        "04_workload.png": "2080040ca22b5170ecaa99276d3111c1",
+        "04_workload.pdf": "50d55f14196a46f7e326b047f668f2b8",
+        "04_workload.svg": "ad79278ac548431534648019ebccc58f",
+        "04_workload.eps": "645b713eb975fabee131b26cf75fbce7"
+      }
+    },
+    "05_baseline_comparison": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 4.7,
+      "files_md5": {
+        "05_baseline_comparison.png": "422b53cd6537856e0d7beac411a7ccbb",
+        "05_baseline_comparison.pdf": "ebc0c2b2d05d33f9d757ee30a1f2a35e",
+        "05_baseline_comparison.svg": "506a9fc82cb0eb6d0a0c7455b2d6423f",
+        "05_baseline_comparison.eps": "1d8c8e6dced2eb2ce5fd5c0ca032c2ef"
+      }
+    },
+    "06_roc_pr": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 4.4,
+      "files_md5": {
+        "06_roc_pr.png": "eaa4a81c32b4039ff7df2b507cc9d413",
+        "06_roc_pr.pdf": "b4b4f842b80af13312e25bf0c3623fee",
+        "06_roc_pr.svg": "1fd05ddff4f4ecf0ca8b5ab7954a9eb9",
+        "06_roc_pr.eps": "623da3f90a741a7455921da140c8d3b8"
+      }
+    },
+    "07_ablation_deltas": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 3.4,
+      "files_md5": {
+        "07_ablation_deltas.png": "2ec34221e251dba353dc2781440c1f14",
+        "07_ablation_deltas.pdf": "2401b79dbaaeb27b79f0dee85c53b0fd",
+        "07_ablation_deltas.svg": "7ceede85228f85c1b1270b4f6c6cd425",
+        "07_ablation_deltas.eps": "0910a0c3e7ac718f13a09375c553a443"
+      }
+    },
+    "08_threshold_sensitivity": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 3.4,
+      "files_md5": {
+        "08_threshold_sensitivity.png": "3b3ee8787a9a5565ccec6a53a957a1a3",
+        "08_threshold_sensitivity.pdf": "7529c9030939c2d37d1ac1531a6e07cc",
+        "08_threshold_sensitivity.svg": "f79fb140e6880b079d004f4682422739",
+        "08_threshold_sensitivity.eps": "e74e468706670ba0dba11ba01a9a0e11"
+      }
+    },
+    "09_runtime": {
+      "engine": "R / ggplot2",
+      "png_dpi": 720,
+      "width_inches": 6.5,
+      "height_inches": 3.2,
+      "files_md5": {
+        "09_runtime.png": "c3238f8c1b292323f60c60fcdf8da03f",
+        "09_runtime.pdf": "dc28221cd5ec65337619420889a36f02",
+        "09_runtime.svg": "b5b86d94d263f9af5edfb83bf73a5691",
+        "09_runtime.eps": "22c82d2e4cf542bb467431f55eb8157c"
+      }
+    }
+  }
+}

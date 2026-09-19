@@ -1,0 +1,37 @@
+[
+  {
+    "document": "05_Manuscript/manuscript_clean.pdf",
+    "compiler": "pdflatex",
+    "status": "compiled",
+    "pages": 31,
+    "checked": "complete PDF; no undefined references/citations, overfull boxes or missing glyphs"
+  },
+  {
+    "document": "05_Manuscript/manuscript_marked.pdf",
+    "compiler": "pdflatex",
+    "status": "compiled",
+    "pages": 31,
+    "checked": "complete PDF; no undefined references/citations, overfull boxes or missing glyphs"
+  },
+  {
+    "document": "06_Reviewer_and_Professor/response_to_reviewer.pdf",
+    "compiler": "pdflatex",
+    "status": "compiled",
+    "pages": 3,
+    "checked": "complete PDF; no undefined references/citations, overfull boxes or missing glyphs"
+  },
+  {
+    "document": "06_Reviewer_and_Professor/change_map.pdf",
+    "compiler": "pdflatex",
+    "status": "compiled",
+    "pages": 2,
+    "checked": "complete PDF; no undefined references/citations, overfull boxes or missing glyphs"
+  },
+  {
+    "document": "06_Reviewer_and_Professor/professor_report_fa.pdf",
+    "compiler": "xelatex",
+    "status": "compiled",
+    "pages": 3,
+    "checked": "complete PDF; no undefined references/citations, overfull boxes or missing glyphs"
+  }
+]

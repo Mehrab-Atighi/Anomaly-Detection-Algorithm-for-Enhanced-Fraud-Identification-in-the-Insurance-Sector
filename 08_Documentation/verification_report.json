@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "datasets": [
+    "Carclaims",
+    "InsuranceClaims"
+  ],
+  "seeds_per_dataset": 10,
+  "trajectory_files": 80,
+  "prediction_rows_checked": 1559900,
+  "metric_rows_recomputed": 1280,
+  "largest_numeric_difference": 2.220446049250313e-16,
+  "checks": [
+    "code/data SHA256",
+    "outcomes matched to source row IDs",
+    "complete disjoint splits",
+    "review masks include every alert plus exact audit count",
+    "training counts from earlier verified partitions",
+    "static and updating D2 predictions identical",
+    "manual confusion metrics",
+    "rank-based ROC AUC",
+    "threshold-grouped average precision",
+    "combined metrics and sample-SD summary reconciliation"
+  ],
+  "scope": "Numerical and structural checks; does not certify dataset provenance or scientific novelty."
+}

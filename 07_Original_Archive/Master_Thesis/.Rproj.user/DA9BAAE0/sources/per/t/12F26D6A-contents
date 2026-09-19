@@ -1,0 +1,293 @@
+LabalingMultiLayer = function(path ,percent1 = percent1 , percent2 = percent2 , percent3 = percent3,
+                    response_column_number ,YesOrNo = YesOrNo , vote_num = vote_num){
+  source("PreProcessing.R")
+  preprocess = Preprocessing(path = path , response_column_number = response_column_number ,YesOrNo = YesOrNo,
+                             percent1 = percent1 , percent2 = percent2 , percent3 = percent3)
+  
+  attach(preprocess)
+  library(ROSE)
+  ### Outlier detection methods
+  
+  result1 = c()
+  total_result = c()
+  
+  ## A. Boxplot method ##
+  for(i in numeric_columns){
+    out <- boxplot.stats(full_data_without_label1[ , i])$out
+    h = length(which(full_data_without_label1[, i] %in% c(out)))
+    if(h >0 ){
+      result1 <- c(result1,which(full_data_without_label1[ , i] %in% c(out)))
+    }
+  }
+  result1 = unique(result1)
+  Result1 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result1 == i)>0){
+      Result1$label[i] = 1
+    }
+  }
+  total_result = c(total_result , result1)
+  Result1$label = as.factor(Result1$label)
+  (cm_1 = confusionMatrix(data = Result1$label , reference = full_data_label1 , mode = "everything"))
+  auc1 = roc.curve( full_data_label1, predicted = Result1$label)
+  auc1[2]
+  
+  
+  ## B.Percntile ##
+  result2 = c()
+  
+  for(i in numeric_columns){
+    lower_bound <- quantile(full_data_without_label1[ ,i] , 0.05)
+    upper_bound <- quantile(full_data_without_label1[ ,i] , 0.95)
+    h = length(which(full_data_without_label1[ ,i] < lower_bound | full_data_without_label1[ ,i] > upper_bound))
+    if(h>0){
+      result2<- c(result2,which(full_data_without_label1[ ,i] < lower_bound | full_data_without_label1[ ,i] > upper_bound))
+    }
+  }
+  result2 = unique(result2)
+  Result2 = data.frame(ID = 1:(percent1*number_of_rows), label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result2 == i)>0){
+      Result2$label[i] = 1
+    }
+  }
+  total_result = c(total_result , result2)
+  Result2$label = as.factor(Result2$label)
+  (cm_2 = confusionMatrix(data = Result2$label , reference = full_data_label1 ,mode = "everything"))
+  auc2 = roc.curve(full_data_label1  , predicted = Result2$label)
+  auc2[2]
+  
+  ## C.Zscore ##
+  result3 = c()
+  for(i in numeric_columns){
+    zData = scale(full_data_without_label1[,i])
+    h = length(which(zData > 1.64 | zData < -1.64))
+    if(h>0){
+      result3 = c(result3,which(zData > 1.64 | zData < -1.64))
+    }
+  }
+  result3 = unique(result3)
+  Result3 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result3 == i)>0){
+      Result3$label[i] = 1
+    }
+  }
+  total_result = c(total_result , result3)
+  Result3$label = as.factor(Result3$label)
+  (cm_3 = confusionMatrix(data = Result3$label , reference = full_data_label1 ,mode = "everything"))
+  auc3 = roc.curve(full_data_label1 , predicted = Result3$label)
+  auc3[2]
+  
+  
+  
+  
+  ## D.Hampel filter ##
+  result4 = c()
+  for(i in numeric_columns){
+    lower_bound <- median(full_data_without_label1[,i]) - 3 * mad(full_data_without_label1[,i], constant = 1)
+    upper_bound <- median(full_data_without_label1[,i]) + 3 * mad(full_data_without_label1[,i], constant = 1)
+    h = length(which(full_data_without_label1[,i] < lower_bound | full_data_without_label1[,i] > upper_bound))
+    if(h>0){
+      result4 <- c(result4,which(full_data_without_label1[,i] < lower_bound | full_data_without_label1[,i] > upper_bound))
+    }
+    
+  }
+  result4 = unique(result4)
+  total_result = c(total_result , result4)
+  Result4 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result4 == i)>0){
+      Result4$label[i] = 1
+    }
+  }
+  total_result = c(total_result , result4)
+  Result4$label = as.factor(Result4$label)
+  (cm_4 = confusionMatrix(data = Result4$label , reference = full_data_label1,mode = "everything"))
+  auc4 = roc.curve(full_data_label1 , predicted = Result4$label)
+  auc4[2]
+  
+  
+  ## E Grubbs’s test ##
+  library(tidyverse)
+  library(outliers)
+  result5 = c()
+  for(i in numeric_columns){
+    (test1 <- grubbs.test(full_data_without_label1[,i] , type = 10 , two.sided = TRUE))
+    (test2 <- grubbs.test(full_data_without_label1[,i], opposite = TRUE , type = 10 , two.sided = TRUE))
+    
+    df = data.frame(x = c(test1$alternative , test2$alternative) , PValue = c(test1$p.value, test2$p.value))
+    df = separate(df , col = x  ,into =  c("A" , "B" ,"C" , "D" , "E" ,"F" ) , sep = " ")
+    
+    if(df$PValue[1] <= 0.05){
+      h = length(which(full_data_without_label1[,i] == as.numeric(df$C[1])) )
+      if(h > 0 ){
+        result5 = c(which(full_data_without_label1[,i] == as.numeric(df$C[1])))
+      }
+    }
+    if(df$PValue[2] <= 0.05){
+      h =length(which(full_data_without_label1[,i] == as.numeric(df$C[2])))
+      if( h > 0 ){
+        result5 = c(result5,which(full_data_without_label1[,i] == as.numeric(df$C[2])))
+      }
+    }
+  }
+  result5 = unique(result5)
+  total_result = c(total_result , result5)
+  Result5 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result5 == i)>0){
+      Result5$label[i] = 1
+    }
+  }
+  total_result = c(total_result , result5)
+  Result5$label = as.factor(Result5$label)
+  (cm_5 = confusionMatrix(data = Result5$label , reference = full_data_label1,mode = "everything"))
+  auc5 = roc.curve(full_data_label1 , predicted = Result5$label)
+  auc5[2]
+  
+  
+  
+  ## LOF Method ##
+  library(DMwR2)
+  result6 = c()
+  outlier.scores <- lofactor(full_data_without_label1[,numeric_columns], k=5)
+  outliers <- order(outlier.scores, decreasing=T)[1:(0.15*(percent1*number_of_rows))]
+  if(length(outliers) > 0){
+    result6 = c(result6 , outliers)
+  }
+  result6 = unique(result6)
+  total_result = c(total_result , result6)
+  Result6 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result6 == i)>0){
+      Result6$label[i] = 1
+    }
+  }
+  Result6$label = as.factor(Result6$label)
+  (cm_6 = confusionMatrix(data = Result6$label , reference = full_data_label1,mode = "everything"))
+  auc6 = roc.curve(full_data_label1 , predicted = Result6$label)
+  auc6[2]
+  
+  ## KNN method
+  library(adamethods)
+  
+  result7 <- do_knno(full_data_without_label1[, numeric_columns], k = 5 ,top_n = (percent1*number_of_rows)/5)
+  result7 = unique(result7)
+  
+  Result7 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result7 == i)>0){
+      Result7$label[i] = 1
+    }
+  }
+  total_result = c(total_result , result7)
+  Result7$label = as.factor(Result7$label)
+  (cm_7 = confusionMatrix(data = Result7$label , reference = full_data_label1,mode = "everything"))
+  auc7 = roc.curve(full_data_label1 , predicted = Result7$label)
+  auc7[2]
+  
+  
+  ## isolatiion forest 
+  
+  model <- h2o.isolationForest(training_frame = train_p1_h2o,
+                               max_depth = 50,
+                               ntrees = 50,
+                               stopping_metric = "anomaly_score")
+  score <- h2o.predict(model, train_p1_h2o)
+  result_pred8 <- as.data.frame(score$predict)
+  result8 <- ifelse(result_pred8[,1]>0.7 , 1 , 0)
+  
+  (cm_8 = confusionMatrix(data = factor(result8) , reference = full_data_label1 , mode = "everything"))
+  auc8 = roc.curve(full_data_label1 , predicted = factor(result8))
+  auc8[2]
+  total_result = c(total_result , which(result8 == 1))
+  
+  
+  ## Kmodes method
+  result9 = c()
+  library(klaR)
+  model = kmodes(full_data_without_label1[,categorical_columns], modes = 30, iter.max = 100, weighted = TRUE , fast = TRUE)
+  cluster_names = as.numeric(names(sort(table(model$cluster)))[1:5])
+  result9= c( which(model$cluster == cluster_names[1]) , which(model$cluster == cluster_names[2]) , 
+              which(model$cluster == cluster_names[3]) , which(model$cluster == cluster_names[4]) ,
+              which(model$cluster == cluster_names[5]))
+  
+  result9 = unique(result9)
+  total_result = c(total_result , result9)
+  Result9 = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+  for(i in 1:(percent1*number_of_rows)){
+    if(sum(result9 == i)>0){
+      Result9$label[i] = 1
+    }
+  }
+  Result9$label = as.factor(Result9$label)
+  cm_9 = confusionMatrix(data = Result9$label , reference = full_data_label1,mode = "everything")
+  auc9 = roc.curve(full_data_label1 , predicted = Result9$label)
+  auc9[2]
+  total_result = c(total_result , result9)
+  
+  
+
+selected_rows = total_result[table(total_result) > 1]
+
+###ٍEntropy Method
+library(caret)
+#Entropy function
+entropi <- function(target) {
+  freq <- table(target)/length(target)
+  # vectorize
+  vec <- as.data.frame(freq)[,2]
+  #drop 0 to avoid NaN resulting from log2
+  vec<-vec[vec>0]
+  #compute entropy
+  -sum(vec * log2(vec))
+}
+j = 1
+Entropies = c()
+full_data_without_label1 = full_data_without_label1[selected_rows , ]
+for(i in 1:nrow(full_data_without_label1)){
+  Entropies[j] = mean(apply(full_data_without_label1[-i,] , 2 , entropi))
+  j = j+1
+}
+result10 = which(Entropies >= quantile(Entropies , 0.8) & Entropies >= quantile(Entropies , 1-0.8))
+result10 = unique(result10)
+
+Result_final_outliers = data.frame(ID = 1:(percent1*number_of_rows) , label = 0)
+for(i in selected_rows[result10]){
+  Result_final_outliers$label[i] = 1
+}
+
+Result_final_outliers$label = as.factor(Result_final_outliers$label)
+(cm_total = confusionMatrix(data = Result_final_outliers$label , reference = full_data_label1 , mode = "everything"))
+auc10 = roc.curve( full_data_label1, predicted = Result_final_outliers$label)
+auc10[2]
+
+
+### calculate the accuracy of fraud detections with outlier methods and edit labaling
+j = 0
+jj = table(Result_final_outliers$label)
+I1 = which(full_data_label1 == 1) 
+for(i in 1:(percent1*number_of_rows)){
+  if(Result_final_outliers$label[i] == 1){
+    if(full_data_label1[i] == 0){
+      Result_final_outliers$label[i] = 0
+      
+    }else{j = j +1}
+  }
+}
+(acc1_1 = (1 - (j / jj[2])))
+
+
+outputs = list(
+  I1 = I1 , 
+  cm_1 = cm_1 , cm_2 = cm_2 , cm_3 = cm_3 , cm_4 = cm_4 , cm_5 = cm_5 , cm_6 = cm_6 , 
+  cm_7 = cm_7 , cm_8 = cm_8 , cm_9  = cm_9 , cm_total = cm_total, 
+  Result_final_outliers = Result_final_outliers , acc1_1 = acc1_1 , categorical_columns = categorical_columns
+  , percent1 = percent1 , percent2 = percent2 , percent3 = percent3
+)
+
+# save(outputs , file = "Labeling.RData")
+return(outputs)
+}
+

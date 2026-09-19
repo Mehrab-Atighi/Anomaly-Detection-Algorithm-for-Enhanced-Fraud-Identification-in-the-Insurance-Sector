@@ -1,0 +1,36 @@
+\begin{algorithm}[htbp]
+\footnotesize
+\caption{Multilayered structure of the SAD algorithm}\label{algo:multilayer}
+\begin{algorithmic}[1]
+\REQUIRE $D$; nine-detector $AD\ SET$; $ML\ SET$; $T_{AD},T_{ML}$;
+\STATE \hspace{1em} expert verification; sampling percentage $PN$; entropy retention fraction $q$
+\ENSURE Trained models and potential frauds in each partition
+\STATE Preprocess and partition $D$ using Algorithm \ref{algo:preprocessing}.
+\STATE Apply the $N=9$ detectors to $D_1$; initialize $Y_1=\varnothing$.
+\FOR{each row $x$ of $D_1$}
+\STATE Set $U_{Total}(x)=\sum_{k=1}^{N}U_k(x)$.
+\IF{$U_{Total}(x)\geq T_{AD}$}
+\STATE Add $x$ to candidate set $Y_1$.
+\ENDIF
+\ENDFOR
+\STATE \rev{Compute candidate-local $Gain(x;Y_1)$ using Equation \ref{eq:entropy}.}
+\STATE \rev{Set $C_1(x)=1$ for the highest $q$ fraction of scores within $Y_1$.}
+\STATE Create $F_1=\{x\in Y_1:C_1(x)=1\}$; all other rows are Potential Normal.
+\STATE Sample $G_1$ randomly from $D_1\setminus F_1$ at percentage $PN$.
+\STATE \rev{Verify $F_1\cup G_1$; receive labeled $E_1$ and set $L_1=E_1$.}
+\STATE Create $E'_1=SMOTE(L_1)$; train $ML\ SET$ to obtain $TS_1$.
+\FOR{$j=2,\ldots,m$}
+\STATE Use $TS_{j-1}$ to predict all of $D_j$ before verification.
+\FOR{each row $x$ of $D_j$}
+\STATE Store model votes $V_1(x),\ldots,V_M(x)$ and sum $V_{Total}(x)$.
+\STATE If $V_{Total}(x)\geq T_{ML}$, label Potential Fraud; otherwise Potential Normal.
+\ENDFOR
+\STATE Create alert set $F_j$ and random non-alert sample $G_j$ at percentage $PN$.
+\STATE \rev{Save all predictions; verify $F_j\cup G_j$ to obtain $E_j$.}
+\IF{$j<m$}
+\STATE \rev{Set $L_j=L_{j-1}\cup E_j$ using only real verified records.}
+\STATE Create $E'_j=SMOTE(L_j)$; retrain $ML\ SET$ to obtain $TS_j$.
+\ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}

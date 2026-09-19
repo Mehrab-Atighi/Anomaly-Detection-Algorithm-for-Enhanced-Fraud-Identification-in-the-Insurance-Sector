@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "documents": [
+    {
+      "document": "05_Manuscript/manuscript_clean.pdf",
+      "pages": 31,
+      "readable_without_repair": true,
+      "nonempty_text_on_every_page": true,
+      "sha256": "b4e161f7b1a2a62ea2281eff42ffd6130837f9dc67d936fb2823864df1d401be",
+      "rendered_pages": 31
+    },
+    {
+      "document": "05_Manuscript/manuscript_marked.pdf",
+      "pages": 31,
+      "readable_without_repair": true,
+      "nonempty_text_on_every_page": true,
+      "sha256": "f0d66ae2f306d41a7ddab8563fe6f22d9eee5dac4f49638d027bcbfa82d21402",
+      "rendered_pages": 31
+    },
+    {
+      "document": "06_Reviewer_and_Professor/response_to_reviewer.pdf",
+      "pages": 3,
+      "readable_without_repair": true,
+      "nonempty_text_on_every_page": true,
+      "sha256": "2d02a3d32b984fc813b90688fe56e51f0daee5786eb11417eac8cf653f7a2244",
+      "rendered_pages": 3
+    },
+    {
+      "document": "06_Reviewer_and_Professor/change_map.pdf",
+      "pages": 2,
+      "readable_without_repair": true,
+      "nonempty_text_on_every_page": true,
+      "sha256": "61dba9e3accc53beabef5c37598742b0ce622cc496e63f9b43ae035e17f94c22",
+      "rendered_pages": 2
+    },
+    {
+      "document": "06_Reviewer_and_Professor/professor_report_fa.pdf",
+      "pages": 3,
+      "readable_without_repair": true,
+      "nonempty_text_on_every_page": true,
+      "sha256": "1151430f409b05143d72cdfb554edd2acf2c7716d51c59814aafc5e221fa30ee",
+      "rendered_pages": 3
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+\section{LITERATURE REVIEW}\label{SC:LR}\label{sec:literature}
+\begin{revised}
+The literature is grouped below by the information used for learning and
+the role of verification in each approach.
+Early statistical and data-mining reviews distinguish label-based detection
+from anomaly screening \citep{Bolton2002,Ngai2011}; broader financial-fraud
+reviews describe their continuing complementarity \citep{West2016,A61}.
+The systematic review of \citet{Schrijver2024} describes the prominence of
+supervised learning and oversampling in automobile-insurance fraud studies,
+as well as limitations in public data availability.
+
+\subsection{Supervised approaches}
+Supervised models use previously investigated claims to estimate a decision
+boundary or ranking. Regression, support-vector machines, forests, boosting,
+and neural networks are common choices \citep{A80,A61}. Insurance-specific
+work includes optimized boosting and interpretable assessment
+\citep{Ding2025}, practical model-selection guidance
+\citep{BanulescuRadu2024}, and imbalance and missing-value handling
+\citep{Khalil2024}. These methods can exploit claim attributes effectively
+when their training labels are sufficiently representative. Direct comparisons
+of supervised and unsupervised insurance models are also reported by
+\citet{Debener2023}. Selective
+historical investigation, however, can bias which examples are labeled.
+
+In \emph{Annals of Data Science}, \citet{Kamalov2023} examine feature selection
+under imbalance and propose a minority-sensitive criterion. Their work
+motivates explicit attention to fraud-class metrics here; we do not equate
+our unsupervised Gini screen with their supervised selection algorithm.
+
+\subsection{Unsupervised approaches}
+Anomaly methods rank observations according to deviations from a fitted
+notion of normality. Auto-insurance applications include spectral ranking
+\citep{Nian2016} and unsupervised deep learning \citep{Gomes2021}.
+Such approaches can propose cases before reliable labels exist, but unusual
+observations need not be fraudulent. Clustering methods also depend on
+representation and dissimilarity choices, as reviewed by
+\citet{XuTian2015} in \emph{Annals of Data Science}. This supports using
+heterogeneous signals while retaining verification of their interpretation.
+
+\subsection{Reinforcement-learning-based approaches}
+When verification is costly, a learned policy can decide which observations
+justify acquiring an outcome. In the framework studied by \citet{A73},
+reinforcement learning guides this information-acquisition decision for
+outlier detection. Actions are evaluated through a reward signal. SAD instead uses fixed voting
+thresholds and a random audit fraction; it has no learned reward-maximizing
+query policy. Its sequential component is retraining after each reviewed
+batch, which can be tested against a frozen model.
+
+\subsection{Hybrid architectures}
+Hybrid approaches combine representations or learners, while graph methods
+use relationships among claims, people, or entities \citep{Vorobyev2024}.
+PSO-XGBoost is a recent insurance-specific example of optimization combined
+with boosting \citep{Ding2025}. \citet{Hassani2020}, in \emph{Annals of Data
+Science}, review deep-learning applications in banking, providing broader
+financial-domain context. That review is contextual evidence, not a direct
+insurance-fraud performance comparator.
+
+\subsection{Research gap and comparator scope}
+SAD addresses the connection between candidate generation, review, and
+iterative learning. It does not replace the need for representative labels
+or resolve all challenges in recent deep or graph-based systems.
+Table \ref{tab:positioning} distinguishes these roles. The numerical
+experiments include an explicitly adapted PSO-XGBoost comparator and balanced
+random forests in addition to eight component classifiers. We do not
+attribute our adapted implementation's numbers to the original publication.
+
+\begin{table}[tbp]\centering\footnotesize
+\caption{Comparative positioning by learning and acquisition mechanism.}
+\label{tab:positioning}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.5cm}*{3}{>{\raggedright\arraybackslash}X}}
+\toprule
+Family & Representative source & Strength & Boundary relevant to SAD\\\midrule
+Supervised & Ding et al.; Banulescu-Radu and Yankol-Schalck & Direct label-based discrimination & Needs representative verified labels\\
+Unsupervised & Nian et al.; Gomes et al. & Initial screening without outcomes & Anomaly is not confirmed fraud\\
+Reinforcement learning & Nijhuis and van Lelyveld & Values costly information & Requires a query/reward design\\
+Hybrid/graph & Vorobyev; Ding et al. & Relational or optimized predictive signals & May require links or additional tuning\\
+SAD & This study & Explicit review and batch update workflow & Retrospective simulation; policy-dependent labels\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[tbp]\centering\footnotesize
+\caption{Mechanisms of recent counterparts compared with SAD.
+Design comparison does not imply numerical reproduction.}
+\label{tab:mechanisms}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.8cm}*{3}{>{\raggedright\arraybackslash}X}}\toprule
+Method & Main mechanism & Relation to sequential review & Relation to multilayer SAD\\\midrule
+PSO-XGBoost \citep{Ding2025} & Optimized boosted trees & Search tunes parameters; it does not implement batch review & No post-consensus entropy gate specified\\
+Unsupervised deep learning \citep{Gomes2021} & Learned anomaly representation & Does not by itself define SAD's verified-label accumulation & Different initial scoring mechanism\\
+Costly-verification RL \citep{A73} & Reward-driven information acquisition & Learns an acquisition policy; SAD uses fixed rules & SAD's entropy gate is not a reward policy\\
+Claims graph features \citep{Vorobyev2024} & Relational feature construction & Requires links beyond independent claim attributes & Adds relational information rather than SAD's entropy gate\\
+SAD, this study & Anomaly votes, verification, supervised votes & Retrains once after each reviewed batch & Applies candidate-local EAD after initial consensus\\
+\bottomrule\end{tabularx}\end{table}
+\end{revised}

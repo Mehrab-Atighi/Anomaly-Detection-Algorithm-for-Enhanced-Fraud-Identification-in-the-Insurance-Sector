@@ -1,0 +1,32 @@
+"","times","names_times","Dataset","modelnames","model_num","vote_num"
+"1",0.169874334335327,"Labeling ","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"2",0.000785048802693685,"Balancing Data1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"3",4.0133794148763e-07,"nn modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"4",0.000818300247192383,"ml modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"5",0.000795865058898926,"svm modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"6",0.000649499893188477,"xgb modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"7",0.000590749581654867,"rf modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"8",0.000612135728200277," nb modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"9",0.00356870094935099,"knn modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"10",0.00197253227233887,"adab modeling rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"11",0.000377098719278971,"calculate totam cm rond1","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"12",0.000219468275705973,"Balancing Data2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"13",1.98682149251302e-07,"nn modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"14",0.000929566224416097,"ml modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"15",0.00105181932449341,"svm modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"16",0.000931596755981445,"xgb modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"17",0.000615449746449788,"rf modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"18",0.000618902842203776," nb modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"19",0.00335221687952677,"knn modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"20",0.00227499802907308,"adab modeling rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"21",0.000278751055399577,"calculate totam cm rond2","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"22",0.000239666302998861,"Balancing Data3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"23",1.98682149251302e-07,"nn modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"24",0.00152260065078735,"ml modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"25",0.00164823532104492,"svm modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"26",0.000663916269938151,"xgb modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"27",0.000682981808980306,"rf modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"28",0.000648085276285807," nb modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"29",0.00367423295974731,"knn modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"30",0.0028835654258728,"adab modeling rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5
+"31",0.000345218181610107,"calculate totam cm rond3","insurance fraud claims.csv","ml_svm_xgb_nb_rf_knn_adab",5,5

@@ -1,0 +1,101 @@
+Carclaims seed 1234: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1235: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1236: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1237: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1238: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1239: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1240: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1241: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1242: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Carclaims seed 1243: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1234: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1235: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1236: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1237: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1238: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1239: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1240: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1241: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1242: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+InsuranceClaims seed 1243: preprocess and 9 anomaly detectors
+  Main | simple_a
+  Main | simple_b
+  Main | multilayer
+  Strict | multilayer
+Experiment complete.

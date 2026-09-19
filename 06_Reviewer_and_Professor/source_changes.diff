@@ -1,0 +1,2164 @@
+--- Original_Submission/v5.tex
++++ Revised/manuscript_clean_flattened.tex
+@@ -1,52 +1,54 @@
++% Compile with pdfLaTeX and BibTeX (or latexmk -pdf).
++
++% BEGIN INCLUDED preamble.tex
+ \documentclass[12pt]{article}
+-\usepackage{epsfig}
+-\usepackage{subfigure} \usepackage{colortbl}
+-%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+-\usepackage{subfigure} \usepackage{verbatim}
+-\usepackage{diagbox} \usepackage{color}
+-\usepackage{multirow} \usepackage{latexsym}
+-\usepackage{amsmath} \usepackage{amssymb}
+-\usepackage{amsthm} \usepackage{graphicx}
+-\usepackage{hyperref} %\usepackage[latin1]{inputenc}
+-\usepackage[T1]{fontenc} \usepackage[all]{xy}
+-\usepackage{subfigure}
+-\usepackage{multirow}
+-\usepackage{tikz}
+-\usetikzlibrary{calc}
+-%\usepackage{colortbl}
+-%\usepackage{subref}
+-%\usepackage[dvips]{color}
+-\usepackage{latexsym} \usepackage{amsmath}
+-\usepackage{amssymb} \usepackage{amsthm}
+-\usepackage{graphicx}
+-\usepackage{hyperref}
+-\usepackage{amssymb}
+-\usepackage{amsmath}
+-\usepackage{lineno}
+-\usepackage{algorithm}
+-\usepackage{algorithmic}
+-%\usepackage[table,xcdraw]{xcolor}
+-\usepackage{multirow}
+-%\usepackage[french]{babel}
+-%\usepackage[latin1]{inputenc} \usepackage[T1]{fontenc}
+-\usepackage[all]{xy} \usepackage{lscape} \makeatletter
+-\newcommand{\bea}{\begin{eqnarray}}
+-\newcommand{\eea}{\end{eqnarray}}
+-\newcommand{\nn}{\nonumber}
+-\newcommand{\bee}{\begin{eqnarray*}}
+-\newcommand{\eee}{\end{eqnarray*}}
+-\newcommand{\lb}{\label}
+-\newcommand{\nii}{\noindent}
+-\newcommand{\ii}{\indent}
+-\newtheorem{thm}{Theorem}[section]
+-\newtheorem{lem}{Lemma}[section]
+-\newtheorem{rem}{Remark}[section]
++\usepackage[T1]{fontenc}
++\usepackage{lmodern}
++\usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array}
++\usepackage{xcolor,enumitem,float}
++\usepackage{algorithm,algorithmic,multirow}
++\usepackage[section]{placeins}
++\usepackage[authoryear,square]{natbib}
++\usepackage[hidelinks]{hyperref}
++\usepackage{xurl}
++\usepackage{microtype}
++\setcounter{topnumber}{3}
++\setcounter{bottomnumber}{2}
++\setcounter{totalnumber}{5}
++\renewcommand{\topfraction}{.92}
++\renewcommand{\bottomfraction}{.85}
++\renewcommand{\textfraction}{.08}
++\renewcommand{\floatpagefraction}{.75}
++\setlength{\textfloatsep}{14pt plus 2pt minus 2pt}
++\setlength{\floatsep}{12pt plus 2pt minus 2pt}
++\setlength{\emergencystretch}{2em}
++\newif\ifmarked
++\ifdefined\MarkedVersion\markedtrue\else\markedfalse\fi
++\definecolor{revisionblue}{RGB}{24,70,140}
++\newenvironment{revised}{\ifmarked\color{revisionblue}\fi}{}
++\newcommand{\rev}[1]{{\ifmarked\color{revisionblue}\fi#1}}
++\newcommand{\paperfigure}[4]{\begin{figure}[!htbp]\centering
++  \includegraphics[width=#4\linewidth]{figures/#1.png}
++  \caption{#2}\label{#3}\end{figure}}
++
++% BEGIN INCLUDED generated/numbers.tex
++% AUTO-GENERATED from actual ten-seed results.
++\newcommand{\ExtSimpleBFone}{0.560}
++\newcommand{\ExtSimpleBAP}{0.491}
++\newcommand{\ExtMultiFone}{0.497}
++\newcommand{\ExtMultiReview}{0.365}
++
++% END INCLUDED generated/numbers.tex
++
++
++% END INCLUDED preamble.tex
++
+ \begin{document}
+ \begin{center}
+ {\bf Anomaly Detection Algorithm for Enhanced Fraud
+ Identification in the Insurance Sector}\\
+-{\sc Mehrab Atighi$^{a}$, Sayed Jamal Mirkamali$^{b}$, 
+- Amir T. Payandeh Najafabadi$^{a,}$\footnote{amirtpayandeh@sbu.ac.ir}}\\
++{\sc Mehrab Atighi$^{a}$, Sayed Jamal Mirkamali$^{b}$,
++Amir T. Payandeh Najafabadi$^{a,}$\footnote{amirtpayandeh@sbu.ac.ir}}\\
+ a Department of Actuarial Science, Faculty of Mathematical
+ Sciences, Shahid Beheshti University,
+ Evin, 1983969411, Tehran, Iran.\\
+@@ -54,1103 +56,982 @@
+ 3848177584, Arak, Iran.\\
+ \today
+ \end{center}
++\ifmarked
++\noindent\colorbox{yellow!25}{\parbox{\dimexpr\linewidth-2\fboxsep}{
++\textbf{Revision guide.} The original five-section organization and Algorithms
++1--3 and the original workflow images are retained. Blue text marks additions and substantive corrections;
++minor language and citation edits are not individually colored. Empirical
++tables and plots replace the earlier exports. The change map identifies
++removed claims and the source diff records textual changes.}}\medskip
++\fi
+ \begin{abstract}
+-Detecting fraud in the vast databases of the insurance industry
+-remains an ongoing challenge. Existing algorithms often flag
+-numerous suspicious cases, resulting in time-consuming and costly
+-investigations. To address this issue, we propose a novel,
+-sequential, and multilayered algorithm that achieves a high level
+-of accuracy while presenting a manageable number of cases for
+-expert review. In this article, we evaluate the performance of our
+-algorithm using real-world data, demonstrating its impressive
+-accuracy of over 95\% and notable speed. This approach offers a
+-significant advancement in fraud detection for the insurance
+-sector.
+- \end{abstract}
+-
+-
+-\noindent{\bf Keywords:} Fraud Detection;
+-Supervised/Unsupervised/Reinforcement Learning; Artificial
+-Intelligence; Insurance Application; Multilayer Algorithms.
+-
+-{\bf MSC2010}: {62D05, 62F10, 62N01, 65C05.}
+-
+-\section{Introduction}
+-
+-%   Fraud Detection:
+-Fraud poses a significant ethical and financial threat to the
+-global insurance industry. Committed by both policyholders and, at
+-times, insurers themselves, fraudulent activities can have severe
+-consequences. As high levels of fraudulent claims lead to
+-substantial financial losses, insurance companies must take
+-proactive steps to prevent fraud to avoid increasing premiums for
+-all customers. Even a small percentage of dishonest policyholders
+-can result in higher premiums across the board. In 2019, the
+-European Insurance and Reinsurance Federation reported an alarming
+-13 billion euros in industry fraud, underscoring the urgent need
+-for efficient and effective fraud prevention measures \cite{A61}.
+-
+-The inherent stochasticity of insurance claim losses makes
+-identifying suspicious and fraudulent cases a complex and
+-time-consuming task, often demanding significant resources. In recent years, machine learning techniques have
+-proven to be powerful tools in detecting insurance fraud. Both
+-supervised and unsupervised learning approaches have demonstrated
+-considerable potential in enhancing the accuracy and efficiency of
+-fraud detection systems \cite{A61}.
+-
+-
+-
+-%   Insurance Industry
+-To address the multifaceted challenges posed by fraud, this
+-research concentrates on enhancing fraud detection methodologies.
+-Our goal is to develop more efficient and accurate techniques that
+-reduce the number of flagged cases while maintaining a high
+-detection rate. By doing so, we aim to alleviate the burden on
+-insurance companies and their experts, enabling them to
+-concentrate their efforts on the most relevant and pressing cases.
+-
+-In this study, we introduce a novel sequential and multilayered
+-anomaly detection algorithm designed to strike a balance between
+-accuracy and efficiency. Our approach not only contributes to
+-minimizing financial losses resulting from fraudulent activities
+-but also helps restore trust between insurance companies and their
+-customers. Moreover, by improving the overall fraud detection
+-process, businesses can potentially reduce the substantial annual
+-losses they currently face. Also, we seek to provide practical
+-solutions that can be readily implemented in the insurance
+-industry, ultimately benefiting both insurance providers and
+-policyholders. By streamlining the fraud detection process and
+-mitigating the adverse effects of fraudulent activities, we strive
+-to create a more resilient and trustworthy insurance landscape.
+-
+-%   Ideas
+-
+-In this article, we present an innovative approach that combines
+-advanced machine learning techniques, such as reinforcement
+-learning and supervised learning, to create a highly accurate and
+-automated fraud detection system. Our goal is to surpass
+-traditional manual methods by reducing the reliance on human
+-intervention, accelerating detection speed, and enhancing the
+-overall efficiency of fraud prevention measures.
+-
+-By leveraging these cutting-edge methods, we aim to provide
+-insurance companies with a powerful tool to combat fraudulent
+-activities. Additionally, we offer an overview of various existing
+-techniques employed in detecting fraud, providing a comprehensive
+-understanding of the current landscape and the potential
+-advantages of our proposed approach.
+-    %it need more text
+-
+-%   Overview
+-The rest of this paper is organized as the following. Section
+-\ref{SC:LR} provides a literature review on fraud detection in the
+-insurance industry. We describe our proposed algorithm in Section
+-\ref{SC:METHOD}. In Section \ref{SC:RESULT}, we implement the
+-algorithm using real-world data and present evaluation metrics.
+-Concluding remarks and discussions are given in Section
+-\ref{SC:CONCLUSION}.
+-
+-
+-\section{LITERATURE REVIEW}\label{SC:LR}
+-Insurance fraud detection is a critical task for data science and
+-machine learning. Given the inherent complexities of the problem,
+-the application of various machine learning techniques for fraud
+-detection in the insurance industry has gained significant
+-attention.
+-
+-Han et al. (2011) stressed the importance of clustering,
+-classification, and outlier analysis as crucial methods in their
+-work, serving as a foundational reference for understanding core
+-data mining challenges \cite{A71}. Ngai et al. (2011) investigated
+-data mining techniques in financial fraud detection, presenting a
+-classification framework and an extensive literature review that
+-compiles key methods and applications \cite{A76}.
+-
+-Aggarwal et al. (2015) explored the various applications of data
+-mining techniques in financial fraud detection, demonstrating how
+-these methods can substantially improve fraud detection accuracy
+-\cite{A70}. Aggarwal and Philip (2015) offered a thorough review
+-of AI techniques in fraud detection, emphasizing the role of
+-machine learning methods in advancing fraud detection systems
+-\cite{A74}.
+-
+-In a recent study, Yao et al. (2019) applied the Hampel Filter to
+-eliminate profile-isolated outliers in laser vision measurement,
+-highlighting the importance of outlier detection in enhancing
+-measurement accuracy \cite{A80}. Moreover, Moon et al. (2019)
+-employed predictive modeling for identifying fraudulent automobile
+-insurance claims, leveraging advanced machine learning algorithms
+-to enhance fraud detection effectiveness \cite{A80}. These studies
+-emphasize the ongoing advancements in outlier detection and
+-predictive modeling techniques, demonstrating their potential in
+-addressing fraud-related challenges in various domains, including
+-insurance.
+-
+-
+-Bryant and Desai (2020) further expanded on this discussion by
+-focusing on the practical applications of machine learning in
+-financial fraud detection, emphasizing the pivotal role these
+-technologies play in modern fraud prevention strategies
+-\cite{A75}. More recently, Kou et al. (2021) explored AI-based
+-fraud detection in the insurance and financial industries,
+-offering valuable insights into the integration of AI in fraud
+-detection systems to bolster efficiency and accuracy \cite{A78}.
+-These studies highlight the increasing importance of machine
+-learning and AI in the realm of fraud detection, showcasing their
+-potential to revolutionize traditional fraud prevention approaches
+-and enhance overall system performance.
+-
+-
+-In a recent study, Zhang et al. (2022) delved into the development
+-of auto insurance knowledge graphs and their application in fraud
+-detection, exhibiting substantial progress in leveraging knowledge
+-graphs for practical fraud identification purposes \cite{A27}.
+-Their work contributes to the ongoing advancements in data-driven
+-fraud detection techniques, emphasizing the importance of
+-integrating domain-specific knowledge for enhanced performance.
+-
+-
+-In a recent contribution, Nijhuis and van Lelyveld (2023)
+-investigated the application of reinforcement learning for outlier
+-detection in costly-to-verify data, proposing novel methods to
+-tackle the challenges associated with outlier handling \cite{A73}.
+-Their work signifies the importance of exploring advanced machine
+-learning techniques to overcome practical constraints and improve
+-the accuracy of fraud detection systems.
+-
+-Collectively, these studies underscore the potential of employing
+-diverse machine learning and AI techniques to enhance insurance
+-fraud detection, augmenting the precision and efficiency of
+-detection systems. The research emphasizes the importance of
+-continued exploration and development of advanced methodologies to
+-address the challenges posed by insurance fraud effectively.
+-
+-
+-\section{METHODOLOGY}\label{SC:METHOD}
+-Our proposed algorithm consists of several key components: Data
+-Preprocessing, Anomaly Detection, Machine Learning, Model
+-Evaluation, and Structures. In the following subsections, we
+-provide a detailed description of each part within the algorithm
+-to highlight the unique features and functionalities of our
+-approach.
+-    \subsection{PRE PROCESSING}\label{SSC:PreProcessing}
+-Dimensionality reduction is a crucial preprocessing technique in
+-machine learning that focuses on decreasing the number of input
+-variables, or features, in a dataset. This process involves
+-projecting data from a high-dimensional space into a
+-lower-dimensional space while preserving the significant
+-characteristics of the original data. The following section will
+-introduce two popular and broadly applicable methods for data
+-preprocessing that effectively employ dimensionality reduction.
++\begin{revised}
++Insurance-fraud screening requires effective detection under class
++imbalance and limited verification resources. Sequential Anomaly Detection
++(SAD) uses an anomaly ensemble to select claims for review, then trains
++eight supervised learners on verified records and updates them across
++successive batches. Three architectures differ in their initial screening:
++Simple-A uses nine anomaly detectors, Simple-B adds an entropy vote, and
++Multilayer applies entropy after anomaly consensus. We evaluate these
++architectures using ten repeated stratified random splits of Carclaims
++(15,420 records; 5.99\% fraud) and Insurance Claims (1,000 records;
++24.70\% fraud). Recorded outcomes simulate verification after case selection,
++including random audits of non-alerted claims. At fixed voting thresholds
++$(3,4)$, Simple-B achieves mean fraud F1 \ExtSimpleBFone{} and average
++precision \ExtSimpleBAP{} on the second benchmark. Multilayer achieves F1
++\ExtMultiFone{} at a review fraction of \ExtMultiReview{}. A frozen-model
++ablation, ten classifiers trained under a common acquisition policy, and
++a stricter threshold setting examine the effects on detection and workload.
++The findings support assessment of both outcomes when selecting a review
++policy; they do not establish universal architectural superiority or
++prospective generalizability to an independent insurer.
++\end{revised}
++\end{abstract}
++\noindent\textbf{Keywords:} insurance fraud; sequential updating; anomaly
++detection; entropy; verification workload; class imbalance.
++\par\noindent{\bf MSC2010}: {62D05, 62F10, 62N01, 65C05.}
++
++% BEGIN INCLUDED sections/01_introduction.tex
++\section{Introduction}\label{sec:introduction}
++Insurance fraud creates financial losses and places demands on claims
++investigation. Insurers must identify suspicious claims while allocating
++limited review resources \citep{A61,Bolton2002}. This task is difficult
++because legitimate claims are heterogeneous and unusual observations are
++not necessarily fraudulent.
++
++Machine-learning approaches address this problem through supervised
++classification, unsupervised screening, or combinations of the two
++\citep{Ngai2011,West2016,Schrijver2024}. Their practical value depends on
++both detection performance and the number of claims requiring verification.
++Selective investigation also determines which labels become available
++for subsequent training.
++
++Sequential Anomaly Detection (SAD) connects initial anomaly screening to
++verification and repeated supervised learning. The framework is intended
++to support a choice between detection performance and review workload.
++We examine this choice through the simple and multilayered SAD structures.
++
++\begin{revised}
++The contribution lies in the organization and evaluation of established
++components within a verification-driven workflow. Its \emph{sequential}
++mechanism incorporates verified records from one batch into training before
++the ensemble screens the next batch. Its \emph{multilayer} mechanism
++applies an entropy filter to the candidates selected by anomaly-detector
++consensus. Updating changes the information available for later prediction;
++layering changes which initial cases reach verification. Simple-A,
++Simple-B and Multilayer retain the original architectural alternatives:
++entropy is absent, contributes a flat vote, or forms a second screening
++layer, respectively.
++
++The evaluation compares these three architectures, introduces a frozen-model
++control for sequential updating, and applies the same prescribed protocol
++to two benchmark datasets. Additional classifiers include an imbalance-aware
++forest and a recent fraud-motivated boosting approach. The experiments
++explicitly account for review workload and designate fraud as the positive
++class. Recorded outcomes simulate expert feedback and are revealed to the
++learner only after review selection. SAD uses fixed acquisition rules;
++the comparison with reinforcement learning therefore concerns workflow
++design rather than a learned reward-maximizing policy.
++\end{revised}
++
++Section \ref{SC:LR} positions SAD within the fraud-detection literature.
++Section \ref{SC:METHOD} defines its components and update rules;
++Section \ref{SC:RESULT} reports the benchmark experiments.
++Section \ref{SC:CONCLUSION} discusses the findings and their limitations.
++
++% END INCLUDED sections/01_introduction.tex
++
++
++% BEGIN INCLUDED sections/02_literature.tex
++\section{LITERATURE REVIEW}\label{SC:LR}\label{sec:literature}
++\begin{revised}
++The literature is grouped below by the information used for learning and
++the role of verification in each approach.
++Early statistical and data-mining reviews distinguish label-based detection
++from anomaly screening \citep{Bolton2002,Ngai2011}; broader financial-fraud
++reviews describe their continuing complementarity \citep{West2016,A61}.
++The systematic review of \citet{Schrijver2024} describes the prominence of
++supervised learning and oversampling in automobile-insurance fraud studies,
++as well as limitations in public data availability.
++
++\subsection{Supervised approaches}
++Supervised models use previously investigated claims to estimate a decision
++boundary or ranking. Regression, support-vector machines, forests, boosting,
++and neural networks are common choices \citep{A80,A61}. Insurance-specific
++work includes optimized boosting and interpretable assessment
++\citep{Ding2025}, practical model-selection guidance
++\citep{BanulescuRadu2024}, and imbalance and missing-value handling
++\citep{Khalil2024}. These methods can exploit claim attributes effectively
++when their training labels are sufficiently representative. Direct comparisons
++of supervised and unsupervised insurance models are also reported by
++\citet{Debener2023}. Selective
++historical investigation, however, can bias which examples are labeled.
++
++In \emph{Annals of Data Science}, \citet{Kamalov2023} examine feature selection
++under imbalance and propose a minority-sensitive criterion. Their work
++motivates explicit attention to fraud-class metrics here; we do not equate
++our unsupervised Gini screen with their supervised selection algorithm.
++
++\subsection{Unsupervised approaches}
++Anomaly methods rank observations according to deviations from a fitted
++notion of normality. Auto-insurance applications include spectral ranking
++\citep{Nian2016} and unsupervised deep learning \citep{Gomes2021}.
++Such approaches can propose cases before reliable labels exist, but unusual
++observations need not be fraudulent. Clustering methods also depend on
++representation and dissimilarity choices, as reviewed by
++\citet{XuTian2015} in \emph{Annals of Data Science}. This supports using
++heterogeneous signals while retaining verification of their interpretation.
++
++\subsection{Reinforcement-learning-based approaches}
++When verification is costly, a learned policy can decide which observations
++justify acquiring an outcome. In the framework studied by \citet{A73},
++reinforcement learning guides this information-acquisition decision for
++outlier detection. Actions are evaluated through a reward signal. SAD instead uses fixed voting
++thresholds and a random audit fraction; it has no learned reward-maximizing
++query policy. Its sequential component is retraining after each reviewed
++batch, which can be tested against a frozen model.
++
++\subsection{Hybrid architectures}
++Hybrid approaches combine representations or learners, while graph methods
++use relationships among claims, people, or entities \citep{Vorobyev2024}.
++PSO-XGBoost is a recent insurance-specific example of optimization combined
++with boosting \citep{Ding2025}. \citet{Hassani2020}, in \emph{Annals of Data
++Science}, review deep-learning applications in banking, providing broader
++financial-domain context. That review is contextual evidence, not a direct
++insurance-fraud performance comparator.
++
++\subsection{Research gap and comparator scope}
++SAD addresses the connection between candidate generation, review, and
++iterative learning. It does not replace the need for representative labels
++or resolve all challenges in recent deep or graph-based systems.
++Table \ref{tab:positioning} distinguishes these roles. The numerical
++experiments include an explicitly adapted PSO-XGBoost comparator and balanced
++random forests in addition to eight component classifiers. We do not
++attribute our adapted implementation's numbers to the original publication.
++
++\begin{table}[tbp]\centering\footnotesize
++\caption{Comparative positioning by learning and acquisition mechanism.}
++\label{tab:positioning}
++\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.5cm}*{3}{>{\raggedright\arraybackslash}X}}
++\toprule
++Family & Representative source & Strength & Boundary relevant to SAD\\\midrule
++Supervised & Ding et al.; Banulescu-Radu and Yankol-Schalck & Direct label-based discrimination & Needs representative verified labels\\
++Unsupervised & Nian et al.; Gomes et al. & Initial screening without outcomes & Anomaly is not confirmed fraud\\
++Reinforcement learning & Nijhuis and van Lelyveld & Values costly information & Requires a query/reward design\\
++Hybrid/graph & Vorobyev; Ding et al. & Relational or optimized predictive signals & May require links or additional tuning\\
++SAD & This study & Explicit review and batch update workflow & Retrospective simulation; policy-dependent labels\\
++\bottomrule
++\end{tabularx}
++\end{table}
++
++\begin{table}[tbp]\centering\footnotesize
++\caption{Mechanisms of recent counterparts compared with SAD.
++Design comparison does not imply numerical reproduction.}
++\label{tab:mechanisms}
++\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.8cm}*{3}{>{\raggedright\arraybackslash}X}}\toprule
++Method & Main mechanism & Relation to sequential review & Relation to multilayer SAD\\\midrule
++PSO-XGBoost \citep{Ding2025} & Optimized boosted trees & Search tunes parameters; it does not implement batch review & No post-consensus entropy gate specified\\
++Unsupervised deep learning \citep{Gomes2021} & Learned anomaly representation & Does not by itself define SAD's verified-label accumulation & Different initial scoring mechanism\\
++Costly-verification RL \citep{A73} & Reward-driven information acquisition & Learns an acquisition policy; SAD uses fixed rules & SAD's entropy gate is not a reward policy\\
++Claims graph features \citep{Vorobyev2024} & Relational feature construction & Requires links beyond independent claim attributes & Adds relational information rather than SAD's entropy gate\\
++SAD, this study & Anomaly votes, verification, supervised votes & Retrains once after each reviewed batch & Applies candidate-local EAD after initial consensus\\
++\bottomrule\end{tabularx}\end{table}
++\end{revised}
++
++% END INCLUDED sections/02_literature.tex
++
++
++% BEGIN INCLUDED sections/03_methods.tex
++\section{METHODOLOGY}\label{SC:METHOD}\label{sec:methods}
++SAD combines predictor preprocessing, anomaly screening, supervised
++classification and batch-wise model updating. The following subsections
++specify these components, their integration and the evaluation measures.
++
++\subsection{PRE PROCESSING}\label{SSC:PreProcessing}
++Dimensionality reduction decreases the number of input variables while
++retaining useful characteristics of the data. In this research, the
++preprocessing step uses feature screening through a Gini criterion for
++categorical variables and a near-zero-variance criterion for numerical
++variables \citep{Hastie2009,Kuhn2008}.
++
+ \subsubsection*{Dimension Reduction}
+-In this research, we employ the two following methods for
+-dimensionality reduction and subsequently partition the dataset
+-randomly into m subsets. Further details on this process can be
+-found in Algorithm \ref{algo:preprocessing}.
+-
+-\textbf{\small Gini Index:} The Gini index measures inequality in
+-a dataset, ranging from 0 (all observations are equal) to 1 (all
+-observations are different). It's calculated by $Gini(Y) = 1 -
+-\displaystyle\sum_{r=1}^{R} P_r^2,$ where the lower values
+-indicate the more equal distribution \cite{A59}.
+-
+-\textbf{Near Zero Variance:} The Near Zero Var function identifies
+-predictors with limited variability, such as single-value or
+-low-variance predictors, and those with a high frequency ratio
+-between the most common and second most common values \cite{A59}.
+-        \begin{algorithm}[H]
+-            \footnotesize
+-            \caption{PreProcessing Algorithm}\label{algo:preprocessing}
+-            \begin{algorithmic}
+-                \STATE \textbf{inputs} :  Dataset D ,   Partitioning percentages $p_i \,, i = 1, \cdots , m$ ,\\ bounds for Gini Index $g_{L} \, , g_{U}$,
+-                \STATE \textbf{outputs}: Partitions $D_i$, $ i = 1, \cdots , m$,
+-                \STATE Remove The Categorical columns of $D$ where Gini Index is not between $g_{L} \, , g_{U}$,
+-                \STATE Remove The Numerical columns of $D$ where Near, Zero Variance is TRUE,
+-                \STATE Separate  $D$ into m Partitions where the size, of $D_i$ is proportional to $p_i \,, i = 1, \cdots , m$.
+-            \end{algorithmic}
+-        \end{algorithm}
++\textbf{Gini Index:} For a categorical predictor with category frequencies
++$p_r$, the Gini impurity is
++\[
++Gini=1-\sum_{r=1}^{R}p_r^2.
++\]
++It is zero for a constant feature and increases as the observations are
++distributed more evenly across categories. We retain predictors with
++$g_L<Gini<g_U$, where $g_L=0.1$ and $g_U=0.9$.
++\rev{This marginal variability screen does not measure association with fraud;
++it can discard informative high-cardinality features.}
++
++\textbf{Near Zero Variance:} Numerical predictors are removed if constant,
++or if their most-common to second-most-common value frequency ratio exceeds
++19 and their percentage of unique values is at most 10\%, following the
++near-zero-variance screening convention \citep{Kuhn2008}.
++
++\rev{To prevent information from later evaluation batches entering fitted
++preprocessing, partitioning precedes feature screening. The screen, missing
++value handling, scaling and categorical encoding are fitted using $D_1$
++predictors only, as made explicit in Algorithm \ref{algo:preprocessing}.}
++
++% BEGIN INCLUDED algorithms/preprocessing.tex
++\begin{algorithm}[htbp]
++\footnotesize
++\caption{PreProcessing Algorithm}\label{algo:preprocessing}
++\begin{algorithmic}[1]
++\REQUIRE Dataset $D$; partition fractions $p_1,\ldots,p_m$; Gini bounds $g_L,g_U$
++\ENSURE Partitions $D_1,\ldots,D_m$ and fixed predictor transformations
++\STATE \rev{Withhold outcomes from predictors; retain original row identities.}
++\STATE \rev{Partition records with sizes proportional to $p_1,\ldots,p_m$.}
++\STATE \rev{On $D_1$ only, remove categorical predictors outside $(g_L,g_U)$ in Gini impurity.}
++\STATE \rev{On $D_1$ only, remove numerical predictors satisfying near-zero variance.}
++\STATE \rev{Fit imputation, scaling and encoding on retained $D_1$ predictors.}
++\STATE \rev{Apply those fixed transformations to every partition $D_j$.}
++\end{algorithmic}
++\end{algorithm}
++
++% END INCLUDED algorithms/preprocessing.tex
++
++
++\begin{revised}
++Policy identifiers, postal identifiers and incident addresses are excluded.
++Near-unique categorical fields are also excluded. The two date fields in
++Insurance Claims are expanded into year, month and weekday; this does not
++make the experimental split chronological. The marker \texttt{?} is treated
++as missing. Numerical medians and categorical modes provide imputation;
++scaling and one-hot encoding use $D_1$ parameters and levels, with unseen
++categories mapped to zero indicators. Outcomes are removed by name before
++any detector or transformation is fitted, and row identities are preserved.
++\end{revised}
+ 
+ \subsubsection*{Balancing}
+-        \textbf{\small Resampling structures:}\\
+-The Synthetic Minority Over-sampling Technique (SMOTE,) is an
+-approach used to balance imbalanced datasets by generating
+-synthetic samples from the minority class. SMOTE operates by
+-randomly selecting a sample from the minority class and
+-identifying one of its k-nearest neighbors. A synthetic sample is
+-then generated through interpolation between these two samples.
+-This technique enhances the performance of machine learning models
+-when dealing with imbalanced data \cite{A62}.
+-This study incorporate the SMOTE method for enhancing machine
+-learning algorithms in fraud detection in insurance industry.
++\textbf{Resampling structure:} We use the Synthetic Minority Over-sampling
++Technique (SMOTE) to address class imbalance during supervised training
++\citep{Chawla2002,He2009}. SMOTE constructs additional minority-class
++training vectors along line segments joining a minority observation to a
++nearby observation from the same class.
++\rev{In the revised experiments, SMOTE is applied only to accumulated
++verified training records, never to future evaluation observations.
++The neighbor count is at most five and is reduced for small minority sets.
++One minority observation invokes random oversampling; a single-class set
++raises an error. SMOTE operates on encoded features, so synthetic one-hot
++values may be fractional. These are training vectors, not synthetic policies.
++Previously generated synthetic records are not accumulated across rounds.}
+ 
+ \subsection*{Structure}
+-We now introduce a schematic representation of two distinct
+-structures within our proposed Sequential Anomaly Detection (SAD)
+-algorithm, designed specifically for fraud identification in the
+-insurance industry. These structures form the basis of our
+-innovative approach to tackling fraudulent activities within this
+-domain.
+-
+-Figure \ref{figai1} illustrates a sequential process
+-involving several stages: First, input data undergoes
+-preprocessing to reduce its size and is subsequently divided into
+-desired subsets. Anomaly detection is then applied to the first
+-subset, with the identified potential fraud cases sent to an
+-expert for verification. This step also enables fraud pattern
+-recognition and the development of a trained model using machine
+-learning algorithms. In subsequent iterations, the trained model
+-is employed to detect potential fraud data, allowing for expert
+-confirmation and continuous refinement of the machine learning
+-algorithms to achieve a more accurate fraud detection system.\\
+-Figure \ref{figai2} illustrates a multilayered structure where the EAD method is applied to the result of anomaly detection to get the more suspicious cases as the potential frauds.
+-
+-%% اینجا یک توضیح درمورد فرآیند کارو گام ها اضافه بشود.
+-
+-    \begin{center}
+-        \begin{figure}[H]%% placement specifier
+-            \centering
+-            \includegraphics[width=\textwidth]{Pictures/simple.png}
+-    \caption{Workflow of simple structure of sequential anomaly
+-detection. (SAD)}\label{figai1}
+-           \includegraphics[width=\textwidth]{Pictures/Multilayered.png}
+-\caption{Workflow of multilayered structure of sequential anomaly
+-detection.(SAD)}\label{figai2}
+-        \end{figure}
+-    \end{center}
++The two SAD workflows are illustrated below.
++Figure \ref{figai1} connects preprocessing and data partitioning to
++initial anomaly screening, verification and supervised learning. In subsequent iterations, the trained
++models identify potential fraud in the next subset, followed by expert
++confirmation and model updating.
++Figure \ref{figai2} shows the multilayered structure, where EAD is applied
++to the result of anomaly consensus before expert verification.
++\rev{Figures 1 and 2 provide conceptual overviews of the retained workflows.
++Algorithms 1--3 specify their implementation: preprocessing is fitted on $D_1$ after partitioning; expert review
++includes alerts and a random sample of non-alerts; both fraud and genuine
++verified records enter training (the diagram label ``Frauds'' is shorthand
++for the reviewed records); and no model is retrained after the last evaluation
++batch. The terminal trained model in the conceptual diagrams is relevant only
++if further batches will arrive. Simple-A uses nine initial detector votes;
++Simple-B adds entropy as a tenth vote. In Multilayer, EAD gates the initial
++candidate subset before verification.}
++
++\begin{figure}[!htbp]\centering
++\includegraphics[width=\textwidth]{figures/simple.png}
++\caption{Simple SAD workflow: initial screening, verification and model updating
++across successive batches.}\label{figai1}
++\medskip
++\includegraphics[width=\textwidth]{figures/Multilayered.png}
++\caption{Multilayered SAD workflow, with entropy screening between initial
++anomaly consensus and verification.}\label{figai2}
++\end{figure}
+ 
+ \subsection*{ANOMALY DETECTION}\label{SSC:AD}
+-In the initial stage of the algorithm, the absence of reliable
+-labels for fraud or suspicious data necessitates unsupervised
+-models and techniques to identify potential fraudulent activities.
+-Various anomaly detection algorithms have been proposed by
+-researchers, and the models employed in our study are introduced
+-below.
+-
+-\textbf{\small Box Plot:} Box plots aid in identifying outliers by
+-examining values that fall outside the range of $Q3 + (1.5 \times
+-IQR)$ or $Q1 - (1.5 \times IQR)$, where $Q1$ and $Q3$ represent
+-the first and third quartiles, respectively, and $IQR$ is the
+-interquartile range. Extreme points are defined as those beyond
+-$Q3 + (3 \times IQR)$ or $Q1 - (3 \times IQR)$ \cite{A4}.
+-
+-\textbf{\small Percentile structure:} Percentiles partition data
+-into 100 segments, indicating the percentage of data points that
+-fall below a specific value. The $25_{th}$ percentile, for
+-instance, marks the point where $25\%$ of the data lies below it.
+-Outliers typically fall below the $5_{th}$ percentile or above the
+-$95_{th}$ percentile, meaning that normal data usually resides
+-within the $(5, 95)\%$ range \cite{A38}.
+-
+-\textbf{\small Z Score structure:} Z Score identifies outliers by
+-comparing individual data points to the mean and standard
+-deviation of the dataset. Values with a Z Score above 3 or below
+--3 are considered outliers. This straightforward method proves
+-effective when dealing with data exhibiting a normal distribution
+-\cite{A38}.
+-
+-\textbf{\small Hample filter structure:} The Hampel Identifier
+-detects outliers using the median and median absolute deviation.
+-For data sequences with a moving window, a point is an outlier if
+-its difference from the local median exceeds a certain threshold.
+-Usually, the threshold is set to 3. If set to 0, it acts like a
+-standard median filter \cite{A42}.
+-
+-\textbf{\small E Grubs test structure:} The Grubb's test detects
+-outliers in normally distributed data by contrasting the test
+-statistic against a critical value. It operates under the
+-assumption that the data contains either no outliers or a single
+-outlier. This test is brief and easy to implement \cite{A44}.
+-
+-\textbf{\small KNN structure:} The K-Nearest Neighbors (KNN)
+-algorithm calculates the distance between a test instance and
+-training examples to identify its closest neighbors. While this
+-process can be computationally intensive for large datasets,
+-various indexing techniques can help improve its efficiency
+-\cite{A46}.
+-
+-\textbf{\small Local outlier factor (LOF) structure:} Local
+-Outlier Factor (LOF) detects outliers by employing KNN to compare
+-each data point with its neighbors, evaluating the isolation of a
+-point based on its local reachability density. A simplified LOF
+-approach, while more computationally demanding, utilizes KNN
+-distance to facilitate density estimation, resulting in improved
+-performance \cite{A46}.
+-
+-\textbf{\small Isolation forest structure:} The Isolation Forest
+-(iForest) algorithm efficiently detects outliers by constructing
+-binary trees from random dataset partitions, calculating anomaly
+-scores for each data point. It exhibits linear time complexity and
+-high precision \cite{A52}
+-
+-\textbf{\small K Modes structure:} The K Modes clustering
+-algorithm, an alternative to K-means, efficiently clusters
+-categorical data by iteratively selecting k centroids, calculating
+-dissimilarity, assigning objects to the nearest centroid, and
+-updating centroids. This straightforward approach ensures optimal
+-clustering performance \cite{A60	}.
+-
+-\textbf{\small Entropy Anomaly Detection (EAD):} Anomaly detection
+-using information theory calculates a dataset's information
+-content and observes changes when removing potential anomalies.
+-Higher information gain, defined as $\text{Gain}(x) =
+-\text{Info}(D) - \text{Info}(D \backslash x),$ indicates an
+-anomaly. Here, the information content of dataset D is given by
+-$\text{Info}(D) = \sum_{x \in D} p(x) \times \log(p(x))$
+-\cite{A57}.
+-
+-Identifying anomalies can be achieved by eliminating instances
+-with the highest Gain(X). Efficient approximations are employed to
+-address the computational complexity associated with this process.
+-
+-\textbf{\small Threshold limits:} In anomaly detection, it is
+-essential to introduce suspicious cases identified by most
+-methods. This is achieved using the anomaly detection threshold
+-limit, denoted as $T_{AD}$, which determines the criteria for
+-classifying data points as potential anomalies.
+-
+-% باید ترش هولد را اینجا اضافه بکنیم توضیحاتش رو
+-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++Before verified labels become available, the initial ensemble screens
++claims for departures from empirical feature patterns. An anomaly flag
++indicates a case for review, not a confirmed fraud \citep{Chandola2009}.
++The nine retained detectors are specified below.
++
++\textbf{Box Plot:} Observations outside
++$[Q_1-1.5IQR,Q_3+1.5IQR]$, where $IQR=Q_3-Q_1$, are flagged
++using the boxplot rule. The rule is applied separately to retained numerical
++features, and the union of flagged records supplies one detector vote.
++
++\textbf{Percentile structure:} Percentiles divide an empirical distribution
++according to its cumulative frequency. Values below the fifth percentile
++or above the ninety-fifth percentile are flagged in each numerical feature;
++the union provides one vote.
++
++\textbf{Z-score structure:} The Z score compares an observation with a
++feature's mean and standard deviation. The prescribed rule flags
++$|Z|>3$. Its interpretation depends on the feature distribution.
++
++\textbf{Hampel filter structure:} Robust location and scale reduce the
++influence of extreme values \citep{Hampel1974}. Here the batch-wise rule
++flags a numerical value when its distance from the median exceeds
++$3\times1.4826\times MAD$. It is not a sliding temporal filter.
++
++\textbf{Grubbs test structure:} Grubbs' test compares an extreme standardized
++deviation with a sample-size-dependent critical value under a normality
++assumption \citep{Grubbs1969}. We use the two-sided critical threshold at
++$\alpha=0.05$ as a screening rule. This is not an iterative multiple-outlier
++hypothesis-testing procedure.
++
++\textbf{KNN structure:} Distance-based outlier methods assess how far an
++observation lies from neighboring observations \citep{Ramaswamy2000}.
++The implemented score is the mean distance to five neighbors in standardized
++numerical space; the top 20\% are flagged. This averaging is an implementation
++choice, rather than an exact reproduction of the cited $k$th-distance rule.
++
++\textbf{Local outlier factor (LOF) structure:} LOF quantifies how sparse an observation's neighborhood is relative
++to the neighborhoods of nearby observations \citep{Breunig2000}.
++The implementation uses 20 neighbors and a contamination setting of 0.15.
++
++\textbf{Isolation forest structure:} Isolation Forest constructs randomized
++partition trees and scores observations using their isolation paths
++\citep{Liu2008}. We use 200 trees, subsamples of at most 256 records and
++contamination 0.10 on the encoded predictor matrix.
++
++\textbf{K Modes structure:} K-Modes extends centroid-based clustering to
++categorical observations using category matching and modal representatives
++\citep{Huang1998}. We use up to 30 clusters, one Huang initialization and
++20 iterations, flagging the five smallest nonempty clusters. Small cluster
++membership is a screening heuristic, not evidence of fraud by itself.
++
++\textbf{Entropy Anomaly Detection (EAD):} The information content of a
++categorical feature is measured by Shannon entropy \citep{Shannon1948}.
++The original removal-based EAD idea compares the entropy of a working
++dataset with its entropy after one observation is removed.
++\begin{revised}
++For subset $S$ and predictor $\ell$, let
++$H_\ell(S)=-\sum_r p_{\ell r}\log_2p_{\ell r}$.
++The exact implemented score is
++\begin{equation}\label{eq:entropy}
++Gain(x_i;S)=\frac{1}{p}\sum_{\ell=1}^{p}
++\{H_\ell(S)-H_\ell(S\setminus\{x_i\})\}.
++\end{equation}
++Numerical variables use up to ten quantile bins fitted on $S$; those bins
++remain fixed during leave-one-out calculation. Frequency counts permit
++exact scores without rebuilding the dataset for every removal. The highest
++20\% of scores form the entropy shortlist. Simple-B computes EAD on $D_1$;
++Multilayer computes it on the anomaly-consensus subset $Y_1$.
++\end{revised}
++
++\textbf{Threshold limits:} The anomaly threshold $T_{AD}$ specifies the
++minimum number of positive detector votes required to flag an observation.
++A record is flagged once its positive-vote count reaches $T_{AD}$.
++The threshold operates on detector consensus.
+ 
+ \subsection{MACHINE LEARNING}\label{SSC:ML}
+-Following anomaly detection, the data is labeled with expert
+-opinions, enabling the application of supervised learning. Our
+-supervised learning algorithm utilizes various machine learning
+-techniques, which are outlined in subsequent sections.
+-
+-\textbf{\small LR models:} Logistic Regression (LR) is a popular
+-supervised learning model used to predict outcomes based on input
+-features and target variables \cite{A52}.
+-
+-\textbf{\small SVM models:} The Support Vector Machine (SVM) is a
+-widely used machine learning classifier in various real-world
+-applications, addressing both linear and nonlinear problems. It
+-separates instances of classes using a hyperplane, making it ideal
+-for nonlinear classification and complex problems \cite{A52}.
+-
+-    \textbf{\small XGB models:}
+-XGBoost is an efficient gradient boosting implementation that
+-builds additive models using decision trees. It creates an
+-ensemble of base learners by iteratively minimizing errors,
+-outperforming individual classifiers. \cite{A57}.
+-
+-    \textbf{\small RF models:}
+-Breiman in 2001 introduced the Random Forest (RF) classifier which
+-combines bagging and subspaces to construct a set of decision
+-trees from the training dataset. Predictions are made based on
+-votes from these trees, yielding high accuracy.
+-\cite{A52}.
+-
+-\textbf{\small NB models:} Na\"ive Bayes (NB) is an efficient
+-predictive model for large datasets, utilizing Bayes' theorem and
+-assuming predictor independence. In fraud detection, the model
+-calculates probabilities with Maximum A Posteriori (MAP) and is
+-distinct due to its feature distribution assumptions \cite{A52}.
+-
+-    \textbf{\small ADAB Boost models:}
+-Adaptive Boosting, or Adaboost, is a renowned machine learning
+-algorithm known for its quick boosting capabilities. Boosting
+-algorithms transform lazy learners into eager learners, enhancing
+-their predictive abilities through training\cite{A52}.
+-
+-    \textbf{\small ANN models:}
+-Artificial Neural Networks (ANNs) are models inspired by the human
+-brain, capable of learning patterns from data and making
+-predictions. ANNs comprise interconnected artificial neurons
+-processing information through layers. By adjusting weights and
+-biases, they adapt to complex data relationships \cite{A52}.
+-
+-
+-    \textbf{\small Threshold limit:}
+-In machine learning methods, it is crucial to identify cases that
+-most algorithms have flagged as suspicious under the potential
+-frauds category. This is accomplished using the machine learning
+-threshold limit, denoted as $T_{ML}$, which establishes the
+-criteria for classifying data points as potential fraud cases.
++Following anomaly detection, expert opinions supply training labels for
++supervised learning. The ensemble includes the following eight model
++families already used in the thesis implementation.
++
++\textbf{LR models:} Logistic regression estimates a binary outcome
++probability from the input features \citep{Hastie2009}.
++
++\textbf{SVM models:} A support-vector classifier constructs a separating
++hyperplane; kernel extensions can model nonlinear boundaries
++\citep{Cortes1995}. The present ensemble uses a linear kernel.
++
++\textbf{XGB models:} XGBoost builds an additive ensemble of decision trees
++with regularized gradient boosting \citep{Chen2016}.
++
++\textbf{RF models:} Random forests combine trees trained with randomized
++observations and feature selections; their collective predictions form an
++ensemble estimate \citep{Breiman2001}.
++
++\textbf{NB models:} Naive Bayes combines class-conditional feature models
++under a conditional-independence assumption \citep{Domingos1997}. The
++implementation uses Gaussian feature likelihoods.
++
++\textbf{KNN models:} Nearest-neighbor classification uses labeled examples
++close to the observation being classified \citep{Cover1967}. This supervised
++component is distinct from the initial KNN outlier detector.
++
++\textbf{AdaBoost models:} AdaBoost combines weak learners through
++successive reweighting of training observations \citep{Freund1997}.
++
++\textbf{ANN models:} Artificial neural networks learn weights between
++interconnected layers to model relationships between predictors and
++outcomes \citep{Rumelhart1986}. We use one hidden layer.
++
++\begin{revised}
++\begin{table}[tbp]\centering\small
++\caption{Fixed specifications of the original eight supervised model families.}
++\label{tab:learners}
++\begin{tabularx}{\linewidth}{p{2.0cm}X}\toprule
++Model & Specification\\\midrule
++LR & L2 logistic regression; liblinear; $C=1$; 1,000 iterations\\
++SVM & Linear kernel; $C=1$; training-only probability estimation\\
++XGBoost & 120 trees; depth 4; learning rate .05; row/column subsampling .8\\
++RF & 200 trees; minimum leaf size 2\\
++NB & Gaussian conditional feature model\\
++KNN & Five neighbors; distance weighting\\
++AdaBoost & 100 decision stumps; learning rate .5\\
++ANN & 32 hidden units; L2 penalty $10^{-4}$; at most 200 iterations;
++early stopping with 15\% internal validation\\
++\bottomrule\end{tabularx}\end{table}
++\end{revised}
++
++\textbf{Threshold limit:} The supervised threshold $T_{ML}$ specifies the
++minimum number of positive model votes for an alert.
++\rev{For learner $k$, $V_k(x)=\mathbb{1}\{\hat p_k(x)\geq0.5\}$, and
++$\hat y(x)=\mathbb{1}\{\sum_{k=1}^{M}V_k(x)\geq T_{ML}\}$.
++The mean score $M^{-1}\sum_k\hat p_k(x)$ is used for ranking metrics.
++After oversampling, that score need not be a calibrated population fraud
++probability.}
+ 
+ \subsection{Sequential Anomaly Detection (SAD)}\label{SSC:SAD}
+-In following, we describe two structures where the
+-input is preprocessed data in Algorithm \ref{algo:preprocessing}.
+-\subsubsection*{Simple structure of the SAD algorithm}
+-\label{sec4_2}  The anomaly detection process starts with
+-unlabeled data from the initial section. After voting-based
+-labeling, it predicts new instances using machine learning methods
+-(supervised learning). At the end of each section, models are
+-updated with expert opinions, enabling continuous improvement in
+-anomaly detection.
+-
+-The structure takes multiple inputs, including the number of
+-machine learning models, anomaly detection methods, minimum votes
+-for machine learning models and anomaly detection methods, as well
+-as the set of machine learning models and anomaly detection
+-methods. Additionally, the dataset provided to Algorithm
+-\ref{algo:preprocessing} is a critical input for the structure.
+-These inputs contribute to a comprehensive preprocessing phase in
+-the anomaly detection process.
+-
+-In the initial step, all data from the first section is processed
+-by anomaly detection methods. Each observation and method is
+-labeled as either normal (assigned a value of 0) or anomalous
+-(assigned a value of 1) based on the method's determination. Next,
+-for each observation in the first section, the labels received
+-from each method are summed, referred to as the total votes for
+-that observation, $U_{Total}$. If $U_{Total}$ is greater than or
+-equal to the threshold $T_{AD}$, the observation is flagged as
+-suspicious; otherwise, it is considered normal.
+-
+-The set $F_1$ consists of all observations identified as
+-suspicious and is submitted to experts for further analysis. After
+-review, each observation in $F_1$ receives a new label (0 or 1),
+-indicating whether fraud is present, forming the set $E_1$. Since
+-$E_1$ is likely to have imbalanced labels, balancing methods are
+-applied to make it suitable for use in machine learning models. To
+-achieve better balance, $PN$ percent of normal data from the first
+-section is combined with the balanced $E_1$, creating the new
+-balanced set $E'_1$.
+-
+-For each machine learning model, the balanced set $E'_1$ is used
+-for training, and then all observations in the second data section
+-are classified using each trained model. Every model contributes a
+-vote for each observation, and if the total votes exceed the
+-threshold $T_{ML}$, the observation is flagged as an outlier for
+-expert review. Data balancing and model updating are performed
+-iteratively for subsequent sections, ensuring that the models
+-remain current throughout the entire dataset analysis.
+-
+-\begin{algorithm}[H]
+-%   \begin{tikzpicture}[overlay, remember picture]
+-%       \draw [black, thick] ($(current page.south west) + (1.5,17.5 + 1.2)$) -- ($(current page.north west) + (1.5,-3.5 + 1.2)$) node[midway, above, sloped] {Descriptive layer};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,15.3 + 1.2)$) -- ($(current page.north west) + (1.5,-11.1 + 1.2)$) node[midway, above, sloped] {RL};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,13.7 + 1.2)$) -- ($(current page.north west) + (1.5,-12.8 + 1.2)$) node[midway, above, sloped] {ML};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,5 + 1.2)$) -- ($(current page.north west) + (1.5,-14.3 + 1.2)$) node[midway, above, sloped] {Updating Layer};
+-%   \end{tikzpicture}
+-
+-
+-    \tiny
+-    \caption{Simple structure of the SAD algorithm}\label{algo:simple}
+-    \begin{algorithmic}
+-        \STATE \textbf{inputs} : Dataset D , AD SET , ML SET , Expert opinion , PN
+-        \STATE \textbf{outputs}  : trained models , potential frauds
+-        %%\STATE m $\gets$ Number of partitions of the input dataset.
+-        \STATE $N \gets$ number of anomaly detection methods.
+-        \STATE $M \gets$ number of machine learning models.
+-        \STATE AD SET $\gets$ ($AD_1 , \cdots , AD_{N} $)
+-        \STATE ML SET  $\gets$ ($ML_1 , \cdots , ML_{M} $)
+-        \STATE $T_{AD} \gets$ Threshold number of voting for anomaly detection methods
+-        \STATE $T_{ML} \gets$ Threshold number of voting for machine learning models
+-        \STATE PreProcessing on the input dataset $D$ which is described in Algorithm \ref{algo:preprocessing}
+-        %%\STATE Partition the input dataset $D$ into $D_1 , D_2 , ... , D_m$
+-        \STATE Store the result of anomaly detection methods of AD SET on $D_1$  into $U_{1} , \cdots , U_{N}$ (0 for normal \& 1 for anomaly).
+-        \FOR{Each row of $D_1$}
+-        \STATE Set $U_{Total} = \sum_{i = 1}^{N}{U_{i}}$
+-        \IF{$U_{Total} \ge T_{AD}$}
+-        \STATE Label the row as Potential Fraud
+-        \ELSE
+-        \STATE Label the row as Potential Normal
+-        \ENDIF
+-        \ENDFOR
+-        \STATE Create $F_1$ dataset as the subset of $D_1$  for which labeled as Potential Fraud.
+-        \STATE Send $F_1$ dataset for experts.
+-        \STATE Receive the opinion of experts on $F_1$ dataset as $E_1$
+-        \STATE Create $E^\prime_1$ as oversampling SMOTE model of $E_1 \cup G_1$  where $G_1$ is a random subset of size PN\% of $D_1$ for which labeled as Potential Normal
+-        \FOR{each Model of ML SET}
+-        \STATE Learn the Model with $E^\prime_1$ Dataset as training set.
+-        \ENDFOR
+-        \STATE Set trained models as $TS_1$
+-        \FOR{j from 2 to m}
+-        \FOR{each row of $D_j$}
+-        \STATE Use $TS_{j-1}$ for prediction on $D_j$ as tast set.
+-        \STATE Store the response prediction of  $TS_{j-1}$ on $D_j$  into $V_{1} , \cdots , V_{M}$ (0 for normal \& 1 for anomaly).
+-        \STATE Set $V_{Total} = \sum_{i = 1}^{M}{V_{i}}$
+-        \IF{$V_{Total} \ge T_{ML}$}
+-        \STATE Label the row as Potential Fraud
+-        \ELSE
+-        \STATE Label the row as Potential Normal
+-        \ENDIF
+-        \STATE Create $F_j$ dataset as the subset of $D_j$  for which labeled as Potential Fraud.
+-        \STATE Send $F_j$ dataset for experts.
+-        \STATE Receive the opinion of experts on $F_j$ dataset as $E_j$
+-        \STATE Create $E^\prime_j$ as oversampling SMOTE model of $E_j \cup G_j\, \cup E^\prime_{j-1} \, $  where $G_j$ is a random subset of size PN\% of $D_j$ for which labeled as Potential Normal
+-        \FOR{each Models of ML SET}
+-        \STATE Learn the Model with $E^\prime_j$ Dataset as training set.
+-        \ENDFOR
+-        \STATE Set trained models as $TS_j$
+-        \ENDFOR
+-        \ENDFOR
+-    \end{algorithmic}
++In the following, we describe two structures using the partitions returned
++by Algorithm \ref{algo:preprocessing}. The inputs include the anomaly
++detector set $AD\ SET$, the supervised model set $ML\ SET$, their sizes
++$N$ and $M$, vote thresholds $T_{AD}$ and $T_{ML}$, expert opinions and the
++non-alert sampling percentage $PN$.
++
++\begin{revised}
++Throughout the algorithms, ``potential normal'' means \emph{not alerted},
++not verified genuine. In batch $j$, $F_j$ is the alert set and $G_j$ is a
++random sample of $\lceil(PN/100)|D_j\setminus F_j|\rceil$ non-alerts.
++Both sets are submitted for verification before their labels are available
++to the learning algorithm. $E_j$ denotes these newly verified records,
++$L_j=\bigcup_{r\leq j}E_r$ the accumulated real training records, and
++$E'_j=SMOTE(L_j)$ the current balanced training set. In the experiments,
++$PN=10$. Stored outcomes simulate expert opinions; no actual expert
++investigation was conducted in this retrospective evaluation.
++\end{revised}
++
++\subsubsection*{Simple structure of the SAD algorithm}\label{sec4_2}
++The anomaly detection process starts with unlabeled data from the first
++partition. Every detector supplies a normal (0) or anomalous (1) vote for
++each observation. The total $U_{Total}$ is compared with $T_{AD}$ to identify
++potential frauds. Expert opinions then provide labels for training the
++supervised models. At the end of each subsequent partition, the models are
++updated with newly verified observations.
++
++The balanced set $E'_1$ trains each model in $ML\ SET$, forming $TS_1$.
++All observations in $D_2$ are then classified using those trained models.
++Each model contributes one vote; if their sum reaches $T_{ML}$, the
++observation is flagged for expert review. Balancing and model updating are
++repeated for subsequent partitions as stated in Algorithm \ref{algo:simple}.
++\rev{Simple-A uses the nine anomaly detectors above. Simple-B adds EAD as
++a tenth vote in the same initial consensus. Their common integer threshold
++therefore corresponds to different vote fractions; this architecture
++comparison does not hold the initial review budget exactly constant.}
++
++% BEGIN INCLUDED algorithms/simple.tex
++\begin{algorithm}[htbp]
++\footnotesize
++\caption{Simple structure of the SAD algorithm}\label{algo:simple}
++\begin{algorithmic}[1]
++\REQUIRE $D$; $AD\ SET=(AD_1,\ldots,AD_N)$; $ML\ SET=(ML_1,\ldots,ML_M)$;
++\STATE \hspace{1em} thresholds $T_{AD},T_{ML}$; expert verification; sampling percentage $PN$
++\ENSURE Trained models and potential frauds in each partition
++\STATE Preprocess and partition $D$ using Algorithm \ref{algo:preprocessing}.
++\STATE Apply $AD\ SET$ to $D_1$ to obtain binary votes $U_1(x),\ldots,U_N(x)$.
++\FOR{each row $x$ of $D_1$}
++\STATE Set $U_{Total}(x)=\sum_{k=1}^{N}U_k(x)$.
++\IF{$U_{Total}(x)\geq T_{AD}$}
++\STATE Label $x$ as Potential Fraud.
++\ELSE
++\STATE Label $x$ as Potential Normal.
++\ENDIF
++\ENDFOR
++\STATE Create $F_1$ as all Potential Fraud rows in $D_1$.
++\STATE Sample $G_1$ randomly from $D_1\setminus F_1$ at percentage $PN$.
++\STATE \rev{Verify both $F_1$ and $G_1$; receive labeled set $E_1$; set $L_1=E_1$.}
++\STATE Create balanced training data $E'_1=SMOTE(L_1)$.
++\STATE Train all models in $ML\ SET$ on $E'_1$; denote them $TS_1$.
++\FOR{$j=2,\ldots,m$}
++\STATE Use $TS_{j-1}$ to predict all of $D_j$ before verification.
++\FOR{each row $x$ of $D_j$}
++\STATE Store model votes $V_1(x),\ldots,V_M(x)$ and sum $V_{Total}(x)$.
++\STATE If $V_{Total}(x)\geq T_{ML}$, label Potential Fraud; otherwise Potential Normal.
++\ENDFOR
++\STATE Create alert set $F_j$ and random non-alert sample $G_j$ at percentage $PN$.
++\STATE \rev{Save all predictions; verify $F_j\cup G_j$ to obtain $E_j$.}
++\IF{$j<m$}
++\STATE \rev{Set $L_j=L_{j-1}\cup E_j$ using only real verified records.}
++\STATE Create $E'_j=SMOTE(L_j)$; retrain all models to obtain $TS_j$.
++\ENDIF
++\ENDFOR
++\end{algorithmic}
+ \end{algorithm}
+ 
+-
+-\subsubsection*{Multilayered structure of the SAD algorithm}
+-\label{sec4_3} The Multilayered structure of the SAD algorithm processes data from the
+-preprocessing algorithm \ref{algo:preprocessing}, identifying
+-anomalies in the unlabeled first section data through voting-based
+-labeling. It then predicts new instances in subsequent sections
+-using machine learning methods and updates models with expert
+-feedback at the end of each section.
+-
+-The structure's inputs include: the number of machine learning
+-models, anomaly detection methods, minimum votes for machine
+-learning models and anomaly detection methods, the set of machine
+-learning models and anomaly detection methods, and the dataset
+-provided to the preprocessing algorithm \ref{algo:preprocessing}.
+-
+-In the first step, all first-section data is processed by anomaly
+-detection methods. Each observation and method is labeled as
+-normal (0) or anomalous (1) based on the method's assessment.
+-
+-In the subsequent step, the sum of labels from each method is
+-calculated for every observation in the first section, denoted as
+-$U_{Total}$. If $U_{Total}$ exceeds the threshold $T_{AD}$, the
+-observation is flagged as suspicious; otherwise, it is considered
+-normal.
+-
+-The set $Y_1$ comprises all observations suspected of fraud. These
+-observations undergo re-examination using the entropy method
+-$EAD$. If $EAD$ also identifies them as suspicious, they are
+-included in the dataset $F_1$ for expert review. After expert
+-analysis, each observation receives a new label indicating
+-fraudulence (0 or 1), forming the set $E_1$.
+-
+-
+-The set $E_1$ likely contains imbalanced labels, necessitating
+-balancing for effective use in machine learning models. To achieve
+-better balance, $PN$ percent of normal data from the first section is
+-combined with $E_1$, yielding the balanced set $E'_1$. This
+-balanced set can then be utilized for training machine learning
+-models.
+-
+-Each machine learning model is trained on the balanced dataset
+-$E'_1$ and then classifies observations in the second data section.
+-If the total votes for an observation surpass $T_{ML}$, it is
+-flagged as an outlier for expert review. Datasets are balanced and
+-models updated iteratively for subsequent sections, maintaining
+-optimal performance and up-to-date models throughout the process.
+-
+-
+-\begin{algorithm}[H]
+-    \tiny
+-%   \begin{tikzpicture}[overlay, remember picture]
+-%       \draw [black, thick] ($(current page.south west) + (1.5,18.3 + 8/72)$) -- ($(current page.north west) + (1.5,-2.2 + 8/72)$) node[midway, above, sloped] {Descriptive layer};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,15 + 8/72)$) -- ($(current page.north west) + (1.5,-10 + 8/72)$) node[midway, above, sloped] {Entropy};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,13.3 + 8/72)$) -- ($(current page.north west) + (1.5,-13.2 + 8/72)$) node[midway, above, sloped] {RL};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,11.7 + 8/72)$) -- ($(current page.north west) + (1.5,-14.9 + 8/72)$) node[midway, above, sloped] {ML};
+-%
+-%       \draw [black, thick] ($(current page.south west) + (1.5,3 + 8/72)$) -- ($(current page.north west) + (1.5,-16.6 + 8/72)$) node[midway, above, sloped] {Updating Layer};
+-%   \end{tikzpicture}
+-
+-    \caption{Multilayered structure of the SAD algorithm}\label{algo:multilayer}
+-    \begin{algorithmic}
+-        \STATE \textbf{inputs} : Dataset D , AD SET , ML SET , Expert opinion , PN
+-        \STATE \textbf{outputs}  : trained models , potential frauds
+-        %%\STATE m $\gets$ Number of partitions of the input dataset.
+-        \STATE $N \gets$ number of anomaly detection methods.
+-        \STATE $M \gets$ number of machine learning models.
+-        \STATE AD SET $\gets$ ($AD_1 , \cdots , AD_{N} $)
+-        \STATE ML SET  $\gets$ ($ML_1 , \cdots , ML_{M} $)
+-        \STATE $T_{AD} \gets$ Threshold number of voting for anomaly detection methods
+-        \STATE $T_{ML} \gets$ Threshold number of voting for machine learning models
+-        \STATE PreProcessing on the input dataset $D$ which is described in Algorithm \ref{algo:preprocessing}
+-        %%\STATE Partition the input dataset $D$ into $D_1 , D_2 , ... , D_m$
+-        \STATE Store the result of anomaly detection methods of AD SET on $D_1$  into $U_{1} , \cdots , U_{N}$ (0 for normal \& 1 for anomaly).
+-        \FOR{Each row of $D_1$}
+-        \STATE Set $U_{Total} = \sum_{i = 1}^{N}{U_{i}}$
+-        \IF{$U_{Total} \ge T_{AD}$}
+-        \STATE Add this row into the set $Y_1$
+-        \ELSE
+-        \STATE Label the row as Potential Normal
+-        \ENDIF
+-        \ENDFOR
+-        \FOR{Each row of $Y_1$}
+-        \STATE Store the result of EAD method into $C_1$
+-        \IF{$C_{1} = 1$}
+-        \STATE Label the row as Potential Fraud
+-        \ELSE
+-        \STATE Label the row as Potential Normal
+-        \ENDIF
+-        \ENDFOR
+-        \STATE Create $F_1$ dataset as the subset of $Y_1$  for which labeled as Potential Fraud.
+-        \STATE Send $F_1$ dataset for experts.
+-        \STATE Receive the opinion of experts on $F_1$ dataset as $E_1$
+-        \STATE Create $E^\prime_1$ as oversampling SMOTE model of $E_1 \cup G_1$  where $G_1$ is a random subset of size PN\% of $D_1$ for which labeled as Potential Normal
+-        \FOR{each Model of ML SET}
+-        \STATE Learn the Model with $E^\prime_1$ Dataset as training set.
+-        \ENDFOR
+-        \STATE Set trained models as $TS_1$
+-        \FOR{j from 2 to m}
+-        \FOR{each row of $D_j$}
+-        \STATE Use $TS_{j-1}$ for prediction on $D_j$ as tast set.
+-        \STATE Store the response prediction of  $TS_{j-1}$ on $D_j$  into $V_{1} , \cdots , V_{M}$ (0 for normal \& 1 for anomaly).
+-        \STATE Set $V_{Total} = \sum_{i = 1}^{M}{V_{i}}$
+-        \IF{$V_{Total} \ge T_{ML}$}
+-        \STATE Label the row as Potential Fraud
+-        \ELSE
+-        \STATE Label the row as Potential Normal
+-        \ENDIF
+-        \STATE Create $F_j$ dataset as the subset of $D_j$  for which labeled as Potential Fraud.
+-        \STATE Send $F_j$ dataset for experts.
+-        \STATE Receive the opinion of experts on $F_j$ dataset as $E_j$
+-        \STATE Create $E^\prime_j$ as oversampling SMOTE model of $E_j \cup G_j\, \cup E^\prime_{j-1} \, $  where $G_j$ is a random subset of size PN\% of $D_j$ for which labeled as Potential Normal
+-        \FOR{each Models of ML SET}
+-        \STATE Learn the Model with $E^\prime_j$ Dataset as training set.
+-        \ENDFOR
+-        \STATE Set trained models as $TS_j$
+-        \ENDFOR
+-        \ENDFOR
+-    \end{algorithmic}
++% END INCLUDED algorithms/simple.tex
++
++
++\subsubsection*{Multilayered structure of the SAD algorithm}\label{sec4_3}
++The multilayered structure also starts with anomaly-detector votes on the
++first partition. Their sum identifies a candidate set $Y_1$. These
++candidates undergo re-examination using EAD, and only those also selected
++by EAD enter the alert set $F_1$. Expert verification supplies the labels
++used for balancing and supervised training. Subsequent partitions use the
++same voting, verification and updating cycle as the simple structure.
++
++\rev{Thus the extra layer changes the initial acquisition set, rather
++than merely adding another learner to the final supervised ensemble.
++The entropy bins and scores are computed within $Y_1$; screening the
++candidate subset is not equivalent to applying the full-$D_1$ entropy
++ranking unchanged. Algorithm \ref{algo:multilayer} preserves the original
++candidate-to-entropy ordering and makes this distinction explicit.}
++
++% BEGIN INCLUDED algorithms/multilayer.tex
++\begin{algorithm}[htbp]
++\footnotesize
++\caption{Multilayered structure of the SAD algorithm}\label{algo:multilayer}
++\begin{algorithmic}[1]
++\REQUIRE $D$; nine-detector $AD\ SET$; $ML\ SET$; $T_{AD},T_{ML}$;
++\STATE \hspace{1em} expert verification; sampling percentage $PN$; entropy retention fraction $q$
++\ENSURE Trained models and potential frauds in each partition
++\STATE Preprocess and partition $D$ using Algorithm \ref{algo:preprocessing}.
++\STATE Apply the $N=9$ detectors to $D_1$; initialize $Y_1=\varnothing$.
++\FOR{each row $x$ of $D_1$}
++\STATE Set $U_{Total}(x)=\sum_{k=1}^{N}U_k(x)$.
++\IF{$U_{Total}(x)\geq T_{AD}$}
++\STATE Add $x$ to candidate set $Y_1$.
++\ENDIF
++\ENDFOR
++\STATE \rev{Compute candidate-local $Gain(x;Y_1)$ using Equation \ref{eq:entropy}.}
++\STATE \rev{Set $C_1(x)=1$ for the highest $q$ fraction of scores within $Y_1$.}
++\STATE Create $F_1=\{x\in Y_1:C_1(x)=1\}$; all other rows are Potential Normal.
++\STATE Sample $G_1$ randomly from $D_1\setminus F_1$ at percentage $PN$.
++\STATE \rev{Verify $F_1\cup G_1$; receive labeled $E_1$ and set $L_1=E_1$.}
++\STATE Create $E'_1=SMOTE(L_1)$; train $ML\ SET$ to obtain $TS_1$.
++\FOR{$j=2,\ldots,m$}
++\STATE Use $TS_{j-1}$ to predict all of $D_j$ before verification.
++\FOR{each row $x$ of $D_j$}
++\STATE Store model votes $V_1(x),\ldots,V_M(x)$ and sum $V_{Total}(x)$.
++\STATE If $V_{Total}(x)\geq T_{ML}$, label Potential Fraud; otherwise Potential Normal.
++\ENDFOR
++\STATE Create alert set $F_j$ and random non-alert sample $G_j$ at percentage $PN$.
++\STATE \rev{Save all predictions; verify $F_j\cup G_j$ to obtain $E_j$.}
++\IF{$j<m$}
++\STATE \rev{Set $L_j=L_{j-1}\cup E_j$ using only real verified records.}
++\STATE Create $E'_j=SMOTE(L_j)$; retrain $ML\ SET$ to obtain $TS_j$.
++\ENDIF
++\ENDFOR
++\end{algorithmic}
+ \end{algorithm}
+ 
++% END INCLUDED algorithms/multilayer.tex
++
++
++\begin{revised}
++The batch order is sequential in information access, not necessarily in
++calendar time. Every prediction in $D_j$ is saved before $E_j$ is revealed.
++Updating occurs once after the complete batch, outside the row-wise voting
++loop. No update is required after $D_m$ because there is no later evaluated
++prediction. These specifications correct ambiguities in the earlier
++pseudocode while retaining its anomaly--verification--learning architecture.
++\end{revised}
++
+ \subsection{EVALUATION}\label{SSC:EVAL}
+-At each stage of the algorithm, we can validate the models after
+-receiving expert opinions. Different criteria are used for
+-evaluating algorithms, and here, we have used three criteria:
+-accuracy, recall, and F1, which we will introduce below.
+-
+-\textbf{\small Accuracy/Weighted Recall metric:} Accuracy measures
+-the ratio of correctly predicted instances to the total number of
+-instances. It is calculated as $Acc=\frac{TP+TN}{TP+TN+FP+FN}$,
+-where TP and TN represent true positives and true negatives
+-(correct predictions), while FP and FN denote false positives and
+-false negatives (incorrect predictions), respectively \cite{A3}.
+-
+-\textbf{\small F1-score  metric:} F1-score represents the harmonic
+-mean of precision and recall. It is calculated as
+-$F1=\frac{2\times P S\times R S}{PS+RS}$, providing a balanced
+-measure of both precision and recall \cite{A3}. Higher
+-F1-scores indicate better model performance, considering both
+-false positives and false negatives.
+-
+-    \textbf{Recall/Sensitivity  metric:} Recall measures the ratio of correctly predicted positive
+-instances to the total number of positive instances. It is
+-calculated as $RS\ or\ Recall\ Score=\frac{TP}{TP+FN}$, where TP
+-and FN represent true positives and false negatives, respectively
+-\cite{A3}. Higher recall indicates a better
+-ability to identify positive instances.
+-
+-
+-\section{Real Data Application}\label{SC:RESULT}
+-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-Now, we demonstrate the practical application of our potential
+-anomaly detection framework using real-world datasets. This
+-involves integrating the anomaly detection methods, machine
+-learning techniques, and evaluation metrics discussed earlier to
+-create a comprehensive approach for identifying fraudulent
+-transactions. The implementation showcases the effectiveness of
+-our method in handling imbalanced datasets and adapting to
+-evolving data patterns, ultimately enhancing the accuracy and
+-reliability of fraud detection in various application domains.
++The original evaluation criteria are accuracy, recall and F1.
++\rev{We explicitly define fraud ($y=1$) as the positive class and add
++precision, specificity, balanced accuracy and ranking metrics because
++accuracy alone can obscure minority-class performance \citep{Saito2015,He2009}.}
++Let $TP,TN,FP,FN$ denote the confusion counts for that class.
++
++\textbf{Accuracy metric:} Accuracy is the fraction of correctly classified
++observations:
++\[
++Acc=\frac{TP+TN}{TP+TN+FP+FN}.
++\]
++\textbf{F1-score metric:} With precision $PS=TP/(TP+FP)$ and recall
++$RS=TP/(TP+FN)$, the harmonic mean is
++\[
++F1=\frac{2PS\,RS}{PS+RS}.
++\]
++\textbf{Recall/Sensitivity metric:} Recall $RS$ measures the fraction of
++recorded frauds correctly flagged by the model.
++
++\begin{revised}
++Specificity is $TN/(TN+FP)$ and balanced accuracy is the mean of specificity
++and recall. ROC--AUC uses the continuous score. Average precision (AP),
++stored as \texttt{pr\_auc} in the exports, is the stepwise precision--recall
++area $\sum_k(R_k-R_{k-1})P_k$, not trapezoidal interpolation. Zero denominators
++in precision/F1 are assigned zero. Full held-out stored outcomes are used
++only for retrospective scoring, including outcomes not acquired for training.
++
++The alert rate is $|F_j|/|D_j|$; the review rate is
++$(|F_j|+|G_j|)/|D_j|$. Final-batch review is counted as workload, although its
++outcomes train no evaluated model. We pool $D_2$--$D_4$ within each seed and
++report means and sample standard deviations over ten seeds. These repeated
++splits reuse observations: their standard deviations describe split
++variability and are not independent-sample confidence intervals.
++\paragraph{AI assistance.}
++ChatGPT (OpenAI) assisted with manuscript editing and revision of the
++analysis and plotting scripts. The authors retain responsibility for the
++code, results and final text.
++\end{revised}
++
++% END INCLUDED sections/03_methods.tex
++
++\begin{revised}
++
++% BEGIN INCLUDED sections/04_results.tex
++\section{Real Data Application}\label{SC:RESULT}\label{sec:results}
++The experiments apply the SAD components defined in Section
++\ref{SC:METHOD} to two insurance-claims benchmarks. The evaluation compares
++the retained architectures, individual classifiers, a frozen-model control
++and two joint threshold settings.
+ 
+ \subsection*{Carclaims dataset}
+-The \textbf{\small Auto Insurance Claims Fraud Detection} dataset
+-on Kaggle, compiled by Anto Pravin John Bosco, contains records to
+-identify fraudulent insurance claims. It includes various features
+-related to automobile insurance policies and claims, allowing the
+-application of machine-learning techniques for anomaly detection.
+-The dataset, comprising 15,420 observations and 31 features,
+-serves as a valuable resource for developing fraud detection
+-models in the insurance industry. Note that our dataset includes
+-the binary variable of cheating \cite{dataset}.
+-
+-    \begin{table}[H]
+-        \centering
+-        \small
+-        \caption{Frequency table for some of categorical variables}
+-        \scriptsize
+-        \begin{tabular}{lrrr}
+-            \hline
+-            \multicolumn{1}{c}{Feature} & \multicolumn{1}{c}{Category} & \multicolumn{1}{c}{Percent of Category} &\multicolumn{1}{c}{Frequency} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{2}{*}{Sex}} & \multicolumn{1}{c}{Female} & \multicolumn{1}{c}{15.69}  &\multicolumn{1}{c}{2420} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Male} & \multicolumn{1}{c}{84.31}  &\multicolumn{1}{c}{13000} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{4}{*}{MaritalStatus}} & \multicolumn{1}{c}{Divorced} & \multicolumn{1}{c}{0.49}  &\multicolumn{1}{c}{76} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Married} & \multicolumn{1}{c}{68.90} &\multicolumn{1}{c}{10625} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Single} & \multicolumn{1}{c}{30.38}  &\multicolumn{1}{c}{4684} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Widow} & \multicolumn{1}{c}{0.23}  &\multicolumn{1}{c}{35} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{VehicleCategory}} & \multicolumn{1}{c}{Sedan} & \multicolumn{1}{c}{62.72} &\multicolumn{1}{c}{9671} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Sport} & \multicolumn{1}{c}{34.75}  &\multicolumn{1}{c}{5358} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Utility} & \multicolumn{1}{c}{2.54} &\multicolumn{1}{c}{391} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{4}{*}{DriverRating}} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{25.58}  &\multicolumn{1}{c}{3944} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{24.65}  &\multicolumn{1}{c}{3801} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{25.19}  &\multicolumn{1}{c}{3884} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{24.58}  &\multicolumn{1}{c}{3791} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{2}{*}{FraudFound}} & \multicolumn{1}{c}{No} & \multicolumn{1}{c}{94.01}  &\multicolumn{1}{c}{14497} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{5.99}  &\multicolumn{1}{c}{923} \\
+-            \hline
+-        \end{tabular}
+-    \end{table}
+-
+-    \subsection*{Algorithm Specifications}
+-In this research, by implementing the structures and models as
+-mentioned below, we reached the following results.
+-    \begin{enumerate}
+-        \item Preprocessing Algorithm:\\
+-For all scenarios executed in this algorithm, the following values
+-have been considered: $$m = 4 , p_1 = 50\% , p_2 = 30\% , p_3 =
+-10\% , p_4 = 10\% $$
+-
+-        \item Simple Structure A:\\
+-This is the  Simple structure of the SAD algorithm where the set of machine learning
+-models and outlier detection methods are as follows:
+-        $PN = 10\%$,
+-        \\ AD SET $\gets$ (Box plot, Percentile, Z-Score, Hample filter, E-Grubs test, LOF, KNN, Isolation forest, KModes),\\ ML SET $\gets$ (LR, SVM, XGBoost, KNN, RF, Adaboost, NN).
+-
+-        \item Simple Structure B: \\
+-This is the Simple structure of the SAD algorithm where the set of machine learning
+-models and outlier detection methods are as follows: $PN =
+-10\%$,\\ AD SET $\gets$ (Box plot, Percentile, Z-Score, Hample
+-filter, E-Grubs test, LOF, KNN, Isolation forest, KModes, EAD),\\
+-ML SET $\gets$ (LR, SVM, XGBoost, KNN, RF, Adaboost, NN).
+-
+-        \item Multilayered structure of the SAD algorithm:\\ The set of machine learning models and outlier detection methods for this structure are as follows:\\
+-        $PN = 10\%$,\\ AD SET $\gets$ (Box plot, Percentile, Z-Score, Hample filter, E-Grubs test, LOF, KNN, Isolation forest, KModes, EAD),\\ ML SET $\gets$ (LR, SVM, XGBoost, KNN, RF, Adaboost, NN).
+-    \end{enumerate}
+-    \subsection*{Table of Evaluation Metrics}
+-    \begin{table}[H]
+-        \centering
+-        \label{table2}
+-        \caption{Evaluation metrics of different algorithms along with the proposed algorithm by different partitions and structures}
+-        \scriptsize
+-        \begin{tabular}{lrrrrrrrrrr}
+-            \hline
+-            &  & \multicolumn{3}{c}{Simple A} & \multicolumn{3}{c}{Simple B} & \multicolumn{3}{c}{Multilayer} \\
+-            \hline
+-            \multicolumn{1}{c}{ML Model} & \multicolumn{1}{c}{Partition} & Accuracy & F1 & \multicolumn{1}{c}{Recall}  & Accuracy & F1 & \multicolumn{1}{c}{Recall} & Accuracy & F1 & \multicolumn{1}{c}{Recall} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{Adaboost}} & \multicolumn{1}{c}{2} & 0.72 & 0.83 & \multicolumn{1}{c}{0.75}  & 0.74 & 0.85 & \multicolumn{1}{c}{0.77} & 0.82 & 0.90 & \multicolumn{1}{c}{0.86} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.69 & 0.81 & \multicolumn{1}{c}{0.72} & 0.72 & 0.83 & \multicolumn{1}{c}{0.75} & 0.81 & 0.89 & \multicolumn{1}{c}{0.84} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.72 & 0.83 & \multicolumn{1}{c}{0.75}  & 0.71 & 0.83 & \multicolumn{1}{c}{0.74}  & 0.84 & 0.91 & \multicolumn{1}{c}{0.88}  \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{KNN}} & \multicolumn{1}{c}{2} & 0.71 & 0.82 & \multicolumn{1}{c}{0.73}  & 0.69 & 0.81 & \multicolumn{1}{c}{0.72}  & 0.73 & 0.84 & \multicolumn{1}{c}{0.75}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.68 & 0.81 & \multicolumn{1}{c}{0.71} & 0.69 & 0.82 & \multicolumn{1}{c}{0.72}  & 0.77 & 0.86 & \multicolumn{1}{c}{0.80} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.72 & 0.84 & \multicolumn{1}{c}{0.75}  & 0.75 & 0.85 & \multicolumn{1}{c}{0.78} & 0.82 & 0.90 & \multicolumn{1}{c}{0.86} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{ML}} & \multicolumn{1}{c}{2} & 0.80 & 0.89 & \multicolumn{1}{c}{0.84} & 0.77 & 0.87 & \multicolumn{1}{c}{0.81} & 0.84 & 0.91 & \multicolumn{1}{c}{0.88} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.76 & 0.86 & \multicolumn{1}{c}{0.80} & 0.80 & 0.89 & \multicolumn{1}{c}{0.84}& 0.80 & 0.88 & \multicolumn{1}{c}{0.83}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.78 & 0.87 & \multicolumn{1}{c}{0.81} & 0.80 & 0.89 & \multicolumn{1}{c}{0.83} & 0.81 & 0.89 & \multicolumn{1}{c}{0.84}  \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{NB}} & \multicolumn{1}{c}{2} & 0.83 & 0.90 & \multicolumn{1}{c}{0.87} & 0.83 & 0.91 & \multicolumn{1}{c}{0.88}& 0.85 & 0.92 & \multicolumn{1}{c}{0.89}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.81 & 0.90 & \multicolumn{1}{c}{0.85} & 0.81 & 0.90 & \multicolumn{1}{c}{0.85} & 0.85 & 0.92 & \multicolumn{1}{c}{0.88}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.84 & 0.91 & \multicolumn{1}{c}{0.88} & 0.83 & 0.91 & \multicolumn{1}{c}{0.87} & 0.85 & 0.92 & \multicolumn{1}{c}{0.88} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{ANN}} & \multicolumn{1}{c}{2} & 0.81 & 0.89 & \multicolumn{1}{c}{0.85} & 0.78 & 0.87 & \multicolumn{1}{c}{0.81} & 0.83 & 0.91 & \multicolumn{1}{c}{0.87}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} &  0.78 & 0.88 & \multicolumn{1}{c}{0.82} & 0.81 & 0.89 & \multicolumn{1}{c}{0.85} & 0.87 & 0.93 & \multicolumn{1}{c}{0.91}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.79 & 0.88 & \multicolumn{1}{c}{0.82} & 0.80 & 0.89 & \multicolumn{1}{c}{0.84} & 0.85 & 0.92 & \multicolumn{1}{c}{0.89}  \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{RF}} & \multicolumn{1}{c}{2} & 0.87 & 0.93 & \multicolumn{1}{c}{0.92} & 0.86 & 0.93 & \multicolumn{1}{c}{0.92} & 0.93 & 0.96 & \multicolumn{1}{c}{0.99}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.89 & 0.94 & \multicolumn{1}{c}{0.94} & 0.89 & 0.94 & \multicolumn{1}{c}{0.94} & 0.94 & 0.97 & \multicolumn{1}{c}{0.99} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & \textbf{0.91} & 0.95 & \multicolumn{1}{c}{0.96} & \textbf{0.92} & 0.96 & \multicolumn{1}{c}{0.97} & \textbf{0.95} & 0.97 & \multicolumn{1}{c}{1.00} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{SVM}} & \multicolumn{1}{c}{2} & 0.80 & 0.89 & \multicolumn{1}{c}{0.84} & 0.78 & 0.87 & \multicolumn{1}{c}{0.82} & 0.78 & 0.88 & \multicolumn{1}{c}{0.85}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.74 & 0.85 & \multicolumn{1}{c}{0.78} & 0.79 & 0.88 & \multicolumn{1}{c}{0.83} & 0.72 & 0.84 & \multicolumn{1}{c}{0.75}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.78 & 0.87 & \multicolumn{1}{c}{0.81} & 0.80 & 0.89 & \multicolumn{1}{c}{0.83} & 0.77 & 0.87 & \multicolumn{1}{c}{0.80}   \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{XGBoost}} & \multicolumn{1}{c}{2} & 0.82 & 0.90 & \multicolumn{1}{c}{0.87} & 0.79 & 0.88 & \multicolumn{1}{c}{0.83} & 0.71 & 0.83 & \multicolumn{1}{c}{0.74}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & 0.84 & 0.91 & \multicolumn{1}{c}{0.88} & 0.85 & 0.92 & \multicolumn{1}{c}{0.90} & 0.78 & 0.87 & \multicolumn{1}{c}{0.80}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & 0.83 & 0.91 & \multicolumn{1}{c}{0.87} & 0.86 & 0.92 & \multicolumn{1}{c}{0.91} & 0.71 & 0.83 & \multicolumn{1}{c}{0.74}  \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{SAD}} & \multicolumn{1}{c}{2} & \textbf{0.88} & 0.94 & \multicolumn{1}{c}{0.93} & \textbf{0.89} & 0.94 & \multicolumn{1}{c}{0.95} & \textbf{0.93} & 0.96 & \multicolumn{1}{c}{0.99}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3} & \textbf{0.89} & 0.94 & \multicolumn{1}{c}{0.94} & \textbf{0.91} & 0.95 & \multicolumn{1}{c}{0.96} & \textbf{0.94} & 0.97 & \multicolumn{1}{c}{0.99}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4} & \textbf{0.94} & \textbf{0.97} & \multicolumn{1}{c}{0.99} & \textbf{0.94} & \textbf{0.97} & \multicolumn{1}{c}{\textbf{0.99}} & \textbf{0.95} & \textbf{0.97} & \multicolumn{1}{c}{\textbf{1.00}}  \\
+-            \hline
+-        \end{tabular}
+-    \end{table}
+-    As you can see in Table \ref{table2}, the SAD model has performed very well compared to other models. The models were examined in terms of accuracy, F1 and Recall in three simple A, simple B and Multilayered structure of the SAD algorithm. After the SAD model, the random forest model had the highest performance. As the cycle and process progresses, that is, from partition 2 onwards, we see an increase in accuracy, etc., in the majority of models, because as we move forward, the model learns more and becomes stronger. From the point of view of the structure, the multi-layer structure has performed better, and according to table \ref{table1}, it has had a much shorter duration than the other two structures.For example, the highest performance in all cases is for the fourth partition of the SAD model and the Multilayered structure of the SAD algorithm, where the accuracy, F1, and recall are 95\%, 97\%, and 100\%, respectively.
+-    \begin{table}[H]
+-        \centering
+-        \label{table3}
+-        \caption{Evaluation metric of SAD algorithm for different threshold values and different structures}
+-        \scriptsize
+-        \begin{tabular}{rrrrrrrrrrr}
+-            \hline
+-            &&\multicolumn{3}{c}{Simple A} &  \multicolumn{3}{c}{Simple B} &  \multicolumn{3}{c}{MultiLayer} \\
+-            \hline
+-            \multicolumn{1}{c}{$T_{ML}$} & \multicolumn{1}{c}{$T_{AD}$} & F1 & Recall & \multicolumn{1}{c}{Accuracy}  & F1 & Recall & \multicolumn{1}{c}{Accuracy}  & F1 & Recall & \multicolumn{1}{c}{Accuracy}\\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{5}{*}{3}} & \multicolumn{1}{c}{1}& 0.54 & 0.38 & \multicolumn{1}{c}{\textbf{0.39}} & 0.54 & 0.38 & \multicolumn{1}{c}{0.39}  & 0.78 & 0.67 & \multicolumn{1}{c}{0.65} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{2}& 0.57 & 0.41 & \multicolumn{1}{c}{\textbf{0.42}} & 0.60 & 0.44 & \multicolumn{1}{c}{0.45} & 0.79 & 0.67 & \multicolumn{1}{c}{0.65} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3}& 0.77 & 0.64 & \multicolumn{1}{c}{\textbf{0.63}} & 0.77 & 0.54 & \multicolumn{1}{c}{0.54} & 0.79 & 0.67 & \multicolumn{1}{c}{0.66}\\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4}& 0.84 & 0.75 & \multicolumn{1}{c}{\textbf{0.72}} & 0.69 & 0.78 & \multicolumn{1}{c}{0.75} & 0.84 & 0.76 & \multicolumn{1}{c}{0.73} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{5}& 0.88 & 0.82 & \multicolumn{1}{c}{\textbf{0.79}} & 0.85 & 0.79 & \multicolumn{1}{c}{\textbf{0.76}} & 0.84 & 0.76 & \multicolumn{1}{c}{\textbf{0.73}} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{5}{*}{4}} & \multicolumn{1}{c}{1}& 0.72 & 0.58 & \multicolumn{1}{c}{0.57}& 0.68 & 0.54 & \multicolumn{1}{c}{0.53}& 0.87 & 0.81 & \multicolumn{1}{c}{0.78} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{2}& 0.75 & 0.62 & \multicolumn{1}{c}{0.61} & 0.72 & 0.58 & \multicolumn{1}{c}{0.57} & 0.87 & 0.80 & \multicolumn{1}{c}{0.77}   \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3}& 0.88 & 0.82 & \multicolumn{1}{c}{0.79} & 0.80 & 0.69 & \multicolumn{1}{c}{0.67} & 0.92 & 0.89 & \multicolumn{1}{c}{0.85}   \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4}& 0.91 & 0.87 & \multicolumn{1}{c}{0.83} & 0.90 & 0.86 & \multicolumn{1}{c}{0.82} & 0.92 & 0.89 & \multicolumn{1}{c}{0.84}   \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{5}& 0.92 & 0.90 & \multicolumn{1}{c}{\textbf{0.86}} & 0.92 & 0.89 & \multicolumn{1}{c}{\textbf{0.85}} & 0.92 & 0.90 & \multicolumn{1}{c}{\textbf{0.85}} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{5}{*}{5}} & \multicolumn{1}{c}{1}& 0.82 & 0.73 & \multicolumn{1}{c}{0.70} & 0.80 & 0.69 & \multicolumn{1}{c}{0.67} & 0.93 & 0.91 & \multicolumn{1}{c}{0.87} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{2}& 0.81 & 0.71 & \multicolumn{1}{c}{0.68} & 0.82 & 0.73 & \multicolumn{1}{c}{0.70} & 0.94 & 0.92 & \multicolumn{1}{c}{0.88} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3}& 0.91 & 0.88 & \multicolumn{1}{c}{0.83} & 0.88 & 0.82 & \multicolumn{1}{c}{0.79} & 0.95 & 0.96 & \multicolumn{1}{c}{0.91} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4}& 0.94 & 0.93 & \multicolumn{1}{c}{0.88} & 0.93 & 0.92 & \multicolumn{1}{c}{0.88} & 0.95 & 0.95 & \multicolumn{1}{c}{0.90}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{5}& 0.94 & 0.94 & \multicolumn{1}{c}{\textbf{0.89}} & 0.94 & 0.94 & \multicolumn{1}{c}{\textbf{0.89}} & 0.96 & 0.98 & \multicolumn{1}{c}{\textbf{0.93}}  \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{5}{*}{6}} & \multicolumn{1}{c}{1}& 0.88 & 0.82 & \multicolumn{1}{c}{0.78} & 0.87 & 0.81 & \multicolumn{1}{c}{0.78} & 0.96 & 0.97 & \multicolumn{1}{c}{0.92}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{2}& 0.87 & 0.80 & \multicolumn{1}{c}{0.77} & 0.88 & 0.82 & \multicolumn{1}{c}{0.78} & 0.96 & 0.97 & \multicolumn{1}{c}{0.92}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3}& 0.94 & 0.94 & \multicolumn{1}{c}{0.90} & 0.93 & 0.92 & \multicolumn{1}{c}{0.87}  & 0.97 & 0.99 & \multicolumn{1}{c}{0.94} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4}& 0.95 & 0.96 & \multicolumn{1}{c}{0.91} & 0.95 & 0.96 & \multicolumn{1}{c}{0.91} & 0.97 & 1.00 & \multicolumn{1}{c}{0.94}   \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{5}& 0.96 & 0.98 & \multicolumn{1}{c}{\textbf{0.92}} & 0.96 & 0.97 & \multicolumn{1}{c}{\textbf{0.92}} & 0.97 & 1.00 & \multicolumn{1}{c}{\textbf{0.95}}  \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{5}{*}{7}} & \multicolumn{1}{c}{1}& 0.94 & 0.95 & \multicolumn{1}{c}{0.90} & 0.94 & 0.92 & \multicolumn{1}{c}{0.88} & 0.97 & 0.99 & \multicolumn{1}{c}{0.94}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{2}& 0.94 & 0.93 & \multicolumn{1}{c}{0.88} & 0.93 & 0.91 & \multicolumn{1}{c}{0.87} & 0.97 & 1.00 & \multicolumn{1}{c}{0.94}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{3}& 0.96 & 0.97 & \multicolumn{1}{c}{0.92} & 0.96 & 0.96 & \multicolumn{1}{c}{0.92} & 0.97 & 1.00 & \multicolumn{1}{c}{0.94}  \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{4}& 0.97 & 0.99 & \multicolumn{1}{c}{0.94} & 0.97 & 0.97 & \multicolumn{1}{c}{0.94} & 0.97 & 1.00 & \multicolumn{1}{c}{0.95}   \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{5}& 0.97 & 0.99 & \multicolumn{1}{c}{\textbf{0.94}} & 0.97 & 0.97 & \multicolumn{1}{c}{\textbf{0.94}} & 0.97 & 1.00 & \multicolumn{1}{c}{\textbf{0.94}} \\
+-            \hline
+-        \end{tabular}
+-    \end{table}
+-As demonstrated in Table 3, when $T_{ML}$ increases while $T_{AD}$
+-remains constant, we observe an improvement in accuracy, recall,
+-and F1-score. For instance, when $T_{ML}$ equals 3 and $T_{AD}$ is
+-set to 5, the accuracy in the simple structure A rises from 79\%
+-to 95\%, and in the Multilayered structure of the SAD algorithm, it increases from 73\%
+-to 94\%. This indicates a direct relationship between increasing
+-$T_{ML}$ and enhancing accuracy.
+-
+-Similarly, with a constant $T_{ML}$ and an increasing $T_{AD}$, we
+-notice a growth in accuracy. In simple structure A, when $T_{ML}$
+-is 3 and $T_{AD}$ increases from 1 to 5, accuracy also increases
+-from 39\% to 79\%, demonstrating a direct relationship between the
+-two parameters.
+-    %%FIG1
+-    \begin{center}
+-        \begin{figure}[H]%% placement specifier
+-            % Use \includegraphics command to insert graphic files. Place graphics files in
+-            %% working directory.
+-            \centering%% For centre alignment of image.
+-            \includegraphics[width=\textwidth]{Pictures/FIG1.JPEG}
+-            %% Use \caption command for figure caption and label.
+-            \caption{The trend of evaluation metric of $SAD$ algorithm respect to $T_{AD}$ in the second partition for $T_{ML} = 7 \,, M = 8 $ and different structures}\label{fig1}
+-            %https://en.wikibooks.org/wiki/LaTeX/Importing_Graphics#Importing_external_graphics
+-        \end{figure}
+-    \end{center}
+-In Figure \ref{fig1}, with $T_{ML}$ fixed at 7 for the first
+-partition, it becomes evident that accuracy exhibits a positive
+-correlation with $T_{AD}$. Specifically, in Simple-A and Simple-B
+-structures, an increase in $T_{AD}$ from 2 to 3 yields a
+-significant upward jump in accuracy. However, the Multilayered structure of the SAD algorithm generally outperforms the other two structures. This
+-trend of the multilayer structure's superior performance can also
+-be observed in the F1-score and Recall metrics.
+-
+-
+-    %%FIG2
+-
+-    \begin{center}
+-        \begin{figure}[H]%% placement specifier
+-
+-            \centering
+-            \includegraphics[width=\textwidth]{Pictures/FIG2.PNG}
+-
+-            \caption{The trend of evaluation metric of $SAD$ algorithm respect to $T_{ML}$ in the forth partition  for $T_{AD} = 5 \,, M = 8 $ and  different structures}\label{fig2}
+-
+-        \end{figure}
+-    \end{center}
+-
+-In Figure \ref{fig2}, with $T_{AD}$ set to 5 for the third
+-partition, we observe that accuracy demonstrates a positive
+-correlation with $T_{ML}$. In Simple-A and Simple-B structures, an
+-increase in $T_{ML}$ from 3 to 5 results in a noticeable upward
+-jump in accuracy. However, the Multilayered structure of the SAD algorithm consistently
+-outperforms the other two structures. Similar trends can be
+-observed for the F1-score and Recall metrics. Notably, in the
+-multilayer structure, the rate of change appears to stabilize when
+-$T_{ML}$ reaches 6 or higher.
+-
+-
+-
+-    %%FIG3
+-
+-    \begin{center}
+-        \begin{figure}[H]%% placement specifier
+-
+-            \centering
+-            \includegraphics[width=\textwidth]{Pictures/FIG3_1.PNG}
+-
+-            \caption{The trend of accuracy of algorithms respect to $T_{AD}$ in the second partition  for $T_{ML} = 7 \,, M = 8 $ and different structures.}\label{fig3_1}
+-
+-        \end{figure}
+-    \end{center}
+-
+-In Figure \ref{fig3_1}, with $T_{ML}$ fixed at 7 for the first
+-partition, the accuracy of various machine learning models within
+-different structures is depicted. It becomes evident that accuracy
+-shows a positive correlation with $T_{AD}$ across all machine
+-learning models. This suggests that increasing the anomaly
+-detection threshold generally improves the performance of these
+-models, regardless of the specific structure in which they
+-operate.
+-
+-In general, the Multilayered structure of the SAD algorithm consistently outperforms the
+-other two structures, demonstrating its superior performance.
+-Furthermore, among the various models analyzed, the SAD model
+-emerges as the top-performing model across all structures. This
+-highlights the effectiveness of the SAD model in anomaly detection
+-tasks within different structural contexts.
+-
+-    \begin{figure}[H]
+-        \centering%% For centre alignment of image.
+-       \includegraphics[width=\textwidth]{Pictures/FIG3_2.PNG}
+-        \caption{The trend of accuracy of structures respect to $T_{ML}$ in the forth partition  for $T_{AD} = 5 \,, M = 8 $ and different algorithms}\label{fig3_2}
+-    \end{figure}
+-
+-IIn Figure \ref{fig3_2}, with $T_{ML}$ set to 7 for the first
+-partition, the accuracy of various machine learning models within
+-different structures is presented. We observe that accuracy
+-generally exhibits a positive correlation with $T_{AD}$ across all
+-models. However, this correlation is less pronounced in the SAD
+-model, as its performance improvement is more closely tied to
+-increases in $T_{ML}$. Overall, the Multilayered structure of the SAD algorithm maintains
+-its superior performance compared to the other two structures,
+-while the SAD model continues to stand out among the other models
+-in terms of accuracy.
+-
+-
+-    %%FIG4
+-
+-    \begin{center}
+-        \begin{figure}[H]%% placement specifier
+-
+-            \centering
+-            \includegraphics[width=\textwidth]{Pictures/FIG4_1.PNG}
+-
+-            \caption{The trend of accuracy of algorithms respect to $T_{ML}$ in the forth partition  for $T_{AD} = 5 \,, M = 8 $ and  different structures.}\label{fig4_1}
+-
+-        \end{figure}
+-    \end{center}
+-
+-In Figure \ref{fig4_1}, with $T_{AD}$ set to 5 for the third
+-partition, we analyze the accuracy of various machine learning
+-models within different structures. The SAD model displays a
+-strong correlation between accuracy and $T_{ML}$, while other
+-machine learning models exhibit a weaker correlation or
+-fluctuations. Ultimately, the SAD model achieves higher accuracy
+-across all three structures, underscoring its superior
+-performance. Additionally, Random Forest and Logistic Regression
+-models also show some degree of independence from the correlation,
+-further highlighting the diverse performance characteristics of
+-these models within different structural contexts.
+-
+-
+-    \begin{figure}[H]
+-        \centering%% For centre alignment of image.
+-       \includegraphics[width=\textwidth]{Pictures/FIG4_2.PNG}
+-        \caption{The trend of accuracy of structures respect to $T_{ML}$ in the forth partition for $T_{AD} = 5 \,, M = 8 $ and different algorithms}\label{fig4_2}
+-    \end{figure}
+-
+-In Figure \ref{fig4_2}, with $T_{AD}$ fixed at 5 for the third
+-partition, the accuracy of various machine learning models within
+-different structures is depicted. The SAD model shows a positive
+-correlation between accuracy and $T_{ML}$, whereas other machine
+-learning models display a weaker correlation. This indicates that
+-the performance improvement in the SAD model is more directly
+-connected to increases in $T_{ML}$ compared to other models, which
+-rely more on $T_{AD}$ adjustments for performance enhancements.
+-
+-    %%FIG5
+-
+-    \begin{center}
+-        \begin{figure}[H]%% placement specifier
+-
+-            \centering
+-            \includegraphics[width=\textwidth]{Pictures/FIG5.PNG}
+-            \caption{ Number of potential frauds for different values of $T_{AD} \,, T_{ML}$ respect to partition number.  }\label{fig5}
+-        \end{figure}
+-    \end{center}
+-
+-As illustrated in Figure \ref{fig5}, for data sections ranging
+-from 1 to 4 with varying $T_{ML}$ values, a higher $T_{AD}$
+-results in fewer data points being sent to the insurance company
+-for further examination. As the system evolves and $T_{ML}$
+-progressively increases across sections, the number of data points
+-requiring expert review significantly decreases, indicating the
+-improved efficiency and accuracy of the anomaly detection system.
+-
+-For instance, with $T_{AD} = 5$ and $M = 8$ as parameter values,
+-the system can achieve high accuracy, comparable to that of the
+-SAD method shown in the figures and tables above, by submitting
+-merely 10\% (PN) of the data to the insurance company. This result
+-demonstrates a significant improvement in efficiency compared to
+-manually reviewing each case, ultimately saving time and resources
+-for the organization.
+-
+-        \begin{table}[H]
+-        \centering
+-        \label{table1}
+-        \caption{Elapsed times in each of the partitions with the SAD algorithm for  $T_{ML} = 7 \,, T_{AD} = 5 \,, M = 8$.}
+-        \scriptsize
+-        \begin{tabular}{llr}
+-            \hline
+-            \multicolumn{1}{c}{Partition} & \multicolumn{1}{c}{Structure} & \multicolumn{1}{c}{Time (minutes)} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{1}} & \multicolumn{1}{c}{Simple-A} & \multicolumn{1}{c}{0.53} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Simple-B} & \multicolumn{1}{c}{25.18} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Multilayer} & \multicolumn{1}{c}{1.78} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{2}} & \multicolumn{1}{c}{Simple-A} & \multicolumn{1}{c}{0.78} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Simple-B} & \multicolumn{1}{c}{1.03} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Multilayer} & \multicolumn{1}{c}{0.80} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{3}{*}{3}} & \multicolumn{1}{c}{Simple-A} & \multicolumn{1}{c}{0.06} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Simple-B} & \multicolumn{1}{c}{0.07} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Multilayer} & \multicolumn{1}{c}{0.06} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{4}{*}{4}} & \multicolumn{1}{c}{Simple-A} & \multicolumn{1}{c}{0.07} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Simple-B} & \multicolumn{1}{c}{0.09} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Multilayer} & \multicolumn{1}{c}{0.07} \\
+-            \hline
+-            \multicolumn{1}{c}{\multirow{4}{*}{Total}} & \multicolumn{1}{c}{Simple-A} & \multicolumn{1}{c}{1.43} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Simple-B} & \multicolumn{1}{c}{26.38} \\
+-            \multicolumn{1}{c}{} & \multicolumn{1}{c}{Multilayer} & \multicolumn{1}{c}{2.71} \\
+-            \hline
+-        \end{tabular}
+-    \end{table}
+-Table \ref{table1} shows that the first partition requires more
+-time due to higher data volume and entropy structure
+-implementation. Simple Structure A is faster due to the absence of
+-the entropy method, while Simple Structure B takes longer despite
+-using entropy. The  Multilayered structure of the SAD algorithm significantly reduces time
+-from 25.18 minutes to 1.78 minutes with an entropy filter layer.
+-In partitions 2 to 4, no significant differences are observed
+-between models due to the same $ML\, SET$ implementation. The
+-upcoming section provides a conclusion and recommendations for
+-further exploration in this field.
+-
+-\section{CONCLUSION}\label{SC:CONCLUSION}
+-This study leveraged artificial intelligence and reinforcement
+-learning to detect insurance fraud. Various algorithms and
+-structures, including statistical methods and machine learning
+-models, were presented, leading to the following key findings:
+-({\bf 1}) Due to time constraints, the entropy method and
+-information theory are unsuitable for the Simple-B structure, as
+-all observations in the first data section must be reviewed by the
+-entire $AD\, SET$; ({\bf 2}) Higher $T_{AD}$ and $T_{ML}$ parameters
+-improve accuracy across all structures, with more methods employed
+-in the initial voting process; ({\bf 3}) Increasing $T_{AD}$
+-reduces the number of observations sent for expert review, while
+-raising $T_{ML}$ decreases the amount of data sent from the third
+-section onwards; ({\bf 4}) The SAD method provides the best
+-accuracy within the dataset, followed by the Random Forest model;
+-({\bf 5}) Increasing $T_{AD}$ significantly improves accuracy in
+-the second section, while increasing $T_{ML}$ primarily benefits
+-the SAD method; ({\bf 6}) The same observations on accuracy also
+-apply to recall and F1 score.
+-
+-Recommendations for future research include optimizing utilized
+-models, exploring different $ML\, SET$s, employing various $AD\, SET $s, and e	xamining diverse logistic regression models. Weighted
+-voting may also enhance the structures' effectiveness, allowing
+-more established models and methods to have a greater influence in
+-the voting process.
+-
+-\baselineskip12pt
+-\bibliographystyle{apalike}    % Choose your desired style
+-\bibliography{refs.bib}
+-
++Carclaims contains 15,420 records, 32 original predictors and 923 recorded
++frauds (5.99\%) \citep{dataset}. The original descriptive frequency table
++is retained and regenerated from the supplied data in Table \ref{tab:frequency}.
++
++% BEGIN INCLUDED generated/table_frequency.tex
++\begin{table}[tbp]\centering\footnotesize
++\caption{Frequency table for selected categorical variables in Carclaims. Original descriptive variables are retained; percentages are recomputed from the supplied file.}\label{tab:frequency}
++\begin{tabular}{llrr}\toprule Feature & Category & Percent & Frequency\\\midrule
++Sex & Female & 15.69 & 2,420\\
++ & Male & 84.31 & 13,000\\
++MaritalStatus & Divorced & 0.49 & 76\\
++ & Married & 68.90 & 10,625\\
++ & Single & 30.38 & 4,684\\
++ & Widow & 0.23 & 35\\
++VehicleCategory & Sedan & 62.72 & 9,671\\
++ & Sport & 34.75 & 5,358\\
++ & Utility & 2.54 & 391\\
++DriverRating & 1 & 25.58 & 3,944\\
++ & 2 & 24.65 & 3,801\\
++ & 3 & 25.19 & 3,884\\
++ & 4 & 24.58 & 3,791\\
++FraudFound & No & 94.01 & 14,497\\
++ & Yes & 5.99 & 923\\
++\bottomrule\end{tabular}\end{table}
++
++% END INCLUDED generated/table_frequency.tex
++
++
++\subsection{Additional dataset and replication scope}\label{sec:seconddata}
++Insurance Claims is available through the Kaggle dataset published by
++\texttt{mexwell} \citep{insuranceclaims}, the source identified for the
++second file supplied in the research archive. The analyzed file contains
++1,000 records, 38 original predictors and 247 recorded frauds (24.70\%).
++Its schema, record count and contents differ from Carclaims.
++The differently named \texttt{fraud\_oracle.csv} is a duplicate
++representation of Carclaims and is excluded from the additional benchmark.
++
++Because the feature spaces differ, preprocessing and models are fitted
++separately for each dataset under the same SAD protocol. This experiment
++assesses replication of the workflow across benchmarks. The Kaggle source
++documents access to the second dataset; the original collecting insurer
++and its full real-versus-synthetic provenance remain unverified.
++
++\begin{table}[tbp]\centering
++\caption{Input datasets before predictor screening.}\label{tab:data}
++\begin{tabular}{lrrr}\toprule
++Dataset & Records & Predictors & Recorded fraud\\\midrule
++Carclaims & 15,420 & 32 & 923 (5.99\%)\\
++Insurance Claims & 1,000 & 38 & 247 (24.70\%)\\
++\bottomrule\end{tabular}\end{table}
++
++\subsection{Algorithm specifications}\label{sec:specifications}
++The number of partitions is $m=4$, with proportions
++$p_1=0.50$, $p_2=0.30$, $p_3=0.10$ and $p_4=0.10$.
++Simple-A uses $N=9$ initial detectors; Simple-B uses $N=10$ by including
++EAD as a vote; Multilayer retains $N=9$ and applies EAD to $Y_1$.
++All three retain $M=8$ supervised learners:
++LR, SVM, XGB, RF, NB, KNN, AdaBoost and ANN.
++Seeds 1234--1243 and the four-part schedule are shared across variants.
++The main operating point is $(T_{AD},T_{ML})=(3,4)$; the stricter point $(5,6)$
++is a complete additional Multilayer training trajectory.
++These are fixed illustrative settings, not a preregistered optimum.
++The data had been examined during development; the second benchmark is not
++described as prospectively untouched external data.
++SAD hyperparameters are unchanged between datasets.
++Only the PSO comparator follows the predefined inner training-only search.
++Random partitions are stratified using the outcomes for split construction
++only. Within each trajectory, label access follows Algorithms 2 and 3.
++
++\paragraph{Reconciliation with the original exports.}
++All reported performance values are recomputed from the corrected
++implementation. The revision uses training-only preprocessing and SMOTE, corrected
++entropy/index alignment, and outcome access only after review selection.
++Non-alert samples are verified rather than assumed genuine. The previous
++exports did not consistently designate fraud as the positive class.
++Consequently, their reported recall/F1 and high overall accuracy are not
++reused as evidence of fraud detection performance. These corrections are
++necessary to evaluate the retained SAD architectures consistently.
++
++\FloatBarrier
++\subsection{Architecture performance and workload}
++
++% BEGIN INCLUDED generated/table_architectures.tex
++\begin{table}[!htbp]\centering\footnotesize
++\caption{Fraud-class performance and total review fraction; mean $\pm$ sample SD across ten seeds. All metrics pool $D_2$--$D_4$ within a seed. AP denotes average precision.}\label{tab:architectures}
++\setlength{\tabcolsep}{2pt}
++\begin{tabular}{lrrrrr}\toprule
++Architecture & Precision & Recall & F1 & AP & Review\\\midrule
++\multicolumn{6}{l}{\textit{Carclaims}}\\
++Simple-A & $0.144 \pm 0.009$ & $0.480 \pm 0.039$ & $0.221 \pm 0.014$ & $0.151 \pm 0.009$ & $0.280 \pm 0.012$\\
++Simple-B & $0.146 \pm 0.006$ & $0.489 \pm 0.044$ & $0.224 \pm 0.009$ & $0.153 \pm 0.008$ & $0.281 \pm 0.016$\\
++Multilayer & $0.144 \pm 0.008$ & $0.407 \pm 0.047$ & $0.212 \pm 0.014$ & $0.140 \pm 0.007$ & $0.253 \pm 0.016$\\
++Multilayer-static & $0.141 \pm 0.008$ & $0.427 \pm 0.046$ & $0.211 \pm 0.013$ & $0.135 \pm 0.009$ & $0.264 \pm 0.017$\\
++\multicolumn{6}{l}{\textit{Insurance Claims}}\\
++Simple-A & $0.491 \pm 0.015$ & $0.586 \pm 0.078$ & $0.533 \pm 0.038$ & $0.487 \pm 0.029$ & $0.368 \pm 0.033$\\
++Simple-B & $0.510 \pm 0.038$ & $0.624 \pm 0.038$ & $0.560 \pm 0.028$ & $0.491 \pm 0.039$ & $0.377 \pm 0.028$\\
++Multilayer & $0.465 \pm 0.035$ & $0.544 \pm 0.101$ & $0.497 \pm 0.043$ & $0.452 \pm 0.048$ & $0.365 \pm 0.050$\\
++Multilayer-static & $0.435 \pm 0.042$ & $0.546 \pm 0.104$ & $0.479 \pm 0.041$ & $0.442 \pm 0.034$ & $0.386 \pm 0.067$\\
++\bottomrule\end{tabular}
++\end{table}
++\begin{table}[!htbp]\centering\footnotesize
++\caption{Complementary metrics under the same main protocol. High accuracy alone is insufficient for these imbalanced datasets.}\label{tab:architectures_aux}
++\setlength{\tabcolsep}{2pt}
++\begin{tabular}{lrrrr}\toprule
++Architecture & Specificity & Balanced acc. & ROC-AUC & Accuracy\\\midrule
++\multicolumn{5}{l}{\textit{Carclaims}}\\
++Simple-A & $0.818 \pm 0.013$ & $0.649 \pm 0.017$ & $0.777 \pm 0.010$ & $0.797 \pm 0.011$\\
++Simple-B & $0.818 \pm 0.016$ & $0.653 \pm 0.016$ & $0.777 \pm 0.008$ & $0.798 \pm 0.013$\\
++Multilayer & $0.846 \pm 0.016$ & $0.626 \pm 0.018$ & $0.752 \pm 0.017$ & $0.819 \pm 0.013$\\
++Multilayer-static & $0.834 \pm 0.018$ & $0.631 \pm 0.017$ & $0.744 \pm 0.018$ & $0.810 \pm 0.015$\\
++\multicolumn{5}{l}{\textit{Insurance Claims}}\\
++Simple-A & $0.800 \pm 0.025$ & $0.693 \pm 0.028$ & $0.738 \pm 0.015$ & $0.747 \pm 0.009$\\
++Simple-B & $0.800 \pm 0.035$ & $0.712 \pm 0.020$ & $0.742 \pm 0.019$ & $0.756 \pm 0.024$\\
++Multilayer & $0.792 \pm 0.045$ & $0.668 \pm 0.035$ & $0.707 \pm 0.026$ & $0.730 \pm 0.020$\\
++Multilayer-static & $0.761 \pm 0.070$ & $0.654 \pm 0.032$ & $0.694 \pm 0.024$ & $0.708 \pm 0.035$\\
++\bottomrule\end{tabular}
++\end{table}
++
++% END INCLUDED generated/table_architectures.tex
++
++
++% BEGIN INCLUDED generated/results_architectures.tex
++On Carclaims, Simple-B has the highest mean F1 among the four architecture variants (0.224). Simple-B and updating Multilayer attain AP 0.153 and 0.140, respectively; Multilayer's mean F1 is 0.212. The corresponding review fractions are 0.281 for Simple-B and 0.253 for Multilayer.
++
++On Insurance Claims, Simple-B has the highest mean F1 among the four architecture variants (0.560). Simple-B and updating Multilayer attain AP 0.491 and 0.452, respectively; Multilayer's mean F1 is 0.497. The corresponding review fractions are 0.377 for Simple-B and 0.365 for Multilayer.
++
++These differences concern both predictive performance and the records acquired for training. The architectures are therefore compared as complete review policies, without holding the review budget constant.
++
++% END INCLUDED generated/results_architectures.tex
++
++Figures \ref{fig:performance}--\ref{fig:workload} summarize pooled performance,
++partition-wise detection and verification workload.
++\paperfigure{02_architecture_performance}{Fraud recall, F1 and AP for four
++architectures. Points and bars show mean and sample SD across ten random splits,
++pooling $D_2$--$D_4$ within each seed.}{fig:performance}{1}
++\paperfigure{03_partition_progress}{Partition-wise F1 and recall.
++Later partitions contain different records; these are not learning curves
++on a fixed test set.}{fig:partitions}{1}
++\paperfigure{04_workload}{Partition-wise alert rate and total review rate,
++including the 10\% audit of non-alerted claims. Lines and points show means
++over ten random splits. The panels distinguish alerted claims from the
++full set submitted for verification.}{fig:workload}{1}
++
++\subsection{Classifier comparisons and ranking curves}\label{sec:comparators}
++The eight component classifiers are evaluated individually on the same
++verified training records acquired by Simple-B. Two additional comparators
++use those same records: balanced random forest (200 trees with within-tree
++balancing and no preceding SMOTE) and PSO-XGBoost adapted from the insurance
++fraud study of \citet{Ding2025}. The latter is a recent fraud-motivated
++comparator; it is not an exact reproduction of the published system.
++
++PSO selects hyperparameters once using only verified $D_1$ records and
++three-fold stratified cross-validation scored by AP. SMOTE is fitted inside
++each training fold. Four particles and three iterations search 60--160 trees,
++depth 2--6, learning rates $10^{-2}$--$10^{-0.7}$ and row/column subsampling
++0.6--1. Inertia is 0.7 and both attraction coefficients are 1.4.
++Selected values are fixed in subsequent rounds. The comparison tests
++classifier choice under a common acquisition policy, not ten independent
++end-to-end acquisition systems.
++
++% BEGIN INCLUDED generated/table_baselines.tex
++\begin{table}[!htbp]\centering\footnotesize
++\caption{Conditional classifier comparison using Simple-B's verified records. The two columns per benchmark report fraud F1 and AP. PSO-XGB is the explicitly adapted comparator.}\label{tab:baselines}
++\setlength{\tabcolsep}{2pt}
++\begin{tabular}{lrrrr}\toprule
++Method & Carclaims F1 & Carclaims AP & Insurance F1 & Insurance AP\\\midrule
++LR & $0.221 \pm 0.007$ & $0.143 \pm 0.008$ & $0.508 \pm 0.021$ & $0.461 \pm 0.035$\\
++SVM & $0.217 \pm 0.008$ & $0.137 \pm 0.007$ & $0.501 \pm 0.037$ & $0.455 \pm 0.036$\\
++XGB & $0.076 \pm 0.017$ & $0.159 \pm 0.009$ & $0.551 \pm 0.033$ & $0.497 \pm 0.036$\\
++NB & $0.155 \pm 0.022$ & $0.101 \pm 0.016$ & $0.500 \pm 0.022$ & $0.460 \pm 0.022$\\
++RF & $0.039 \pm 0.015$ & $0.161 \pm 0.006$ & $0.537 \pm 0.032$ & $0.511 \pm 0.046$\\
++KNN & $0.172 \pm 0.008$ & $0.101 \pm 0.005$ & $0.413 \pm 0.013$ & $0.296 \pm 0.026$\\
++AdaBoost & $0.216 \pm 0.012$ & $0.144 \pm 0.006$ & $0.558 \pm 0.030$ & $0.512 \pm 0.036$\\
++ANN & $0.188 \pm 0.011$ & $0.140 \pm 0.010$ & $0.404 \pm 0.033$ & $0.360 \pm 0.046$\\
++BalancedRF & $0.231 \pm 0.012$ & $0.168 \pm 0.007$ & $0.595 \pm 0.025$ & $0.497 \pm 0.029$\\
++PSO-XGB-adapted & $0.116 \pm 0.073$ & $0.158 \pm 0.010$ & $0.599 \pm 0.026$ & $0.522 \pm 0.032$\\
++Simple-B & $0.224 \pm 0.009$ & $0.153 \pm 0.008$ & $0.560 \pm 0.028$ & $0.491 \pm 0.039$\\
++\bottomrule\end{tabular}
++\end{table}
++
++% END INCLUDED generated/table_baselines.tex
++
++
++% BEGIN INCLUDED generated/results_baselines.tex
++For Carclaims, BalancedRF leads this comparator set in both mean F1 (0.231) and AP (0.168). For Insurance Claims, PSO-XGB-adapted leads this comparator set in both mean F1 (0.599) and AP (0.522). These rankings are conditional on Simple-B's acquisition policy and the stated training settings. Differences in tuning budgets limit comparisons with fully optimized implementations of the published methods.
++
++% END INCLUDED generated/results_baselines.tex
++
++Figures \ref{fig:baselines} and \ref{fig:curves} show the classifier comparison
++and the architectures' ranking performance on the predefined split.
++\paperfigure{05_baseline_comparison}{Same-acquisition classifier comparison.
++All comparators use the Simple-B verified-record policy.
++PSO-XGB is an adapted search; BalancedRF balances within trees.
++Error bars show sample SD.}{fig:baselines}{1}
++\paperfigure{06_roc_pr}{ROC and precision--recall curves for predefined seed
++1234, pooling $D_2$--$D_4$. These are representative split curves,
++not averages over independent populations. Dashed lines are no-skill
++references.}{fig:curves}{1}
++
++\subsection{Ablation study and threshold sensitivity}\label{sec:ablation}
++Comparing Simple-A with Simple-B examines adding a flat entropy vote;
++comparing Simple-B with Multilayer examines replacing flat entropy voting
++with candidate-local entropy gating. These comparisons also change which
++records are reviewed and therefore are not matched-budget causal estimates.
++For the sequential ablation, Multilayer-static freezes the exact $D_1$
++models and predicts the same $D_2$--$D_4$ records without retraining.
++Its initialization, preprocessing and initial training set are identical
++to those of updating Multilayer.
++
++% BEGIN INCLUDED generated/table_ablation.tex
++\begin{table}[!htbp]\centering\footnotesize
++\caption{Paired seed-wise change from static to updating Multilayer: mean $\pm$ sample SD. These are descriptive paired differences, not confidence intervals.}\label{tab:ablation}
++\setlength{\tabcolsep}{2pt}
++\begin{tabular}{lrrr}\toprule
++Dataset & $\Delta$ F1 & $\Delta$ AP & $\Delta$ review\\\midrule
++Carclaims & $0.0005 \pm 0.0081$ & $0.0049 \pm 0.0052$ & $-0.0109 \pm 0.0070$\\
++Insurance Claims & $0.0182 \pm 0.0223$ & $0.0098 \pm 0.0211$ & $-0.0216 \pm 0.0304$\\
++\bottomrule\end{tabular}
++\end{table}
++
++% END INCLUDED generated/table_ablation.tex
++
++
++% BEGIN INCLUDED generated/results_ablation.tex
++For Carclaims, sequential updating changes mean F1 by +0.0005, AP by +0.0049 and review fraction by -0.0109 relative to the frozen model. For Insurance Claims, sequential updating changes mean F1 by +0.0182, AP by +0.0098 and review fraction by -0.0216 relative to the frozen model. The Carclaims F1 change is small relative to its split-to-split variation. These descriptive results do not establish statistical superiority. Because updating affects later acquisition as well as prediction, the ablation measures the complete update policy. The two threshold settings are evaluated through separate complete trajectories.
++
++% END INCLUDED generated/results_ablation.tex
++
++\paperfigure{07_ablation_deltas}{Paired seed-wise changes, in percentage
++points, from frozen to updating Multilayer. Positive F1/AP changes favor
++updating; review-rate differences measure changed workload. Black diamonds
++and bars show mean and sample SD. Panels use separate vertical
++ranges.}{fig:ablation}{1}
++
++% BEGIN INCLUDED generated/table_thresholds.tex
++\begin{table}[!htbp]\centering\footnotesize
++\caption{Multilayer sensitivity at two joint threshold settings; mean $\pm$ sample SD.}\label{tab:thresholds}
++\setlength{\tabcolsep}{2pt}
++\begin{tabular}{lrrrr}\toprule
++Dataset / thresholds & Recall & F1 & AP & Review\\\midrule
++Carclaims / (3,4) & $0.407 \pm 0.047$ & $0.212 \pm 0.014$ & $0.140 \pm 0.007$ & $0.253 \pm 0.016$\\
++Carclaims / (5,6) & $0.111 \pm 0.029$ & $0.123 \pm 0.021$ & $0.127 \pm 0.007$ & $0.142 \pm 0.010$\\
++Insurance Claims / (3,4) & $0.544 \pm 0.101$ & $0.497 \pm 0.043$ & $0.452 \pm 0.048$ & $0.365 \pm 0.050$\\
++Insurance Claims / (5,6) & $0.300 \pm 0.120$ & $0.369 \pm 0.118$ & $0.440 \pm 0.059$ & $0.231 \pm 0.051$\\
++\bottomrule\end{tabular}
++\end{table}
++
++% END INCLUDED generated/table_thresholds.tex
++
++\paperfigure{08_threshold_sensitivity}{Main $(3,4)$ and strict $(5,6)$
++Multilayer points from separately rerun trajectories.
++The comparison does not isolate the two thresholds independently.}{fig:thresholds}{1}
++
++\subsection{Computation and reproducibility}
++Predictions retain original row ID, split, seed, architecture, score, votes,
++alert, review mask and recorded outcome. Manifests record software versions
++and code/data hashes. Numerical verification recomputes metrics from these
++records; figures and LaTeX tables use the same results.
++The executed implementation is Python, using scikit-learn and the associated
++packages listed in the environment record \citep{Pedregosa2011}.
++Original R scripts and exports are archived; revised results come from Python.
++A single R/\texttt{ggplot2} script renders both benchmarks from the saved
++results. The empirical figures use the same visual conventions and share
++axis limits within each comparison. Performance axes span 0--80\% and
++workload axes 0--55\%, encompassing the displayed values and error bars;
++ROC and precision--recall curves retain the full 0--1 range. Numerical
++tables report fractions on the 0--1 scale. Error bars denote sample
++standard deviations across splits, not confidence intervals.
++
++
++% BEGIN INCLUDED generated/table_runtime.tex
++\begin{table}[!htbp]\centering\footnotesize
++\caption{Wall time in seconds, mean $\pm$ sample SD. Architecture rows sum supervised fitting at $D_1,D_2,D_3$; the shared anomaly stage is reported separately and excludes preprocessing.}\label{tab:runtime}
++\setlength{\tabcolsep}{2pt}
++\begin{tabular}{lrr}\toprule
++Operation & Carclaims & Insurance Claims\\\midrule
++Simple-A & $15.94 \pm 0.79$ & $1.69 \pm 0.10$\\
++Simple-B & $17.67 \pm 1.21$ & $1.83 \pm 0.09$\\
++Multilayer & $10.84 \pm 0.79$ & $1.30 \pm 0.06$\\
++Shared anomaly stage & $2.38 \pm 0.23$ & $0.39 \pm 0.03$\\
++\bottomrule\end{tabular}
++\end{table}
++
++% END INCLUDED generated/table_runtime.tex
++
++\paperfigure{09_runtime}{Supervised fitting time across three training
++rounds, excluding shared initial anomaly calculation, exports and comparator
++tuning. Times describe this hardware and implementation; the panels use
++different time ranges.}{fig:runtime}{1}
++
++
++\paragraph{Data and code availability.}
++The source datasets are identified in \citet{dataset} and
++\citet{insuranceclaims}. The analyzed files, data dictionaries, executable
++analysis and plotting scripts, prediction-level outputs and instructions
++for reproducing the tables and figures are publicly available in the
++project GitHub repository.\footnote{\url{https://github.com/Mehrab-Atighi/Anomaly-Detection-Algorithm-for-Enhanced-Fraud-Identification-in-the-Insurance-Sector}}
++The archived analysis uses the supplied dataset versions; source hashes
++are included to identify these files unambiguously.
++
++% END INCLUDED sections/04_results.tex
++
++
++% BEGIN INCLUDED sections/05_conclusion.tex
++\section{CONCLUSION}\label{SC:CONCLUSION}\label{sec:conclusion}
++This study presents SAD for insurance fraud screening. The original
++framework combines anomaly detection, expert verification and supervised
++learning in successive partitions. Its simple and multilayered structures
++share the update cycle but differ in the use of entropy during initial
++candidate selection. Algorithms 1--3 describe these structures explicitly.
++
++The revised experiments compare the three architectural variants on
++Carclaims and a second Insurance Claims benchmark, add a frozen-model
++ablation and broaden the supervised comparisons.
++
++% BEGIN INCLUDED generated/results_conclusion.tex
++On the second benchmark, Simple-B attains mean fraud F1 0.560 and AP 0.491; updating Multilayer attains F1 0.497 at review fraction 0.365. These values demonstrate an empirical workload--detection trade-off rather than a universal benefit of adding an entropy gate.
++
++% END INCLUDED generated/results_conclusion.tex
++
++Architecture selection should therefore consider detection performance
++together with the available investigation capacity.
++
++\paragraph{Limitations and future research.}
++The partitions are retrospective and random, not chronological. Stored
++labels simulate expert decisions without investigation delay, errors or
++monetary cost. Random audits provide verified negatives and some missed
++frauds, but do not eliminate acquisition bias. The second benchmark has a
++documented Kaggle access source but unverified collecting-insurer provenance.
++It supports replication under a different schema and prevalence;
++prospective validation at an independent insurer remains necessary.
++Its smaller size also limits generalization. AP values across
++different prevalences should not be interpreted as directly comparable
++measures of task difficulty.
++
++The feature screen can discard useful variables; SMOTE on encoded
++categorical predictors can produce fractional values; and ranking scores
++need not be calibrated probabilities. The classifier comparisons share
++the Simple-B acquisition policy. Recent deep and graph-based insurance
++systems requiring additional relationships or proprietary data have not
++been reproduced. The adapted PSO comparator and two threshold settings do
++not constitute exhaustive state-of-the-art benchmarking or optimization.
++
++Future research should evaluate chronological claims with documented
++provenance, actual review costs, matched investigation budgets,
++categorical-aware resampling, calibration and prospectively fixed model
++selection. The accompanying code, data, prediction records and figure
++sources support reproduction of the results reported here.
++
++% END INCLUDED sections/05_conclusion.tex
++
++\end{revised}
++\bibliographystyle{apalike}
++\bibliography{refs,references_additions}
+ \end{document}

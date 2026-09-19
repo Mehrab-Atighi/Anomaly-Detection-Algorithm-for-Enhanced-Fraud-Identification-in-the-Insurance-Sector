@@ -1,0 +1,14 @@
+\begin{algorithm}[htbp]
+\footnotesize
+\caption{PreProcessing Algorithm}\label{algo:preprocessing}
+\begin{algorithmic}[1]
+\REQUIRE Dataset $D$; partition fractions $p_1,\ldots,p_m$; Gini bounds $g_L,g_U$
+\ENSURE Partitions $D_1,\ldots,D_m$ and fixed predictor transformations
+\STATE \rev{Withhold outcomes from predictors; retain original row identities.}
+\STATE \rev{Partition records with sizes proportional to $p_1,\ldots,p_m$.}
+\STATE \rev{On $D_1$ only, remove categorical predictors outside $(g_L,g_U)$ in Gini impurity.}
+\STATE \rev{On $D_1$ only, remove numerical predictors satisfying near-zero variance.}
+\STATE \rev{Fit imputation, scaling and encoding on retained $D_1$ predictors.}
+\STATE \rev{Apply those fixed transformations to every partition $D_j$.}
+\end{algorithmic}
+\end{algorithm}

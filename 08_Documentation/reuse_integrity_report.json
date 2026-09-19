@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "basis": "Immediately preceding released SAD_V5_Style_Final package",
+  "unchanged": [
+    {
+      "folder": "01_Code/sad",
+      "files": 9,
+      "identical": true,
+      "mismatches": []
+    },
+    {
+      "folder": "02_Data",
+      "files": 2,
+      "identical": true,
+      "mismatches": []
+    },
+    {
+      "folder": "03_Results",
+      "files": 545,
+      "identical": true,
+      "mismatches": []
+    },
+    {
+      "folder": "07_Original_Archive",
+      "files": 787,
+      "identical": true,
+      "mismatches": []
+    }
+  ],
+  "changed": "Final text/citation/availability editing; regenerated R figures with larger text and display ranges; float layout; response and professor documents. No model fitting or input-data substitution."
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "source": "Master thesis",
+    "destination": "07_Original_Archive/Master_Thesis",
+    "files": 661,
+    "status": "all file bytes identical"
+  },
+  {
+    "source": "thesis article 1",
+    "destination": "07_Original_Archive/Early_Article_Archive",
+    "files": 49,
+    "status": "all file bytes identical"
+  },
+  {
+    "source": "ورژن پنجم - مقاله ارسال شده آخرین نسخه",
+    "destination": "07_Original_Archive/Submitted_V5_Confirmed",
+    "files": 29,
+    "status": "all file bytes identical"
+  }
+]

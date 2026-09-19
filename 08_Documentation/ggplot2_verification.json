@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "summary_groups_compared": 192,
+  "mean_and_sample_SD_checked": true,
+  "largest_absolute_difference": 5.684341886080802e-14,
+  "original_workflow_pngs_byte_identical": true,
+  "R_script_and_all_32_export_hashes_match": true,
+  "paper_figure_copies_match": true,
+  "display_ranges_enclose_all_points_and_displayed_error_bars": [
+    {
+      "figure_family": "architecture",
+      "axis_min": 0,
+      "axis_max": 80,
+      "displayed_min": 12.637184777277056,
+      "displayed_max": 66.4112787156115,
+      "includes_displayed_SD_endpoints": true
+    },
+    {
+      "figure_family": "partition",
+      "axis_min": 0,
+      "axis_max": 80,
+      "displayed_min": 17.62662294055021,
+      "displayed_max": 71.84321537348893,
+      "includes_displayed_SD_endpoints": true
+    },
+    {
+      "figure_family": "baseline",
+      "axis_min": 0,
+      "axis_max": 80,
+      "displayed_min": 2.44646733808652,
+      "displayed_max": 62.515715403357895,
+      "includes_displayed_SD_endpoints": true
+    },
+    {
+      "figure_family": "threshold",
+      "axis_min": 0,
+      "axis_max": 80,
+      "displayed_min": 8.17666932474896,
+      "displayed_max": 64.43602149104021,
+      "includes_displayed_SD_endpoints": true
+    },
+    {
+      "figure_family": "workload",
+      "axis_min": 0,
+      "axis_max": 55,
+      "displayed_min": 14.9675745784695,
+      "displayed_max": 39.8,
+      "includes_displayed_SD_endpoints": false
+    }
+  ],
+  "scope": "Cross-language rendering audit; model results remain the previous audited execution."
+}

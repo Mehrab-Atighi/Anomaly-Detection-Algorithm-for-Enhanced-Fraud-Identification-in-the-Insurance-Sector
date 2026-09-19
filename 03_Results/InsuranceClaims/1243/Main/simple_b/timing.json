@@ -1,0 +1,65 @@
+[
+  {
+    "stage": "D1",
+    "operation": "fit_8_models",
+    "seconds": 0.4737392999995791,
+    "verified_n": 221,
+    "verified_fraud_n": 60
+  },
+  {
+    "stage": "D1",
+    "operation": "tune_and_fit_2_comparators",
+    "seconds": 1.5362091890001466,
+    "verified_n": 221,
+    "verified_fraud_n": 60
+  },
+  {
+    "stage": "D2",
+    "operation": "predict_8_models",
+    "seconds": 0.04317964999972901,
+    "verified_n": 221,
+    "verified_fraud_n": 60
+  },
+  {
+    "stage": "D2",
+    "operation": "fit_8_models",
+    "seconds": 0.6278163860006316,
+    "verified_n": 346,
+    "verified_fraud_n": 113
+  },
+  {
+    "stage": "D2",
+    "operation": "fit_2_comparators",
+    "seconds": 0.33447710200016445,
+    "verified_n": 346,
+    "verified_fraud_n": 113
+  },
+  {
+    "stage": "D3",
+    "operation": "predict_8_models",
+    "seconds": 0.04132910099997389,
+    "verified_n": 346,
+    "verified_fraud_n": 113
+  },
+  {
+    "stage": "D3",
+    "operation": "fit_8_models",
+    "seconds": 0.7165140890001567,
+    "verified_n": 383,
+    "verified_fraud_n": 127
+  },
+  {
+    "stage": "D3",
+    "operation": "fit_2_comparators",
+    "seconds": 0.3732999349995225,
+    "verified_n": 383,
+    "verified_fraud_n": 127
+  },
+  {
+    "stage": "D4",
+    "operation": "predict_8_models",
+    "seconds": 0.04064351200031524,
+    "verified_n": 383,
+    "verified_fraud_n": 127
+  }
+]

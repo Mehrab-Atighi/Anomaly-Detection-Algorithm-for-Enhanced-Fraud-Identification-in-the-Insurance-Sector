@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,longtable,array,xcolor}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\begin{document}
+\begin{center}{\LARGE\bfseries Revision Within the Original Manuscript}\end{center}
+\textbf{Controlling scope.} The revision retains the original title, authors,
+five main sections, methodology order, detector/learner families and three
+formal algorithms. Reviewer-requested material is inserted at the relevant
+locations within the submitted article.
+
+\textbf{Comparison basis.} The confirmed original source is
+\path{07_Original_Archive/Submitted_V5_Confirmed/v5.tex}. Its page geometry,
+title block and citation style are retained. Figures 1--2 and their draw.io
+sources are unchanged original files.
+
+\small
+\begin{longtable}{p{3.3cm}p{3.7cm}p{7.1cm}}
+\toprule Original location & Revised location & Change and reason\\\midrule\endhead
+1. Introduction & 1. Introduction & Retains the problem and objective; adds explicit sequential/multilayer contributions and removes unsupported RL and performance claims. Reviewer point 1.\\
+2. LITERATURE REVIEW & 2. LITERATURE REVIEW & Reorganized into the four requested classes, with strengths, limitations, research gaps and two positioning tables. Forty cited references, including three relevant Annals papers. Reviewer points 1--2.\\
+3. METHODOLOGY & 3. METHODOLOGY & Same position and internal order: preprocessing; structure; anomaly detectors; supervised models; SAD structures; evaluation.\\
+3.1 PRE PROCESSING; Algorithm 1 & 3.1 PRE PROCESSING; Algorithm 1 & Retains Gini/NZV screening and SMOTE. Clarifies D1-only fitted transformations, named outcome removal and training-only resampling.\\
+Structure; Figures 1--2 & Structure; Figures 1--2 & Restores exact original PNGs and editable draw.io sources. An adjacent note explains verified non-alert audits, training-only preprocessing and the unused final update.\\
+ANOMALY DETECTION & ANOMALY DETECTION & All nine original detector families and EAD remain as individual descriptions. Adds precise settings and correct primary references; formalizes entropy gain.\\
+3.2 MACHINE LEARNING & 3.2 MACHINE LEARNING & Preserves LR, SVM, XGB, RF, NB, AdaBoost and ANN; restores the KNN paragraph already implied by the original eight-model code. Adds a settings table.\\
+3.3 SAD; Algorithm 2 & 3.3 SAD; Algorithm 2 & Retains Simple-A/B, vote thresholds, expert verification and updates. Explicitly verifies the PN sample and accumulates real labels; corrects batch-loop nesting.\\
+3.3 SAD; Algorithm 3 & 3.3 SAD; Algorithm 3 & Retains anomaly candidates $Y_1$, EAD gate $C_1$, shortlist $F_1$ and supervised update cycle. Uses candidate-local entropy and the same review correction.\\
+3.4 EVALUATION & 3.4 EVALUATION & Retains accuracy, recall and F1 formulas; defines fraud as positive and adds precision, specificity, balanced accuracy, ROC--AUC, AP and workload.\\
+4. Real Data Application & 4. Real Data Application & Retains Carclaims and its descriptive frequency table; replaces invalid/ambiguous old performance exports with auditable corrected results.\\
+Algorithm specifications & 4.2 Algorithm specifications & Retains 50/30/10/10 partitions and original architecture/model sets; states ten seeds, fixed settings and necessary implementation corrections.\\
+No second-benchmark validation & 4.1 and 4.3--4.6 & Adds Insurance Claims under the same SAD settings; cites the researcher-confirmed mexwell/Kaggle source. Original insurer provenance remains unverified. Reviewer point 3.\\
+Original model comparisons & 4.4 Classifier comparisons & Adds balanced forest and adapted PSO-XGBoost alongside eight component classifiers, using a common acquired-label policy. Reviewer point 3.\\
+Original sensitivity discussion & 4.5 Ablation and sensitivity & Adds frozen-model sequential ablation and separates entropy placement comparisons; reports two genuinely rerun joint threshold pairs. Reviewer point 3.\\
+5. CONCLUSION & 5. CONCLUSION & Same final section. Interprets actual results, limits claims of superiority and includes limitations/future work here, without a new main Discussion section.\\
+R research archive & Full preserved original archive & Original R code/exports remain unchanged. Models/results remain Python. Executed R/ggplot2 draws all eight empirical figures from those results.\\
+Plot presentation & Figures 3--10 & Restores gray panels, facets, colours, line types and symbols. Workload is plotted by partition. The old exhaustive threshold grid is not claimed or fabricated.\\
+Computational assistance & 3.4 & Briefly acknowledges manuscript and analysis/plotting-script assistance, with author responsibility.\\
+Final editorial review & Throughout; 4.6 & Edits language using the supplied similarity report; improves figure labels and pagination; adds public data/code availability through the authors' GitHub repository. No model or input-data changes.\\
+\bottomrule\end{longtable}
+\normalsize
+
+\textbf{Numerical corrections.} The original exports had positive-class,
+leakage, indexing, entropy and resampling discrepancies. The revised figures
+therefore use the corrected, previously executed results. This final editorial
+pass changes no input data, core model modules or numerical result files.
+
+\textbf{Reading changes.} Blue marks substantive additions and corrections.
+Minor language/citation edits are not individually colored. The unified source
+diff against the confirmed submission records additions and deletions.
+
+\textbf{Final editorial pass.} Language, captions, figure readability and
+pagination were reviewed. The second dataset source and data/code availability
+are explicit. Author names remain; the authors' GitHub repository is linked
+in the manuscript and response letter.
+
+\textbf{Submission files.} Use the inner source-only journal archive for the
+editable manuscript and reviewer response. It contains no PDFs, including
+figure PDFs. The complete package additionally contains compiled reading
+copies, the marked version, the Persian report, data, code, outputs,
+vector graphics and historical files.
+\end{document}

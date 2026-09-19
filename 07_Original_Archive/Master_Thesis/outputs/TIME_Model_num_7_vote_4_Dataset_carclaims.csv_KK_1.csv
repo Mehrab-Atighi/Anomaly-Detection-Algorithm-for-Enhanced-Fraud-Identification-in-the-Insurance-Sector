@@ -1,0 +1,32 @@
+"","times","names_times","Dataset","modelnames","model_num","vote_num"
+"1",0.539579315980275,"Labeling ","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"2",0.0049362858136495,"Balancing Data1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"3",0.0340829650561015,"nn modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"4",0.00219026803970337,"ml modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"5",0.00403331518173218,"svm modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"6",0.000852616628011068,"xgb modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"7",0.000915499528249105,"rf modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"8",0.000721132755279541," nb modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"9",0.00558180014292399,"knn modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"10",0.00420089960098267,"adab modeling rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"11",0.000625169277191162,"calculate totam cm rond1","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"12",0.000487816333770752,"Balancing Data2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"13",0.034572966893514,"nn modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"14",0.00308358271916707,"ml modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"15",0.00728113253911336,"svm modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"16",0.000838915506998698,"xgb modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"17",0.00113556782404582,"rf modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"18",0.000636601448059082," nb modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"19",0.00517353216807047,"knn modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"20",0.00446083545684814,"adab modeling rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"21",0.000363246599833171,"calculate totam cm rond2","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"22",0.000522283713022868,"Balancing Data3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"23",0.0364888350168864,"nn modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"24",0.0046381155649821,"ml modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"25",0.0147354324658712,"svm modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"26",0.00086745023727417,"xgb modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"27",0.00139528512954712,"rf modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"28",0.000668267409006755," nb modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"29",0.00684425036112467,"knn modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"30",0.005738898118337,"adab modeling rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4
+"31",0.000341133276621501,"calculate totam cm rond3","carclaims.csv","ml_svm_xgb_nb_rf_knn_adab_nn",7,4

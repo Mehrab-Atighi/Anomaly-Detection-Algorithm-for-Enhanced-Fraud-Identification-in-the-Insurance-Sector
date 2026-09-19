@@ -1,0 +1,11 @@
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Wall time in seconds, mean $\pm$ sample SD. Architecture rows sum supervised fitting at $D_1,D_2,D_3$; the shared anomaly stage is reported separately and excludes preprocessing.}\label{tab:runtime}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrr}\toprule
+Operation & Carclaims & Insurance Claims\\\midrule
+Simple-A & $15.94 \pm 0.79$ & $1.69 \pm 0.10$\\
+Simple-B & $17.67 \pm 1.21$ & $1.83 \pm 0.09$\\
+Multilayer & $10.84 \pm 0.79$ & $1.30 \pm 0.06$\\
+Shared anomaly stage & $2.38 \pm 0.23$ & $0.39 \pm 0.03$\\
+\bottomrule\end{tabular}
+\end{table}

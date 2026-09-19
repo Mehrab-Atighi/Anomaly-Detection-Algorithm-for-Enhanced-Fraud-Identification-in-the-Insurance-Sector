@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "newly_supplied_archive": "ورژن پنجم - مقاله ارسال شده آخرین نسخه",
+  "checks": [
+    {
+      "submitted_file": "v5.tex",
+      "sha256": "ebd42e0418b47759ce91050c0c349a08c3a50edfb1e052b5a47cadf98b4fb3d0",
+      "identical_prior_file": "07_Original_Archive/Original_Submission/v5.tex"
+    },
+    {
+      "submitted_file": "v5.pdf",
+      "sha256": "5025e427a047371a02908df7409c1ed44702b4b9e0d72c65d50253dd6ca92e61",
+      "identical_prior_file": "07_Original_Archive/Original_Submission/v5.pdf"
+    },
+    {
+      "submitted_file": "Pictures/simple.png",
+      "sha256": "11b087b738ca6496735cd601560899d35e6f9ee59d127d429933da1fe4dfee9b",
+      "identical_prior_file": "07_Original_Archive/Original_Submission/simple.png"
+    },
+    {
+      "submitted_file": "Pictures/Multilayered.png",
+      "sha256": "f1e597e8559421cf5109893d92bb386154f6b476706dde44511a91d3e0fb6020",
+      "identical_prior_file": "07_Original_Archive/Original_Submission/Multilayered.png"
+    }
+  ]
+}

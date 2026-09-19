@@ -1,0 +1,124 @@
+\begin{thebibliography}{}
+
+\bibitem[Abakarim et~al., 2023]{A3}
+Abakarim, Y., Lahby, M., and Attioui, A. (2023).
+\newblock A bagged ensemble convolutional neural networks approach to recognize
+  insurance claim frauds.
+\newblock {\em Applied System Innovation}, 6(1):20.
+
+\bibitem[Aggarwal, 2015]{A70}
+Aggarwal, C.~C. (2015).
+\newblock {\em Data Mining: The Textbook}.
+\newblock Springer Publishing Company, Incorporated.
+
+\bibitem[Aggarwal and Philip, 2015]{A74}
+Aggarwal, C.~C. and Philip, M. (2015).
+\newblock Fraud detection in insurance using data analytics and ai techniques:
+  A comprehensive review.
+\newblock {\em Journal of Financial Crime}, 22(2):345--360.
+
+\bibitem[Aggarwal et~al., 2019]{A38}
+Aggarwal, V., Gupta, V., Singh, P., Sharma, K., and Sharma, N. (2019).
+\newblock Detection of spatial outlier by using improved z-score test.
+\newblock In {\em 2019 3rd International Conference on Trends in Electronics
+  and Informatics (ICOEI)}, pages 788--790. IEEE.
+
+\bibitem[Bosco, 2020]{dataset}
+Bosco, A. P.~J. (2020).
+\newblock Auto insurance claims fraud detection.
+\newblock Accessed: 2024-06-11.
+
+\bibitem[Bryant and Desai, 2020]{A75}
+Bryant, J. and Desai, A. (2020).
+\newblock {\em Financial fraud detection with machine learning}.
+\newblock Springer.
+
+\bibitem[Fajardo et~al., 2021]{A62}
+Fajardo, V.~A., Findlay, D., Jaiswal, C., Yin, X., Houmanfar, R., Xie, H.,
+  Liang, J., She, X., and Emerson, D.~B. (2021).
+\newblock On oversampling imbalanced data with deep conditional generative
+  models.
+\newblock {\em Expert Systems with Applications}, 169:114463.
+
+\bibitem[Giudici et~al., 2024]{A59}
+Giudici, P., Centurelli, M., and Turchetta, S. (2024).
+\newblock Artificial intelligence risk measurement.
+\newblock {\em Expert Systems with Applications}, 235:121220.
+
+\bibitem[Han et~al., 2011]{A71}
+Han, J., Kamber, M., and Pei, J. (2011).
+\newblock {\em Data Mining: Concepts and Techniques}.
+\newblock Morgan Kaufmann, 3 edition.
+
+\bibitem[Hanafy and Ming, 2021]{A4}
+Hanafy, M. and Ming, R. (2021).
+\newblock Using machine learning models to compare various resampling methods
+  in predicting insurance fraud.
+\newblock {\em J. Theor. Appl. Inf. Technol}, 99(12):2819--2833.
+
+\bibitem[Hilal et~al., 2022]{A61}
+Hilal, W., Gadsden, S.~A., and Yawney, J. (2022).
+\newblock Financial fraud: a review of anomaly detection techniques and recent
+  advances.
+\newblock {\em Expert systems With applications}, 193:116429.
+
+\bibitem[Kou et~al., 2021]{A78}
+Kou, G., Xu, Y., Peng, Y., and Shen, F. (2021).
+\newblock Ai-based fraud detection in the insurance and financial industry.
+\newblock {\em Expert Systems with Applications}, 138:112--118.
+
+\bibitem[Moon et~al., 2019]{A80}
+Moon, H., Pu, Y., and Ceglia, C. (2019).
+\newblock A predictive modeling for detecting fraudulent automobile insurance
+  claims.
+\newblock {\em Theoretical Economics Letters}, 09:1886--1900.
+
+\bibitem[Ngai et~al., 2011]{A76}
+Ngai, E.~W., Hu, Y., Wong, Y., Chen, Y., and Sun, X. (2011).
+\newblock The application of data mining techniques in financial fraud
+  detection: A classification framework and an academic review of literature.
+\newblock {\em Decision support systems}, 50(3):559--569.
+
+\bibitem[Nguyen et~al., 2019]{A44}
+Nguyen, V.~K., Renault, E., and Milocco, R. (2019).
+\newblock Environment monitoring for anomaly detection system using
+  smartphones.
+\newblock {\em Sensors}, 19(18):3834.
+
+\bibitem[Nijhuis and van Lelyveld, 2023]{A73}
+Nijhuis, M. and van Lelyveld, I. (2023).
+\newblock Outlier detection with reinforcement learning for costly to verify
+  data.
+\newblock {\em Entropy}, 25(6):842.
+
+\bibitem[Sikder and Batarseh, 2023]{A46}
+Sikder, M. N.~K. and Batarseh, F.~A. (2023).
+\newblock Outlier detection using ai: a survey.
+\newblock {\em AI Assurance}, pages 231--291.
+
+\bibitem[Subudhi and Panigrahi, 2020]{A57}
+Subudhi, S. and Panigrahi, S. (2020).
+\newblock Use of optimized fuzzy c-means clustering and supervised classifiers
+  for automobile insurance fraud detection.
+\newblock {\em Journal of King Saud University-Computer and Information
+  Sciences}, 32(5):568--575.
+
+\bibitem[Tan et~al., 2016]{A52}
+Tan, P.-N., Steinbach, M., and Kumar, V. (2016).
+\newblock {\em Introduction to data mining}.
+\newblock Pearson Education India.
+
+\bibitem[Yao et~al., 2019]{A42}
+Yao, Z., Xie, J., Tian, Y., and Huang, Q. (2019).
+\newblock Using hampel identifier to eliminate profile-isolated outliers in
+  laser vision measurement.
+\newblock {\em Journal of Sensors}, 2019.
+
+\bibitem[Zhang et~al., 2022]{A27}
+Zhang, L., Wu, T., Chen, X., Lu, B., Na, C., and Qi, G. (2022).
+\newblock Auto insurance knowledge graph construction and its application to
+  fraud detection.
+\newblock In {\em Proceedings of the 10th International Joint Conference on
+  Knowledge Graphs}, pages 64--70.
+
+\end{thebibliography}

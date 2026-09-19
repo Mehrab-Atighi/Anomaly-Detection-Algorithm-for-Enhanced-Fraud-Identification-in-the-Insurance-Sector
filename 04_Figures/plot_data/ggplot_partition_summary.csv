@@ -1,0 +1,49 @@
+"Dataset","Method","Metric","Partition","Mean","SD"
+"Carclaims","Simple-A","Fraud F1",2,22.0073894849662,1.36677534934399
+"Insurance Claims","Simple-A","Fraud F1",2,51.4595084964041,3.95355277998275
+"Carclaims","Simple-B","Fraud F1",2,21.9227780739911,1.13331720641673
+"Insurance Claims","Simple-B","Fraud F1",2,54.7328160272033,4.34933830095135
+"Carclaims","Multilayer","Fraud F1",2,21.0510303188806,1.77782522122009
+"Insurance Claims","Multilayer","Fraud F1",2,46.8430842905511,4.61493730442157
+"Carclaims","Multilayer-static","Fraud F1",2,21.0510303188806,1.77782522122009
+"Insurance Claims","Multilayer-static","Fraud F1",2,46.8430842905511,4.61493730442157
+"Carclaims","Simple-A","Fraud recall",2,51.3357400722022,4.90230908209905
+"Insurance Claims","Simple-A","Fraud recall",2,59.4594594594595,9.07632508090536
+"Carclaims","Simple-B","Fraud recall",2,51.0108303249097,5.55912397109188
+"Insurance Claims","Simple-B","Fraud recall",2,63.5135135135135,4.72436418094663
+"Carclaims","Multilayer","Fraud recall",2,42.4187725631769,5.14853705542272
+"Insurance Claims","Multilayer","Fraud recall",2,53.5135135135135,10.2955276592156
+"Carclaims","Multilayer-static","Fraud recall",2,42.4187725631769,5.14853705542272
+"Insurance Claims","Multilayer-static","Fraud recall",2,53.5135135135135,10.2955276592156
+"Carclaims","Simple-A","Fraud F1",3,21.9894047120628,2.30464674262818
+"Insurance Claims","Simple-A","Fraud F1",3,54.9241159179925,7.12014956762393
+"Carclaims","Simple-B","Fraud F1",3,23.618262279879,2.38854381917977
+"Insurance Claims","Simple-B","Fraud F1",3,55.652903416912,5.98440886589986
+"Carclaims","Multilayer","Fraud F1",3,21.6366321227581,1.7926008480882
+"Insurance Claims","Multilayer","Fraud F1",3,53.3328630074256,9.96603836758978
+"Carclaims","Multilayer-static","Fraud F1",3,21.2226616286217,2.86877112047426
+"Insurance Claims","Multilayer-static","Fraud F1",3,49.0272466678671,10.0466685133708
+"Carclaims","Simple-A","Fraud recall",3,43.1521739130435,4.28854513881893
+"Insurance Claims","Simple-A","Fraud recall",3,57.2,10.1631141334184
+"Carclaims","Simple-B","Fraud recall",3,46.304347826087,5.30521890368787
+"Insurance Claims","Simple-B","Fraud recall",3,59.6,8.31598193574009
+"Carclaims","Multilayer","Fraud recall",3,38.1521739130435,7.23640618395259
+"Insurance Claims","Multilayer","Fraud recall",3,54.8,14.9725675078718
+"Carclaims","Multilayer-static","Fraud recall",3,43.1521739130435,8.48244044135942
+"Insurance Claims","Multilayer-static","Fraud recall",3,54.8,15.0908360713823
+"Carclaims","Simple-A","Fraud F1",4,22.4916899208248,3.88730407858864
+"Insurance Claims","Simple-A","Fraud F1",4,57.6488317160326,9.95086408054803
+"Carclaims","Simple-B","Fraud F1",4,23.1004400659636,2.39946535802696
+"Insurance Claims","Simple-B","Fraud F1",4,60.9543625319759,8.95947731304538
+"Carclaims","Multilayer","Fraud F1",4,21.2681420784793,2.79116613682734
+"Insurance Claims","Multilayer","Fraud F1",4,55.6950092945226,10.5050312816435
+"Carclaims","Multilayer-static","Fraud F1",4,21.3677649042629,3.74114196371269
+"Insurance Claims","Multilayer-static","Fraud F1",4,49.937531654336,6.18501630856013
+"Carclaims","Simple-A","Fraud recall",4,42.9347826086956,7.42974516464126
+"Insurance Claims","Simple-A","Fraud recall",4,57.6,11.9554729447786
+"Carclaims","Simple-B","Fraud recall",4,45.1086956521739,6.21775445714874
+"Insurance Claims","Simple-B","Fraud recall",4,62,9.84321537348893
+"Carclaims","Multilayer","Fraud recall",4,38.0434782608696,5.79710144927536
+"Insurance Claims","Multilayer","Fraud recall",4,56.4,14.4160404488272
+"Carclaims","Multilayer-static","Fraud recall",4,43.1521739130435,7.58363713497139
+"Insurance Claims","Multilayer-static","Fraud recall",4,57.6,11.5007246148522

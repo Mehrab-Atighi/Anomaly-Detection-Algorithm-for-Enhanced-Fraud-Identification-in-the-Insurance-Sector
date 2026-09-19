@@ -1,0 +1,73 @@
+{
+  "status": "completed",
+  "implementation": "Python",
+  "seeds": [
+    1234,
+    1235,
+    1236,
+    1237,
+    1238,
+    1239,
+    1240,
+    1241,
+    1242,
+    1243
+  ],
+  "datasets": [
+    "Carclaims",
+    "InsuranceClaims"
+  ],
+  "protocol": {
+    "partition_fractions": [
+      0.5,
+      0.3,
+      0.1,
+      0.1
+    ],
+    "tad": 3,
+    "tml": 4,
+    "normal_audit_fraction": 0.1,
+    "entropy_tail_fraction": 0.2,
+    "lof_fraction": 0.15,
+    "knn_fraction": 0.2,
+    "iforest_fraction": 0.1,
+    "gini_lower": 0.1,
+    "gini_upper": 0.9,
+    "z_threshold": 3.0,
+    "random_state": 1234
+  },
+  "primary_setting": [
+    3,
+    4
+  ],
+  "sensitivity_setting": [
+    5,
+    6
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "imbalanced-learn": "0.14.2",
+    "xgboost": "3.4.1",
+    "kmodes": "0.12.2"
+  },
+  "code_sha256": {
+    "PreProcessing.py": "2a339e91c11ebe8d17691629ca06ce6bd304b10143ba1cd6925848e0b91fb796",
+    "Evaluation.py": "a7a1ef6eb8742961a129ddea44657bc403cb877bbd2d86a38e1d17fb688c350e",
+    "Labeling.py": "d505e7b82d992576cff18d1ca89c828d02d0ba383ffe1b613356b2ef4ba5c624",
+    "FinalModeling.py": "9b56e2f639f42c62c17152ade5dbcb0120ace4be83f6418d69cbfb7b86fefb82",
+    "__init__.py": "7a937113b5424dd8ec4e1f9e207c8613aa0ec08fcf3e7540aae06d406fc6449b",
+    "Comparators.py": "769581fb237bc14c46392c21c196e176ac83f24c889dd08f157acea0f88ecee7",
+    "common.py": "d221569ea65e0cf934f6543f31d8140acdfaabf22d2f42e7b88bdbebeeb75c6d",
+    "EntropyMethod.py": "e4243bdbd1d38797ec0cbc671a7ce45a925df07010eb24055b58c3ba7efb6146",
+    "Modeling.py": "9419b10e46574c065dbbcbb2d82a7cc2606abf174c397ed0d85c5e0444c8fe75"
+  },
+  "data_sha256": {
+    "Carclaims": "a9ff2d9b5f2d7beb2d0bc99d7a74010a0a765147c0234cb0d8d0403bf6ace2d6",
+    "InsuranceClaims": "b32a67e25f86beb5c7218b17eb774623eb16a5fc01cebcae52d9af524a834680"
+  }
+}

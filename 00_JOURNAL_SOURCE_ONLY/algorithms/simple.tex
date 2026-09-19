@@ -1,0 +1,37 @@
+\begin{algorithm}[htbp]
+\footnotesize
+\caption{Simple structure of the SAD algorithm}\label{algo:simple}
+\begin{algorithmic}[1]
+\REQUIRE $D$; $AD\ SET=(AD_1,\ldots,AD_N)$; $ML\ SET=(ML_1,\ldots,ML_M)$;
+\STATE \hspace{1em} thresholds $T_{AD},T_{ML}$; expert verification; sampling percentage $PN$
+\ENSURE Trained models and potential frauds in each partition
+\STATE Preprocess and partition $D$ using Algorithm \ref{algo:preprocessing}.
+\STATE Apply $AD\ SET$ to $D_1$ to obtain binary votes $U_1(x),\ldots,U_N(x)$.
+\FOR{each row $x$ of $D_1$}
+\STATE Set $U_{Total}(x)=\sum_{k=1}^{N}U_k(x)$.
+\IF{$U_{Total}(x)\geq T_{AD}$}
+\STATE Label $x$ as Potential Fraud.
+\ELSE
+\STATE Label $x$ as Potential Normal.
+\ENDIF
+\ENDFOR
+\STATE Create $F_1$ as all Potential Fraud rows in $D_1$.
+\STATE Sample $G_1$ randomly from $D_1\setminus F_1$ at percentage $PN$.
+\STATE \rev{Verify both $F_1$ and $G_1$; receive labeled set $E_1$; set $L_1=E_1$.}
+\STATE Create balanced training data $E'_1=SMOTE(L_1)$.
+\STATE Train all models in $ML\ SET$ on $E'_1$; denote them $TS_1$.
+\FOR{$j=2,\ldots,m$}
+\STATE Use $TS_{j-1}$ to predict all of $D_j$ before verification.
+\FOR{each row $x$ of $D_j$}
+\STATE Store model votes $V_1(x),\ldots,V_M(x)$ and sum $V_{Total}(x)$.
+\STATE If $V_{Total}(x)\geq T_{ML}$, label Potential Fraud; otherwise Potential Normal.
+\ENDFOR
+\STATE Create alert set $F_j$ and random non-alert sample $G_j$ at percentage $PN$.
+\STATE \rev{Save all predictions; verify $F_j\cup G_j$ to obtain $E_j$.}
+\IF{$j<m$}
+\STATE \rev{Set $L_j=L_{j-1}\cup E_j$ using only real verified records.}
+\STATE Create $E'_j=SMOTE(L_j)$; retrain all models to obtain $TS_j$.
+\ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}

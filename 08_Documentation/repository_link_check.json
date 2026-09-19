@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "URL": "https://github.com/Mehrab-Atighi/Anomaly-Detection-Algorithm-for-Enhanced-Fraud-Identification-in-the-Insurance-Sector",
+  "scope": "Author-provided repository; checks hyperlink presence, not online completeness.",
+  "documents": [
+    {
+      "document": "05_Manuscript/manuscript_clean.pdf",
+      "pages": 31,
+      "repository_link_pages": [
+        26
+      ],
+      "exact_clickable_URL_verified": true
+    },
+    {
+      "document": "05_Manuscript/manuscript_marked.pdf",
+      "pages": 31,
+      "repository_link_pages": [
+        26
+      ],
+      "exact_clickable_URL_verified": true
+    },
+    {
+      "document": "06_Reviewer_and_Professor/response_to_reviewer.pdf",
+      "pages": 3,
+      "repository_link_pages": [
+        3
+      ],
+      "exact_clickable_URL_verified": true
+    }
+  ]
+}

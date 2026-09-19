@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array}
+\usepackage{xcolor,enumitem,float}
+\usepackage{algorithm,algorithmic,multirow}
+\usepackage[section]{placeins}
+\usepackage[authoryear,square]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{microtype}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{.92}
+\renewcommand{\bottomfraction}{.85}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.85}
+\setlength{\textfloatsep}{14pt plus 2pt minus 2pt}
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\setlength{\emergencystretch}{2em}
+\newif\ifmarked
+\ifdefined\MarkedVersion\markedtrue\else\markedfalse\fi
+\definecolor{revisionblue}{RGB}{24,70,140}
+\newenvironment{revised}{\ifmarked\color{revisionblue}\fi}{}
+\newcommand{\rev}[1]{{\ifmarked\color{revisionblue}\fi#1}}
+\newcommand{\paperfigure}[4]{\begin{figure}[!htbp]\centering
+  \includegraphics[width=#4\linewidth]{figures/#1.png}
+  \caption{#2}\label{#3}\end{figure}}
+\input{generated/numbers.tex}

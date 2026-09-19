@@ -1,0 +1,232 @@
+\begin{thebibliography}{}
+
+\bibitem[Banulescu-Radu and Yankol-Schalck, 2024]{BanulescuRadu2024}
+Banulescu-Radu, D. and Yankol-Schalck, M. (2024).
+\newblock Practical guideline to efficiently detect insurance fraud in the era
+  of machine learning: A household insurance case.
+\newblock {\em Journal of Risk and Insurance}, 91(4):867--913.
+
+\bibitem[Bolton and Hand, 2002]{Bolton2002}
+Bolton, R.~J. and Hand, D.~J. (2002).
+\newblock {Statistical Fraud Detection: A Review}.
+\newblock {\em Statistical Science}, 17(3):235--255.
+
+\bibitem[Bosco, 2020]{dataset}
+Bosco, A. P.~J. (2020).
+\newblock Auto insurance claims fraud detection.
+\newblock
+  \url{https://www.kaggle.com/datasets/antopravinjohnbosco/auto-insurance-claims-fraud-detection}.
+  Accessed 19 September 2026.
+
+\bibitem[Breiman, 2001]{Breiman2001}
+Breiman, L. (2001).
+\newblock {Random Forests}.
+\newblock {\em Machine Learning}, 45(1):5--32.
+
+\bibitem[Breunig et~al., 2000]{Breunig2000}
+Breunig, M.~M., Kriegel, H.-P., Ng, R.~T., and Sander, J. (2000).
+\newblock {LOF: identifying density-based local outliers}.
+\newblock In {\em Proceedings of the 2000 ACM SIGMOD international conference
+  on Management of data}, pages 93--104.
+
+\bibitem[Chandola et~al., 2009]{Chandola2009}
+Chandola, V., Banerjee, A., and Kumar, V. (2009).
+\newblock {Anomaly detection: A survey}.
+\newblock {\em ACM Computing Surveys}, 41(3):1--58.
+\newblock Article 15.
+
+\bibitem[Chawla et~al., 2002]{Chawla2002}
+Chawla, N.~V., Bowyer, K.~W., Hall, L.~O., and Kegelmeyer, W.~P. (2002).
+\newblock {SMOTE}: Synthetic minority over-sampling technique.
+\newblock {\em Journal of Artificial Intelligence Research}, 16:321--357.
+
+\bibitem[Chen and Guestrin, 2016]{Chen2016}
+Chen, T. and Guestrin, C. (2016).
+\newblock {XGBoost: A Scalable Tree Boosting System}.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 785--794.
+
+\bibitem[Cortes and Vapnik, 1995]{Cortes1995}
+Cortes, C. and Vapnik, V. (1995).
+\newblock {Support-vector networks}.
+\newblock {\em Machine Learning}, 20(3):273--297.
+
+\bibitem[Cover and Hart, 1967]{Cover1967}
+Cover, T. and Hart, P. (1967).
+\newblock {Nearest neighbor pattern classification}.
+\newblock {\em IEEE Transactions on Information Theory}, 13(1):21--27.
+
+\bibitem[Debener et~al., 2023]{Debener2023}
+Debener, J., Heinke, V., and Kriebel, J. (2023).
+\newblock {Detecting insurance fraud using supervised and unsupervised machine
+  learning}.
+\newblock {\em Journal of Risk and Insurance}, 90(3):743--768.
+
+\bibitem[Ding et~al., 2025]{Ding2025}
+Ding, N., Ruan, X., Wang, H., and Liu, Y. (2025).
+\newblock Automobile insurance fraud detection based on {PSO-XGBoost} model and
+  interpretable machine learning method.
+\newblock {\em Insurance: Mathematics and Economics}, 120:51--60.
+
+\bibitem[Domingos and Pazzani, 1997]{Domingos1997}
+Domingos, P. and Pazzani, M. (1997).
+\newblock {On the Optimality of the Simple Bayesian Classifier under Zero-One
+  Loss}.
+\newblock {\em Machine Learning}, 29(2-3):103--130.
+
+\bibitem[Freund and Schapire, 1997]{Freund1997}
+Freund, Y. and Schapire, R.~E. (1997).
+\newblock {A Decision-Theoretic Generalization of On-Line Learning and an
+  Application to Boosting}.
+\newblock {\em Journal of Computer and System Sciences}, 55(1):119--139.
+
+\bibitem[Gomes et~al., 2021]{Gomes2021}
+Gomes, C., Jin, Z., and Yang, H. (2021).
+\newblock Insurance fraud detection with unsupervised deep learning.
+\newblock {\em Journal of Risk and Insurance}, 88(3):591--624.
+
+\bibitem[Grubbs, 1969]{Grubbs1969}
+Grubbs, F.~E. (1969).
+\newblock {Procedures for Detecting Outlying Observations in Samples}.
+\newblock {\em Technometrics}, 11(1):1--21.
+
+\bibitem[Hampel, 1974]{Hampel1974}
+Hampel, F.~R. (1974).
+\newblock {The Influence Curve and its Role in Robust Estimation}.
+\newblock {\em Journal of the American Statistical Association},
+  69(346):383--393.
+
+\bibitem[Hassani et~al., 2020]{Hassani2020}
+Hassani, H., Huang, X., Silva, E., and Ghodsi, M. (2020).
+\newblock Deep learning and implementations in banking.
+\newblock {\em Annals of Data Science}, 7:433--446.
+
+\bibitem[Hastie et~al., 2009]{Hastie2009}
+Hastie, T., Tibshirani, R., and Friedman, J. (2009).
+\newblock {\em {The Elements of Statistical Learning}}.
+\newblock Springer, 2 edition.
+
+\bibitem[He and Garcia, 2009]{He2009}
+He, H. and Garcia, E.~A. (2009).
+\newblock {Learning from Imbalanced Data}.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  21(9):1263--1284.
+
+\bibitem[Hilal et~al., 2022]{A61}
+Hilal, W., Gadsden, S.~A., and Yawney, J. (2022).
+\newblock Financial fraud: a review of anomaly detection techniques and recent
+  advances.
+\newblock {\em Expert systems With applications}, 193:116429.
+
+\bibitem[Huang, 1998]{Huang1998}
+Huang, Z. (1998).
+\newblock {Extensions to the k-Means Algorithm for Clustering Large Data Sets
+  with Categorical Values}.
+\newblock {\em Data Mining and Knowledge Discovery}, 2(3):283--304.
+
+\bibitem[Kamalov et~al., 2023]{Kamalov2023}
+Kamalov, F., Thabtah, F., and Leung, H.~H. (2023).
+\newblock Feature selection in imbalanced data.
+\newblock {\em Annals of Data Science}, 10:1527--1541.
+
+\bibitem[Khalil et~al., 2024]{Khalil2024}
+Khalil, A.~A., Liu, Z., Fathalla, A., Ali, A., and Salah, A. (2024).
+\newblock Machine learning based method for insurance fraud detection on class
+  imbalance datasets with missing values.
+\newblock {\em IEEE Access}, 12:155451--155468.
+
+\bibitem[Kuhn, 2008]{Kuhn2008}
+Kuhn, M. (2008).
+\newblock {Building Predictive Models in R Using the caret Package}.
+\newblock {\em Journal of Statistical Software}, 28(5):1--26.
+
+\bibitem[Liu et~al., 2008]{Liu2008}
+Liu, F.~T., Ting, K.~M., and Zhou, Z.-H. (2008).
+\newblock {Isolation Forest}.
+\newblock In {\em 2008 Eighth IEEE International Conference on Data Mining},
+  pages 413--422.
+
+\bibitem[{mexwell}, nd]{insuranceclaims}
+{mexwell} (n.d.).
+\newblock Insurance claims.
+\newblock Kaggle.
+\newblock \url{https://www.kaggle.com/datasets/mexwell/insurance-claims}.
+  Accessed 19 September 2026.
+
+\bibitem[Moon et~al., 2019]{A80}
+Moon, H., Pu, Y., and Ceglia, C. (2019).
+\newblock A predictive modeling for detecting fraudulent automobile insurance
+  claims.
+\newblock {\em Theoretical Economics Letters}, 09:1886--1900.
+
+\bibitem[Ngai et~al., 2011]{Ngai2011}
+Ngai, E., Hu, Y., Wong, Y., Chen, Y., and Sun, X. (2011).
+\newblock {The application of data mining techniques in financial fraud
+  detection: A classification framework and an academic review of literature}.
+\newblock {\em Decision Support Systems}, 50(3):559--569.
+
+\bibitem[Nian et~al., 2016]{Nian2016}
+Nian, K., Zhang, H., Tayal, A., Coleman, T., and Li, Y. (2016).
+\newblock Auto insurance fraud detection using unsupervised spectral ranking
+  for anomaly.
+\newblock {\em The Journal of Finance and Data Science}, 2(1):58--75.
+
+\bibitem[Nijhuis and van Lelyveld, 2023]{A73}
+Nijhuis, M. and van Lelyveld, I. (2023).
+\newblock Outlier detection with reinforcement learning for costly to verify
+  data.
+\newblock {\em Entropy}, 25(6):842.
+
+\bibitem[Pedregosa et~al., 2011]{Pedregosa2011}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
+  O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J.,
+  Passos, A., Cournapeau, D., Brucher, M., Perrot, M., and Duchesnay, {\'E}.
+  (2011).
+\newblock {Scikit-learn: Machine Learning in Python}.
+\newblock {\em Journal of Machine Learning Research}, 12(85):2825--2830.
+
+\bibitem[Ramaswamy et~al., 2000]{Ramaswamy2000}
+Ramaswamy, S., Rastogi, R., and Shim, K. (2000).
+\newblock {Efficient algorithms for mining outliers from large data sets}.
+\newblock In {\em Proceedings of the 2000 ACM SIGMOD international conference
+  on Management of data}, pages 427--438.
+
+\bibitem[Rumelhart et~al., 1986]{Rumelhart1986}
+Rumelhart, D.~E., Hinton, G.~E., and Williams, R.~J. (1986).
+\newblock {Learning representations by back-propagating errors}.
+\newblock {\em Nature}, 323(6088):533--536.
+
+\bibitem[Saito and Rehmsmeier, 2015]{Saito2015}
+Saito, T. and Rehmsmeier, M. (2015).
+\newblock {The Precision-Recall Plot Is More Informative than the ROC Plot When
+  Evaluating Binary Classifiers on Imbalanced Datasets}.
+\newblock {\em PLOS ONE}, 10(3):e0118432.
+
+\bibitem[Schrijver et~al., 2024]{Schrijver2024}
+Schrijver, G., Sarmah, D.~K., and El-Hajj, M. (2024).
+\newblock Automobile insurance fraud detection using data mining: A systematic
+  literature review.
+\newblock {\em Intelligent Systems with Applications}, 21:200340.
+
+\bibitem[Shannon, 1948]{Shannon1948}
+Shannon, C.~E. (1948).
+\newblock {A Mathematical Theory of Communication}.
+\newblock {\em Bell System Technical Journal}, 27(3):379--423.
+
+\bibitem[Vorobyev, 2024]{Vorobyev2024}
+Vorobyev, I. (2024).
+\newblock Fraud risk assessment in car insurance using claims graph features in
+  machine learning.
+\newblock {\em Expert Systems with Applications}, 251:124109.
+
+\bibitem[West and Bhattacharya, 2016]{West2016}
+West, J. and Bhattacharya, M. (2016).
+\newblock {Intelligent financial fraud detection: A comprehensive review}.
+\newblock {\em Computers \& Security}, 57:47--66.
+
+\bibitem[Xu and Tian, 2015]{XuTian2015}
+Xu, D. and Tian, Y. (2015).
+\newblock A comprehensive survey of clustering algorithms.
+\newblock {\em Annals of Data Science}, 2:165--193.
+
+\end{thebibliography}

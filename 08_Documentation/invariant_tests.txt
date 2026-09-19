@@ -1,0 +1,11 @@
+test_cascade_row_mapping_and_candidate_entropy (__main__.Invariants.test_cascade_row_mapping_and_candidate_entropy) ... ok
+test_class_one_metrics (__main__.Invariants.test_class_one_metrics) ... ok
+test_entropy_against_exact_leave_one_out (__main__.Invariants.test_entropy_against_exact_leave_one_out) ... ok
+test_preprocessor_not_refitted_to_future (__main__.Invariants.test_preprocessor_not_refitted_to_future) ... ok
+test_review_contains_alerts_and_fixed_unlabeled_audit (__main__.Invariants.test_review_contains_alerts_and_fixed_unlabeled_audit) ... ok
+test_splits_partition_every_row_once (__main__.Invariants.test_splits_partition_every_row_once) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.027s
+
+OK

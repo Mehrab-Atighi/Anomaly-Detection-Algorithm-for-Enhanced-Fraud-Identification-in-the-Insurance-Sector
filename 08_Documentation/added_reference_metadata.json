@@ -1,0 +1,1467 @@
+{
+  "Breunig2000": {
+    "title": [
+      "LOF"
+    ],
+    "subtitle": [
+      "identifying density-based local outliers"
+    ],
+    "author": [
+      {
+        "given": "Markus M.",
+        "family": "Breunig",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Institute for Computer Science, University of Munich, Oettingenstr. 67, D-80538 Munich, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hans-Peter",
+        "family": "Kriegel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Institute for Computer Science, University of Munich, Oettingenstr. 67, D-80538 Munich, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Raymond T.",
+        "family": "Ng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, University of British Columbia, Vancouver, BC V6T 1Z4 Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jörg",
+        "family": "Sander",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Institute for Computer Science, University of Munich, Oettingenstr. 67, D-80538 Munich, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Proceedings of the 2000 ACM SIGMOD international conference on Management of data"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2000,
+          5,
+          16
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2000,
+          5,
+          16
+        ]
+      ]
+    },
+    "volume": null,
+    "issue": null,
+    "page": "93-104",
+    "DOI": "10.1145/342009.335388",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "URL": "https://doi.org/10.1145/342009.335388"
+  },
+  "Ramaswamy2000": {
+    "title": [
+      "Efficient algorithms for mining outliers from large data sets"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Sridhar",
+        "family": "Ramaswamy",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Epiphany Inc., Palo Alto, CA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rajeev",
+        "family": "Rastogi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Bell Laboratories, Murray Hill, NJ"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kyuseok",
+        "family": "Shim",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Korea Advanced Institute of Science and Technology and Advanced Information Technology Research Center at KAIST, Taejon, KOREA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Proceedings of the 2000 ACM SIGMOD international conference on Management of data"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2000,
+          5,
+          16
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2000,
+          5,
+          16
+        ]
+      ]
+    },
+    "volume": null,
+    "issue": null,
+    "page": "427-438",
+    "DOI": "10.1145/342009.335437",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "URL": "https://doi.org/10.1145/342009.335437"
+  },
+  "Huang1998": {
+    "title": [
+      "Extensions to the k-Means Algorithm for Clustering Large Data Sets with Categorical Values"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Zhexue",
+        "family": "Huang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Data Mining and Knowledge Discovery"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1998,
+          9
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1998,
+          9
+        ]
+      ]
+    },
+    "volume": "2",
+    "issue": "3",
+    "page": "283-304",
+    "DOI": "10.1023/a:1009769707641",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1023/a:1009769707641"
+  },
+  "Kuhn2008": {
+    "title": [
+      "Building Predictive Models in\n                    <i>R</i>\n                    Using the\n                    <b>caret</b>\n                    Package"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Max",
+        "family": "Kuhn",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Statistical Software"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "published-print": null,
+    "volume": "28",
+    "issue": "5",
+    "page": null,
+    "DOI": "10.18637/jss.v028.i05",
+    "publisher": "Foundation for Open Access Statistic",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.18637/jss.v028.i05"
+  },
+  "Breiman2001": {
+    "title": [
+      "Random Forests"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Leo",
+        "family": "Breiman",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Machine Learning"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2001,
+          10
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2001,
+          10
+        ]
+      ]
+    },
+    "volume": "45",
+    "issue": "1",
+    "page": "5-32",
+    "DOI": "10.1023/a:1010933404324",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1023/a:1010933404324"
+  },
+  "Cortes1995": {
+    "title": [
+      "Support-vector networks"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Corinna",
+        "family": "Cortes",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vladimir",
+        "family": "Vapnik",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Machine Learning"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1995,
+          9
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1995,
+          9
+        ]
+      ]
+    },
+    "volume": "20",
+    "issue": "3",
+    "page": "273-297",
+    "DOI": "10.1007/bf00994018",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1007/bf00994018"
+  },
+  "Chen2016": {
+    "title": [
+      "XGBoost"
+    ],
+    "subtitle": [
+      "A Scalable Tree Boosting System"
+    ],
+    "author": [
+      {
+        "given": "Tianqi",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Washington, Seattle, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Carlos",
+        "family": "Guestrin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Washington, Seattle, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          13
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          13
+        ]
+      ]
+    },
+    "volume": null,
+    "issue": null,
+    "page": "785-794",
+    "DOI": "10.1145/2939672.2939785",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "URL": "https://doi.org/10.1145/2939672.2939785"
+  },
+  "Domingos1997": {
+    "title": [
+      "On the Optimality of the Simple Bayesian Classifier under Zero-One Loss"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Pedro",
+        "family": "Domingos",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michael",
+        "family": "Pazzani",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Machine Learning"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1997,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1997,
+          11
+        ]
+      ]
+    },
+    "volume": "29",
+    "issue": "2-3",
+    "page": "103-130",
+    "DOI": "10.1023/a:1007413511361",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1023/a:1007413511361"
+  },
+  "Hampel1974": {
+    "title": [
+      "The Influence Curve and its Role in Robust Estimation"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Frank R.",
+        "family": "Hampel",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Abt. 9, Swiss Federal Institute of Technology",
+            "place": [
+              "Switzerland"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of the American Statistical Association"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1974,
+          6
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1974,
+          6
+        ]
+      ]
+    },
+    "volume": "69",
+    "issue": "346",
+    "page": "383-393",
+    "DOI": "10.1080/01621459.1974.10482962",
+    "publisher": "Informa UK Limited",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1080/01621459.1974.10482962"
+  },
+  "Grubbs1969": {
+    "title": [
+      "Procedures for Detecting Outlying Observations in Samples"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Frank E.",
+        "family": "Grubbs",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "U. S. Army Aberdeen Research and Development Center Aberdeen Proving Ground"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Technometrics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1969,
+          2
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1969,
+          2
+        ]
+      ]
+    },
+    "volume": "11",
+    "issue": "1",
+    "page": "1-21",
+    "DOI": "10.1080/00401706.1969.10490657",
+    "publisher": "Informa UK Limited",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1080/00401706.1969.10490657"
+  },
+  "Shannon1948": {
+    "title": [
+      "A Mathematical Theory of Communication"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "C. E.",
+        "family": "Shannon",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Bell System Technical Journal"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1948,
+          7
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1948,
+          7
+        ]
+      ]
+    },
+    "volume": "27",
+    "issue": "3",
+    "page": "379-423",
+    "DOI": "10.1002/j.1538-7305.1948.tb01338.x",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
+  },
+  "Cover1967": {
+    "title": [
+      "Nearest neighbor pattern classification"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "T.",
+        "family": "Cover",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "P.",
+        "family": "Hart",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Information Theory"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1967,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1967,
+          1
+        ]
+      ]
+    },
+    "volume": "13",
+    "issue": "1",
+    "page": "21-27",
+    "DOI": "10.1109/tit.1967.1053964",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1109/tit.1967.1053964"
+  },
+  "Freund1997": {
+    "title": [
+      "A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Yoav",
+        "family": "Freund",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Robert E",
+        "family": "Schapire",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Computer and System Sciences"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1997,
+          8
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1997,
+          8
+        ]
+      ]
+    },
+    "volume": "55",
+    "issue": "1",
+    "page": "119-139",
+    "DOI": "10.1006/jcss.1997.1504",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1006/jcss.1997.1504"
+  },
+  "Rumelhart1986": {
+    "title": [
+      "Learning representations by back-propagating errors"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "David E.",
+        "family": "Rumelhart",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Geoffrey E.",
+        "family": "Hinton",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ronald J.",
+        "family": "Williams",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Nature"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1986,
+          10
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1986,
+          10
+        ]
+      ]
+    },
+    "volume": "323",
+    "issue": "6088",
+    "page": "533-536",
+    "DOI": "10.1038/323533a0",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1038/323533a0"
+  },
+  "Hastie2009": {
+    "title": [
+      "The Elements of Statistical Learning"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Trevor",
+        "family": "Hastie",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Robert",
+        "family": "Tibshirani",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jerome",
+        "family": "Friedman",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Springer Series in Statistics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "DOI": "10.1007/978-0-387-84858-7",
+    "publisher": "Springer New York",
+    "type": "book",
+    "URL": "https://doi.org/10.1007/978-0-387-84858-7"
+  },
+  "Saito2015": {
+    "title": [
+      "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Takaya",
+        "family": "Saito",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Marc",
+        "family": "Rehmsmeier",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "PLOS ONE"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2015,
+          3,
+          4
+        ]
+      ]
+    },
+    "published-print": null,
+    "volume": "10",
+    "issue": "3",
+    "page": "e0118432",
+    "DOI": "10.1371/journal.pone.0118432",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1371/journal.pone.0118432"
+  },
+  "He2009": {
+    "title": [
+      "Learning from Imbalanced Data"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "family": "Haibo He",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "E.A.",
+        "family": "Garcia",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Knowledge and Data Engineering"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2009,
+          9
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2009,
+          9
+        ]
+      ]
+    },
+    "volume": "21",
+    "issue": "9",
+    "page": "1263-1284",
+    "DOI": "10.1109/tkde.2008.239",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1109/tkde.2008.239"
+  },
+  "Ngai2011": {
+    "title": [
+      "The application of data mining techniques in financial fraud detection: A classification framework and an academic review of literature"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "E.W.T.",
+        "family": "Ngai",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yong",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Y.H.",
+        "family": "Wong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yijun",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xin",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Decision Support Systems"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2011,
+          2
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2011,
+          2
+        ]
+      ]
+    },
+    "volume": "50",
+    "issue": "3",
+    "page": "559-569",
+    "DOI": "10.1016/j.dss.2010.08.006",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1016/j.dss.2010.08.006"
+  },
+  "West2016": {
+    "title": [
+      "Intelligent financial fraud detection: A comprehensive review"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Jarrod",
+        "family": "West",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maumita",
+        "family": "Bhattacharya",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Computers &amp; Security"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "volume": "57",
+    "issue": null,
+    "page": "47-66",
+    "DOI": "10.1016/j.cose.2015.09.005",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1016/j.cose.2015.09.005"
+  },
+  "Bolton2002": {
+    "title": [
+      "Statistical Fraud Detection: A Review"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Richard J.",
+        "family": "Bolton",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David J.",
+        "family": "Hand",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Statistical Science"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2002,
+          8,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2002,
+          8,
+          1
+        ]
+      ]
+    },
+    "volume": "17",
+    "issue": "3",
+    "page": null,
+    "DOI": "10.1214/ss/1042727940",
+    "publisher": "Institute of Mathematical Statistics",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1214/ss/1042727940"
+  },
+  "Debener2023": {
+    "title": [
+      "Detecting insurance fraud using supervised and unsupervised machine learning"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Jörn",
+        "family": "Debener",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Finance Center Münster University of Münster Münster Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Volker",
+        "family": "Heinke",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Finance Center Münster University of Münster Münster Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1249-5189",
+        "authenticated-orcid": false,
+        "given": "Johannes",
+        "family": "Kriebel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Finance Center Münster University of Münster Münster Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Risk and Insurance"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          15
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          9
+        ]
+      ]
+    },
+    "volume": "90",
+    "issue": "3",
+    "page": "743-768",
+    "DOI": "10.1111/jori.12427",
+    "publisher": "Wiley",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1111/jori.12427"
+  },
+  "Chandola2009": {
+    "title": [
+      "Anomaly detection"
+    ],
+    "subtitle": [
+      "A survey"
+    ],
+    "author": [
+      {
+        "given": "Varun",
+        "family": "Chandola",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Minnesota, Minneapolis, MN"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Arindam",
+        "family": "Banerjee",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Minnesota, Minneapolis, MN"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vipin",
+        "family": "Kumar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Minnesota, Minneapolis, MN"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "ACM Computing Surveys"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2009,
+          7
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2009,
+          7
+        ]
+      ]
+    },
+    "volume": "41",
+    "issue": "3",
+    "page": "1-58",
+    "DOI": "10.1145/1541880.1541882",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "type": "journal-article",
+    "URL": "https://doi.org/10.1145/1541880.1541882"
+  },
+  "Liu2008": {
+    "title": [
+      "Isolation Forest"
+    ],
+    "subtitle": [],
+    "author": [
+      {
+        "given": "Fei Tony",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kai Ming",
+        "family": "Ting",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhi-Hua",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "2008 Eighth IEEE International Conference on Data Mining"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2008,
+          12
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2008,
+          12
+        ]
+      ]
+    },
+    "volume": null,
+    "issue": null,
+    "page": "413-422",
+    "DOI": "10.1109/icdm.2008.17",
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "URL": "https://doi.org/10.1109/icdm.2008.17"
+  }
+}

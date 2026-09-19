@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "source": "07_Original_Archive/Submitted_V5_Confirmed/Pictures/simple.png",
+      "figure": "simple.png",
+      "byte_identical": true,
+      "sha256": "11b087b738ca6496735cd601560899d35e6f9ee59d127d429933da1fe4dfee9b"
+    },
+    {
+      "source": "07_Original_Archive/Submitted_V5_Confirmed/Pictures/Multilayered.png",
+      "figure": "Multilayered.png",
+      "byte_identical": true,
+      "sha256": "f1e597e8559421cf5109893d92bb386154f6b476706dde44511a91d3e0fb6020"
+    }
+  ]
+}

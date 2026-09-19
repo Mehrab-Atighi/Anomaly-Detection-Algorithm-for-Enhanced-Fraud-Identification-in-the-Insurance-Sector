@@ -1,0 +1,18 @@
+cm_total = cbind(rbind(c(cm_total$byClass , cm_total$overall , cm_total[2])) ,
+             path ="fraud_oracle.csv", CV = "Yes" , Type = "MultyLayer1" , time = as.numeric(time))
+
+total_cm = rbind(total_cm , cm_total)
+
+"carclaims.csv"
+
+"fraud_oracle.csv"
+"insurance fraud claims.csv"
+
+
+dim(rbind(total_cm))
+
+x = rbind(total_cm)
+x = as.vector(x)
+x[1:23]
+
+write.xl(total_cm , file = "TimeAndTotalCm.csv")

@@ -1,0 +1,17 @@
+"Dataset","Metric","Setting","Mean","SD"
+"Carclaims","Fraud recall","(3,4)",40.6941431670282,4.72400529258088
+"Insurance Claims","Fraud recall","(3,4)",54.3548387096774,10.0811827813628
+"Carclaims","Fraud F1","(3,4)",21.1957359012834,1.36897023088124
+"Insurance Claims","Fraud F1","(3,4)",49.7187905830594,4.28392364653692
+"Carclaims","Average precision","(3,4)",14.0025205083479,0.689637210061289
+"Insurance Claims","Average precision","(3,4)",45.1861646644692,4.75244546193996
+"Carclaims","Total review","(3,4)",25.2671854734111,1.58877889104487
+"Insurance Claims","Total review","(3,4)",36.46,5.02708221094061
+"Carclaims","Fraud recall","(5,6)",11.1062906724512,2.92962134770224
+"Insurance Claims","Fraud recall","(5,6)",30,12.0386897009903
+"Carclaims","Fraud F1","(5,6)",12.2915624123055,2.11310176560402
+"Insurance Claims","Fraud F1","(5,6)",36.8786093150057,11.8298423580043
+"Carclaims","Average precision","(5,6)",12.6674879061435,0.660069887976678
+"Insurance Claims","Average precision","(5,6)",43.9584590133191,5.88758781353022
+"Carclaims","Total review","(5,6)",14.2399481193255,1.04616111123605
+"Insurance Claims","Total review","(5,6)",23.14,5.0500165016232

@@ -1,0 +1,63 @@
+% Compile with pdfLaTeX and BibTeX (or latexmk -pdf).
+\input{preamble.tex}
+\begin{document}
+\begin{center}
+{\bf Anomaly Detection Algorithm for Enhanced Fraud
+Identification in the Insurance Sector}\\
+{\sc Mehrab Atighi$^{a}$, Sayed Jamal Mirkamali$^{b}$,
+Amir T. Payandeh Najafabadi$^{a,}$\footnote{amirtpayandeh@sbu.ac.ir}}\\
+a Department of Actuarial Science, Faculty of Mathematical
+Sciences, Shahid Beheshti University,
+Evin, 1983969411, Tehran, Iran.\\
+b Department of Mathematics, Faculty of Science, Arak University,
+3848177584, Arak, Iran.\\
+\today
+
+
+
+
+\end{center}
+\ifmarked
+\noindent\colorbox{yellow!25}{\parbox{\dimexpr\linewidth-2\fboxsep}{
+\textbf{Revision guide.} The original five-section organization and Algorithms
+1--3 and the original workflow images are retained. Blue text marks additions and substantive corrections;
+minor language and citation edits are not individually colored. Empirical
+tables and plots replace the earlier exports. The change map identifies
+removed claims and the source diff records textual changes.}}\medskip
+\fi
+\begin{abstract}
+\begin{revised}
+Insurance-fraud screening requires effective detection under class
+imbalance and limited verification resources. Sequential Anomaly Detection
+(SAD) uses an anomaly ensemble to select claims for review, then trains
+eight supervised learners on verified records and updates them across
+successive batches. Three architectures differ in their initial screening:
+Simple-A uses nine anomaly detectors, Simple-B adds an entropy vote, and
+Multilayer applies entropy after anomaly consensus. We evaluate these
+architectures using ten repeated stratified random splits of Carclaims
+(15,420 records; 5.99\% fraud) and Insurance Claims (1,000 records;
+24.70\% fraud). Recorded outcomes simulate verification after case selection,
+including random audits of non-alerted claims. At fixed voting thresholds
+$(3,4)$, Simple-B achieves mean fraud F1 \ExtSimpleBFone{} and average
+precision \ExtSimpleBAP{} on the second benchmark. Multilayer achieves F1
+\ExtMultiFone{} at a review fraction of \ExtMultiReview{}. A frozen-model
+ablation, ten classifiers trained under a common acquisition policy, and
+a stricter threshold setting examine the effects on detection and workload.
+The findings support assessment of both outcomes when selecting a review
+policy; they do not establish universal architectural superiority or
+prospective generalizability to an independent insurer.
+\end{revised}
+\end{abstract}
+\noindent\textbf{Keywords:} insurance fraud; sequential updating; anomaly
+detection; entropy; verification workload; class imbalance.
+\par\noindent{\bf MSC2010}: {62D05, 62F10, 62N01, 65C05.}
+\input{sections/01_introduction.tex}
+\input{sections/02_literature.tex}
+\input{sections/03_methods.tex}
+\begin{revised}
+\input{sections/04_results.tex}
+\input{sections/05_conclusion.tex}
+\end{revised}
+\bibliographystyle{apalike}
+\bibliography{refs,references_additions}
+\end{document}

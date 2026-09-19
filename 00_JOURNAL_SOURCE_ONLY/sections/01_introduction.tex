@@ -1,0 +1,46 @@
+\section{Introduction}\label{sec:introduction}
+Insurance fraud creates financial losses and places demands on claims
+investigation. Insurers must identify suspicious claims while allocating
+limited review resources \citep{A61,Bolton2002}. This task is difficult
+because legitimate claims are heterogeneous and unusual observations are
+not necessarily fraudulent.
+
+Machine-learning approaches address this problem through supervised
+classification, unsupervised screening, or combinations of the two
+\citep{Ngai2011,West2016,Schrijver2024}. Their practical value depends on
+both detection performance and the number of claims requiring verification.
+Selective investigation also determines which labels become available
+for subsequent training.
+
+Sequential Anomaly Detection (SAD) connects initial anomaly screening to
+verification and repeated supervised learning. The framework is intended
+to support a choice between detection performance and review workload.
+We examine this choice through the simple and multilayered SAD structures.
+
+\begin{revised}
+The contribution lies in the organization and evaluation of established
+components within a verification-driven workflow. Its \emph{sequential}
+mechanism incorporates verified records from one batch into training before
+the ensemble screens the next batch. Its \emph{multilayer} mechanism
+applies an entropy filter to the candidates selected by anomaly-detector
+consensus. Updating changes the information available for later prediction;
+layering changes which initial cases reach verification. Simple-A,
+Simple-B and Multilayer retain the original architectural alternatives:
+entropy is absent, contributes a flat vote, or forms a second screening
+layer, respectively.
+
+The evaluation compares these three architectures, introduces a frozen-model
+control for sequential updating, and applies the same prescribed protocol
+to two benchmark datasets. Additional classifiers include an imbalance-aware
+forest and a recent fraud-motivated boosting approach. The experiments
+explicitly account for review workload and designate fraud as the positive
+class. Recorded outcomes simulate expert feedback and are revealed to the
+learner only after review selection. SAD uses fixed acquisition rules;
+the comparison with reinforcement learning therefore concerns workflow
+design rather than a learned reward-maximizing policy.
+\end{revised}
+
+Section \ref{SC:LR} positions SAD within the fraud-detection literature.
+Section \ref{SC:METHOD} defines its components and update rules;
+Section \ref{SC:RESULT} reports the benchmark experiments.
+Section \ref{SC:CONCLUSION} discusses the findings and their limitations.

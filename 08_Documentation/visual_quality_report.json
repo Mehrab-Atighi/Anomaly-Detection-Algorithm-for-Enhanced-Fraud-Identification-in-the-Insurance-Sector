@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "reviewed": "Rendered every page of all five documents. Visually reviewed all 31 clean-article pages, marked introduction/algorithms/results, all ten figures, and every page of the response, change map and Persian report. Rechecked the final edited literature table.",
+  "pdf_pages": {
+    "manuscript_clean": 31,
+    "manuscript_marked": 31,
+    "response_to_reviewer": 3,
+    "change_map": 2,
+    "professor_report_fa": 3
+  },
+  "checks": [
+    "Every final PDF opens without repair and has nonempty text on every page",
+    "No clipped figure labels or missing glyphs observed; ablation axis title shortened after visual review",
+    "Persian shaping and right-to-left table order checked",
+    "No undefined references/citations or overfull boxes in compilation logs",
+    "Eight empirical figure families executed in R/ggplot2: 720-dpi PNG and PDF/SVG/EPS",
+    "All displayed points and error-bar endpoints lie within their stated axis ranges",
+    "Original workflow PNGs and draw.io sources retained byte-for-byte",
+    "Original US-letter layout, title block, five main sections and three formal algorithms retained",
+    "Cleaner float placement reduces clean article from 34 to 31 pages",
+    "Isolated editable-source manuscript and reviewer response compile without missing assets",
+    "Journal source ZIP contains no PDF; reading copies and private report remain in full package",
+    "Final repository amendment: visually reviewed article page 26 and response page 3; verified exact clickable author-provided URL in clean/marked article and response."
+  ],
+  "scope": "Editorial, numerical and packaging QA; not a new similarity scan or journal acceptance prediction."
+}

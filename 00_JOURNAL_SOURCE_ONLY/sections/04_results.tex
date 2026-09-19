@@ -1,0 +1,161 @@
+\section{Real Data Application}\label{SC:RESULT}\label{sec:results}
+The experiments apply the SAD components defined in Section
+\ref{SC:METHOD} to two insurance-claims benchmarks. The evaluation compares
+the retained architectures, individual classifiers, a frozen-model control
+and two joint threshold settings.
+
+\subsection*{Carclaims dataset}
+Carclaims contains 15,420 records, 32 original predictors and 923 recorded
+frauds (5.99\%) \citep{dataset}. The original descriptive frequency table
+is retained and regenerated from the supplied data in Table \ref{tab:frequency}.
+\input{generated/table_frequency.tex}
+
+\subsection{Additional dataset and replication scope}\label{sec:seconddata}
+Insurance Claims is available through the Kaggle dataset published by
+\texttt{mexwell} \citep{insuranceclaims}, the source identified for the
+second file supplied in the research archive. The analyzed file contains
+1,000 records, 38 original predictors and 247 recorded frauds (24.70\%).
+Its schema, record count and contents differ from Carclaims.
+The differently named \texttt{fraud\_oracle.csv} is a duplicate
+representation of Carclaims and is excluded from the additional benchmark.
+
+Because the feature spaces differ, preprocessing and models are fitted
+separately for each dataset under the same SAD protocol. This experiment
+assesses replication of the workflow across benchmarks. The Kaggle source
+documents access to the second dataset; the original collecting insurer
+and its full real-versus-synthetic provenance remain unverified.
+
+\begin{table}[tbp]\centering
+\caption{Input datasets before predictor screening.}\label{tab:data}
+\begin{tabular}{lrrr}\toprule
+Dataset & Records & Predictors & Recorded fraud\\\midrule
+Carclaims & 15,420 & 32 & 923 (5.99\%)\\
+Insurance Claims & 1,000 & 38 & 247 (24.70\%)\\
+\bottomrule\end{tabular}\end{table}
+
+\subsection{Algorithm specifications}\label{sec:specifications}
+The number of partitions is $m=4$, with proportions
+$p_1=0.50$, $p_2=0.30$, $p_3=0.10$ and $p_4=0.10$.
+Simple-A uses $N=9$ initial detectors; Simple-B uses $N=10$ by including
+EAD as a vote; Multilayer retains $N=9$ and applies EAD to $Y_1$.
+All three retain $M=8$ supervised learners:
+LR, SVM, XGB, RF, NB, KNN, AdaBoost and ANN.
+Seeds 1234--1243 and the four-part schedule are shared across variants.
+The main operating point is $(T_{AD},T_{ML})=(3,4)$; the stricter point $(5,6)$
+is a complete additional Multilayer training trajectory.
+These are fixed illustrative settings, not a preregistered optimum.
+The data had been examined during development; the second benchmark is not
+described as prospectively untouched external data.
+SAD hyperparameters are unchanged between datasets.
+Only the PSO comparator follows the predefined inner training-only search.
+Random partitions are stratified using the outcomes for split construction
+only. Within each trajectory, label access follows Algorithms 2 and 3.
+
+\paragraph{Reconciliation with the original exports.}
+All reported performance values are recomputed from the corrected
+implementation. The revision uses training-only preprocessing and SMOTE, corrected
+entropy/index alignment, and outcome access only after review selection.
+Non-alert samples are verified rather than assumed genuine. The previous
+exports did not consistently designate fraud as the positive class.
+Consequently, their reported recall/F1 and high overall accuracy are not
+reused as evidence of fraud detection performance. These corrections are
+necessary to evaluate the retained SAD architectures consistently.
+
+\FloatBarrier
+\subsection{Architecture performance and workload}
+\input{generated/table_architectures.tex}
+\input{generated/results_architectures.tex}
+Figures \ref{fig:performance}--\ref{fig:workload} summarize pooled performance,
+partition-wise detection and verification workload.
+\paperfigure{02_architecture_performance}{Fraud recall, F1 and AP for four
+architectures. Points and bars show mean and sample SD across ten random splits,
+pooling $D_2$--$D_4$ within each seed.}{fig:performance}{1}
+\paperfigure{03_partition_progress}{Partition-wise F1 and recall.
+Later partitions contain different records; these are not learning curves
+on a fixed test set.}{fig:partitions}{1}
+\paperfigure{04_workload}{Partition-wise alert rate and total review rate,
+including the 10\% audit of non-alerted claims. Lines and points show means
+over ten random splits. The panels distinguish alerted claims from the
+full set submitted for verification.}{fig:workload}{1}
+
+\subsection{Classifier comparisons and ranking curves}\label{sec:comparators}
+The eight component classifiers are evaluated individually on the same
+verified training records acquired by Simple-B. Two additional comparators
+use those same records: balanced random forest (200 trees with within-tree
+balancing and no preceding SMOTE) and PSO-XGBoost adapted from the insurance
+fraud study of \citet{Ding2025}. The latter is a recent fraud-motivated
+comparator; it is not an exact reproduction of the published system.
+
+PSO selects hyperparameters once using only verified $D_1$ records and
+three-fold stratified cross-validation scored by AP. SMOTE is fitted inside
+each training fold. Four particles and three iterations search 60--160 trees,
+depth 2--6, learning rates $10^{-2}$--$10^{-0.7}$ and row/column subsampling
+0.6--1. Inertia is 0.7 and both attraction coefficients are 1.4.
+Selected values are fixed in subsequent rounds. The comparison tests
+classifier choice under a common acquisition policy, not ten independent
+end-to-end acquisition systems.
+\input{generated/table_baselines.tex}
+\input{generated/results_baselines.tex}
+Figures \ref{fig:baselines} and \ref{fig:curves} show the classifier comparison
+and the architectures' ranking performance on the predefined split.
+\paperfigure{05_baseline_comparison}{Same-acquisition classifier comparison.
+All comparators use the Simple-B verified-record policy.
+PSO-XGB is an adapted search; BalancedRF balances within trees.
+Error bars show sample SD.}{fig:baselines}{1}
+\paperfigure{06_roc_pr}{ROC and precision--recall curves for predefined seed
+1234, pooling $D_2$--$D_4$. These are representative split curves,
+not averages over independent populations. Dashed lines are no-skill
+references.}{fig:curves}{1}
+
+\subsection{Ablation study and threshold sensitivity}\label{sec:ablation}
+Comparing Simple-A with Simple-B examines adding a flat entropy vote;
+comparing Simple-B with Multilayer examines replacing flat entropy voting
+with candidate-local entropy gating. These comparisons also change which
+records are reviewed and therefore are not matched-budget causal estimates.
+For the sequential ablation, Multilayer-static freezes the exact $D_1$
+models and predicts the same $D_2$--$D_4$ records without retraining.
+Its initialization, preprocessing and initial training set are identical
+to those of updating Multilayer.
+\input{generated/table_ablation.tex}
+\input{generated/results_ablation.tex}
+\paperfigure{07_ablation_deltas}{Paired seed-wise changes, in percentage
+points, from frozen to updating Multilayer. Positive F1/AP changes favor
+updating; review-rate differences measure changed workload. Black diamonds
+and bars show mean and sample SD. Panels use separate vertical
+ranges.}{fig:ablation}{1}
+\input{generated/table_thresholds.tex}
+\paperfigure{08_threshold_sensitivity}{Main $(3,4)$ and strict $(5,6)$
+Multilayer points from separately rerun trajectories.
+The comparison does not isolate the two thresholds independently.}{fig:thresholds}{1}
+
+\subsection{Computation and reproducibility}
+Predictions retain original row ID, split, seed, architecture, score, votes,
+alert, review mask and recorded outcome. Manifests record software versions
+and code/data hashes. Numerical verification recomputes metrics from these
+records; figures and LaTeX tables use the same results.
+The executed implementation is Python, using scikit-learn and the associated
+packages listed in the environment record \citep{Pedregosa2011}.
+Original R scripts and exports are archived; revised results come from Python.
+A single R/\texttt{ggplot2} script renders both benchmarks from the saved
+results. The empirical figures use the same visual conventions and share
+axis limits within each comparison. Performance axes span 0--80\% and
+workload axes 0--55\%, encompassing the displayed values and error bars;
+ROC and precision--recall curves retain the full 0--1 range. Numerical
+tables report fractions on the 0--1 scale. Error bars denote sample
+standard deviations across splits, not confidence intervals.
+
+\input{generated/table_runtime.tex}
+\paperfigure{09_runtime}{Supervised fitting time across three training
+rounds, excluding shared initial anomaly calculation, exports and comparator
+tuning. Times describe this hardware and implementation; the panels use
+different time ranges.}{fig:runtime}{1}
+
+
+\paragraph{Data and code availability.}
+The source datasets are identified in \citet{dataset} and
+\citet{insuranceclaims}. The analyzed files, data dictionaries, executable
+analysis and plotting scripts, prediction-level outputs and instructions
+for reproducing the tables and figures are publicly available in the
+project GitHub repository.\footnote{\url{https://github.com/Mehrab-Atighi/Anomaly-Detection-Algorithm-for-Enhanced-Fraud-Identification-in-the-Insurance-Sector}}
+The archived analysis uses the supplied dataset versions; source hashes
+are included to identify these files unambiguously.

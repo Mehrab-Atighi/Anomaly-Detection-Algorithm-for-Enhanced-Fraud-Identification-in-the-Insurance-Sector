@@ -1,0 +1,1037 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./manuscript_marked.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(./manuscript_clean.tex (./preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/lm/lmodern.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty) (./algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)) (./algorithmic.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(./generated/numbers.tex)) (/usr/share/texmf/tex/latex/lm/t1lmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file manuscript_marked.aux.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd)
+(/usr/share/texmf/tex/latex/lm/omllmm.fd)
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd)
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
+.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts
+/enc/dvips/lm/lm-rm.enc}] (./sections/01_introduction.tex
+
+Package natbib Warning: Citation `A61' on page 2 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Bolton2002' on page 2 undefined on input line
+ 4.
+
+
+Package natbib Warning: Citation `Ngai2011' on page 2 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `West2016' on page 2 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `Schrijver2024' on page 2 undefined on input l
+ine 10.
+
+
+LaTeX Warning: Reference `SC:LR' on page 2 undefined on input line 43.
+
+
+LaTeX Warning: Reference `SC:METHOD' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Reference `SC:RESULT' on page 2 undefined on input line 45.
+
+
+LaTeX Warning: Reference `SC:CONCLUSION' on page 2 undefined on input line 46.
+
+) (./sections/02_literature.tex [2]
+
+Package natbib Warning: Citation `Bolton2002' on page 3 undefined on input line
+ 6.
+
+
+Package natbib Warning: Citation `Ngai2011' on page 3 undefined on input line 6
+.
+
+
+Package natbib Warning: Citation `West2016' on page 3 undefined on input line 7
+.
+
+
+Package natbib Warning: Citation `A61' on page 3 undefined on input line 7.
+
+
+Package natbib Warning: Citation `Schrijver2024' on page 3 undefined on input l
+ine 8.
+
+
+Package natbib Warning: Citation `A80' on page 3 undefined on input line 15.
+
+
+Package natbib Warning: Citation `A61' on page 3 undefined on input line 15.
+
+
+Package natbib Warning: Citation `Ding2025' on page 3 undefined on input line 1
+7.
+
+
+Package natbib Warning: Citation `BanulescuRadu2024' on page 3 undefined on inp
+ut line 18.
+
+
+Package natbib Warning: Citation `Khalil2024' on page 3 undefined on input line
+ 19.
+
+
+Package natbib Warning: Citation `Debener2023' on page 3 undefined on input lin
+e 22.
+
+
+Package natbib Warning: Citation `Kamalov2023' on page 3 undefined on input lin
+e 25.
+
+
+Package natbib Warning: Citation `Nian2016' on page 3 undefined on input line 3
+3.
+
+
+Package natbib Warning: Citation `Gomes2021' on page 3 undefined on input line 
+33.
+
+
+Package natbib Warning: Citation `XuTian2015' on page 3 undefined on input line
+ 37.
+
+[3]
+
+Package natbib Warning: Citation `A73' on page 4 undefined on input line 42.
+
+
+Package natbib Warning: Citation `Vorobyev2024' on page 4 undefined on input li
+ne 51.
+
+
+Package natbib Warning: Citation `Ding2025' on page 4 undefined on input line 5
+3.
+
+
+Package natbib Warning: Citation `Hassani2020' on page 4 undefined on input lin
+e 53.
+
+
+LaTeX Warning: Reference `tab:positioning' on page 4 undefined on input line 62
+.
+
+
+Package natbib Warning: Citation `Ding2025' on page 4 undefined on input line 9
+3.
+
+
+Package natbib Warning: Citation `Gomes2021' on page 4 undefined on input line 
+93.
+
+
+Package natbib Warning: Citation `A73' on page 4 undefined on input line 93.
+
+
+Package natbib Warning: Citation `Vorobyev2024' on page 4 undefined on input li
+ne 93.
+
+) (./sections/03_methods.tex [4] [5]
+
+Package natbib Warning: Citation `Hastie2009' on page 6 undefined on input line
+ 11.
+
+
+Package natbib Warning: Citation `Kuhn2008' on page 6 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `Kuhn2008' on page 6 undefined on input line 2
+8.
+
+
+LaTeX Warning: Reference `algo:preprocessing' on page 6 undefined on input line
+ 33.
+
+(./algorithms/preprocessing.tex) (/usr/share/texmf/tex/latex/lm/t1lmtt.fd)
+[6{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathex.enc}]
+
+Package natbib Warning: Citation `Chawla2002' on page 7 undefined on input line
+ 50.
+
+
+Package natbib Warning: Citation `He2009' on page 7 undefined on input line 50.
+
+
+
+LaTeX Warning: Reference `figai1' on page 7 undefined on input line 63.
+
+
+LaTeX Warning: Reference `figai2' on page 7 undefined on input line 67.
+
+[7]
+
+Package natbib Warning: Citation `Chandola2009' on page 8 undefined on input li
+ne 92.
+
+[8 <./figures/simple.png> <./figures/Multilayered.png>]
+
+Package natbib Warning: Citation `Hampel1974' on page 9 undefined on input line
+ 110.
+
+
+Package natbib Warning: Citation `Grubbs1969' on page 9 undefined on input line
+ 116.
+
+
+Package natbib Warning: Citation `Ramaswamy2000' on page 9 undefined on input l
+ine 121.
+
+
+Package natbib Warning: Citation `Breunig2000' on page 9 undefined on input lin
+e 127.
+
+
+Package natbib Warning: Citation `Liu2008' on page 9 undefined on input line 13
+2.
+
+[9]
+
+Package natbib Warning: Citation `Huang1998' on page 10 undefined on input line
+ 137.
+
+
+Package natbib Warning: Citation `Shannon1948' on page 10 undefined on input li
+ne 142.
+
+
+Package natbib Warning: Citation `Hastie2009' on page 10 undefined on input lin
+e 171.
+
+
+Package natbib Warning: Citation `Cortes1995' on page 10 undefined on input lin
+e 175.
+
+
+Package natbib Warning: Citation `Chen2016' on page 10 undefined on input line 
+178.
+
+
+Package natbib Warning: Citation `Breiman2001' on page 10 undefined on input li
+ne 182.
+
+[10]
+
+Package natbib Warning: Citation `Domingos1997' on page 11 undefined on input l
+ine 185.
+
+
+Package natbib Warning: Citation `Cover1967' on page 11 undefined on input line
+ 189.
+
+
+Package natbib Warning: Citation `Freund1997' on page 11 undefined on input lin
+e 193.
+
+
+Package natbib Warning: Citation `Rumelhart1986' on page 11 undefined on input 
+line 197.
+
+
+LaTeX Warning: Reference `algo:preprocessing' on page 11 undefined on input lin
+e 227.
+
+[11]
+
+LaTeX Warning: Reference `algo:simple' on page 12 undefined on input line 256.
+
+(./algorithms/simple.tex
+
+LaTeX Warning: Reference `algo:preprocessing' on page 12 undefined on input lin
+e 8.
+
+)
+
+LaTeX Warning: Reference `algo:multilayer' on page 12 undefined on input line 2
+76.
+
+(./algorithms/multilayer.tex
+
+LaTeX Warning: Reference `algo:preprocessing' on page 12 undefined on input lin
+e 8.
+
+
+LaTeX Warning: Reference `eq:entropy' on page 12 undefined on input line 16.
+
+) [12]
+
+Package natbib Warning: Citation `Saito2015' on page 13 undefined on input line
+ 292.
+
+
+Package natbib Warning: Citation `He2009' on page 13 undefined on input line 29
+2.
+
+[13] [14]) (./sections/04_results.tex
+
+LaTeX Warning: Reference `SC:METHOD' on page 15 undefined on input line 3.
+
+
+Package natbib Warning: Citation `dataset' on page 15 undefined on input line 9
+.
+
+
+LaTeX Warning: Reference `tab:frequency' on page 15 undefined on input line 10.
+
+
+(./generated/table_frequency.tex)
+
+Package natbib Warning: Citation `insuranceclaims' on page 15 undefined on inpu
+t line 15.
+
+[15] [16] (./generated/table_architectures.tex)
+(./generated/results_architectures.tex)
+
+LaTeX Warning: Reference `fig:performance' on page 17 undefined on input line 6
+8.
+
+
+LaTeX Warning: Reference `fig:workload' on page 17 undefined on input line 68.
+
+[17]
+
+Package natbib Warning: Citation `Ding2025' on page 18 undefined on input line 
+86.
+
+[18] [19 <./figures/02_architecture_performance.png (PNG copy)> <./figures/03_p
+artition_progress.png (PNG copy)>] (./generated/table_baselines.tex)
+(./generated/results_baselines.tex)
+
+LaTeX Warning: Reference `fig:baselines' on page 20 undefined on input line 99.
+
+
+
+LaTeX Warning: Reference `fig:curves' on page 20 undefined on input line 99.
+
+(./generated/table_ablation.tex) (./generated/results_ablation.tex)
+(./generated/table_thresholds.tex) [20 <./figures/04_workload.png (PNG copy)>]
+[21]
+
+Package natbib Warning: Citation `Pedregosa2011' on page 22 undefined on input 
+line 137.
+
+[22 <./figures/05_baseline_comparison.png (PNG copy)>]
+(./generated/table_runtime.tex)
+
+Package natbib Warning: Citation `dataset' on page 23 undefined on input line 1
+55.
+
+
+Package natbib Warning: Citation `insuranceclaims' on page 23 undefined on inpu
+t line 156.
+
+) (./sections/05_conclusion.tex [23 <./figures/06_roc_pr.png (PNG copy)>]
+[24 <./figures/07_ablation_deltas.png (PNG copy)> <./figures/08_threshold_sensi
+tivity.png (PNG copy)>] [25 <./figures/09_runtime.png (PNG copy)>]
+(./generated/results_conclusion.tex))
+No file manuscript_marked.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[26] (./manuscript_marked.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `manuscript_marked.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ ) )</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on manuscript_marked.pdf (26 pages, 3191156 bytes).
+Transcript written on manuscript_marked.log.
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+The top-level auxiliary file: manuscript_marked.aux
+The style file: apalike.bst
+Database file #1: refs.bib
+Database file #2: references_additions.bib
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./manuscript_marked.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(./manuscript_clean.tex (./preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/lm/lmodern.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty) (./algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)) (./algorithmic.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(./generated/numbers.tex)) (/usr/share/texmf/tex/latex/lm/t1lmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./manuscript_marked.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./manuscript_marked.out) (./manuscript_marked.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd)
+(/usr/share/texmf/tex/latex/lm/omllmm.fd)
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd)
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
+.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts
+/enc/dvips/lm/lm-rm.enc}] (./sections/01_introduction.tex
+
+Package natbib Warning: Citation `A61' on page 2 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Bolton2002' on page 2 undefined on input line
+ 4.
+
+
+Package natbib Warning: Citation `Ngai2011' on page 2 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `West2016' on page 2 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `Schrijver2024' on page 2 undefined on input l
+ine 10.
+
+) (./sections/02_literature.tex [2]
+
+Package natbib Warning: Citation `Bolton2002' on page 3 undefined on input line
+ 6.
+
+
+Package natbib Warning: Citation `Ngai2011' on page 3 undefined on input line 6
+.
+
+
+Package natbib Warning: Citation `West2016' on page 3 undefined on input line 7
+.
+
+
+Package natbib Warning: Citation `A61' on page 3 undefined on input line 7.
+
+
+Package natbib Warning: Citation `Schrijver2024' on page 3 undefined on input l
+ine 8.
+
+
+Package natbib Warning: Citation `A80' on page 3 undefined on input line 15.
+
+
+Package natbib Warning: Citation `A61' on page 3 undefined on input line 15.
+
+
+Package natbib Warning: Citation `Ding2025' on page 3 undefined on input line 1
+7.
+
+
+Package natbib Warning: Citation `BanulescuRadu2024' on page 3 undefined on inp
+ut line 18.
+
+
+Package natbib Warning: Citation `Khalil2024' on page 3 undefined on input line
+ 19.
+
+
+Package natbib Warning: Citation `Debener2023' on page 3 undefined on input lin
+e 22.
+
+
+Package natbib Warning: Citation `Kamalov2023' on page 3 undefined on input lin
+e 25.
+
+
+Package natbib Warning: Citation `Nian2016' on page 3 undefined on input line 3
+3.
+
+
+Package natbib Warning: Citation `Gomes2021' on page 3 undefined on input line 
+33.
+
+
+Package natbib Warning: Citation `XuTian2015' on page 3 undefined on input line
+ 37.
+
+[3]
+
+Package natbib Warning: Citation `A73' on page 4 undefined on input line 42.
+
+
+Package natbib Warning: Citation `Vorobyev2024' on page 4 undefined on input li
+ne 51.
+
+
+Package natbib Warning: Citation `Ding2025' on page 4 undefined on input line 5
+3.
+
+
+Package natbib Warning: Citation `Hassani2020' on page 4 undefined on input lin
+e 53.
+
+
+Package natbib Warning: Citation `Ding2025' on page 4 undefined on input line 9
+3.
+
+
+Package natbib Warning: Citation `Gomes2021' on page 4 undefined on input line 
+93.
+
+
+Package natbib Warning: Citation `A73' on page 4 undefined on input line 93.
+
+
+Package natbib Warning: Citation `Vorobyev2024' on page 4 undefined on input li
+ne 93.
+
+) (./sections/03_methods.tex [4] [5]
+
+Package natbib Warning: Citation `Hastie2009' on page 6 undefined on input line
+ 11.
+
+
+Package natbib Warning: Citation `Kuhn2008' on page 6 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `Kuhn2008' on page 6 undefined on input line 2
+8.
+
+(./algorithms/preprocessing.tex) (/usr/share/texmf/tex/latex/lm/t1lmtt.fd)
+[6{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathex.enc}]
+
+Package natbib Warning: Citation `Chawla2002' on page 7 undefined on input line
+ 50.
+
+
+Package natbib Warning: Citation `He2009' on page 7 undefined on input line 50.
+
+
+[7]
+
+Package natbib Warning: Citation `Chandola2009' on page 8 undefined on input li
+ne 92.
+
+[8 <./figures/simple.png> <./figures/Multilayered.png>]
+
+Package natbib Warning: Citation `Hampel1974' on page 9 undefined on input line
+ 110.
+
+
+Package natbib Warning: Citation `Grubbs1969' on page 9 undefined on input line
+ 116.
+
+
+Package natbib Warning: Citation `Ramaswamy2000' on page 9 undefined on input l
+ine 121.
+
+
+Package natbib Warning: Citation `Breunig2000' on page 9 undefined on input lin
+e 127.
+
+
+Package natbib Warning: Citation `Liu2008' on page 9 undefined on input line 13
+2.
+
+[9]
+
+Package natbib Warning: Citation `Huang1998' on page 10 undefined on input line
+ 137.
+
+
+Package natbib Warning: Citation `Shannon1948' on page 10 undefined on input li
+ne 142.
+
+
+Package natbib Warning: Citation `Hastie2009' on page 10 undefined on input lin
+e 171.
+
+
+Package natbib Warning: Citation `Cortes1995' on page 10 undefined on input lin
+e 175.
+
+
+Package natbib Warning: Citation `Chen2016' on page 10 undefined on input line 
+178.
+
+
+Package natbib Warning: Citation `Breiman2001' on page 10 undefined on input li
+ne 182.
+
+[10]
+
+Package natbib Warning: Citation `Domingos1997' on page 11 undefined on input l
+ine 185.
+
+
+Package natbib Warning: Citation `Cover1967' on page 11 undefined on input line
+ 189.
+
+
+Package natbib Warning: Citation `Freund1997' on page 11 undefined on input lin
+e 193.
+
+
+Package natbib Warning: Citation `Rumelhart1986' on page 11 undefined on input 
+line 197.
+
+[11] (./algorithms/simple.tex) (./algorithms/multilayer.tex) [12]
+
+Package natbib Warning: Citation `Saito2015' on page 13 undefined on input line
+ 292.
+
+
+Package natbib Warning: Citation `He2009' on page 13 undefined on input line 29
+2.
+
+[13] [14]) (./sections/04_results.tex
+
+Package natbib Warning: Citation `dataset' on page 15 undefined on input line 9
+.
+
+(./generated/table_frequency.tex)
+
+Package natbib Warning: Citation `insuranceclaims' on page 15 undefined on inpu
+t line 15.
+
+[15] [16] (./generated/table_architectures.tex)
+(./generated/results_architectures.tex) [17]
+
+Package natbib Warning: Citation `Ding2025' on page 18 undefined on input line 
+86.
+
+[18] [19 <./figures/02_architecture_performance.png (PNG copy)> <./figures/03_p
+artition_progress.png (PNG copy)>] (./generated/table_baselines.tex)
+(./generated/results_baselines.tex) (./generated/table_ablation.tex)
+(./generated/results_ablation.tex) (./generated/table_thresholds.tex) [20 <./fi
+gures/04_workload.png (PNG copy)>] [21]
+
+Package natbib Warning: Citation `Pedregosa2011' on page 22 undefined on input 
+line 137.
+
+[22 <./figures/05_baseline_comparison.png (PNG copy)>]
+(./generated/table_runtime.tex)
+
+Package natbib Warning: Citation `dataset' on page 23 undefined on input line 1
+55.
+
+
+Package natbib Warning: Citation `insuranceclaims' on page 23 undefined on inpu
+t line 156.
+
+) (./sections/05_conclusion.tex [23 <./figures/06_roc_pr.png (PNG copy)>]
+[24 <./figures/07_ablation_deltas.png (PNG copy)> <./figures/08_threshold_sensi
+tivity.png (PNG copy)>] [25 <./figures/09_runtime.png (PNG copy)>]
+(./generated/results_conclusion.tex)) (./manuscript_marked.bbl [26] [27]
+[28] [29])
+
+Package natbib Warning: There were undefined citations.
+
+[30] (./manuscript_marked.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) ) )</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/font
+s/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msbm10.pfb>
+Output written on manuscript_marked.pdf (30 pages, 3211877 bytes).
+Transcript written on manuscript_marked.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./manuscript_marked.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(./manuscript_clean.tex (./preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/lm/lmodern.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty) (./algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)) (./algorithmic.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(./generated/numbers.tex)) (/usr/share/texmf/tex/latex/lm/t1lmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./manuscript_marked.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./manuscript_marked.out) (./manuscript_marked.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd)
+(/usr/share/texmf/tex/latex/lm/omllmm.fd)
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd)
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
+.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts
+/enc/dvips/lm/lm-rm.enc}] (./sections/01_introduction.tex [2])
+(./sections/02_literature.tex [3] [4]) (./sections/03_methods.tex [5] [6]
+(./algorithms/preprocessing.tex) (/usr/share/texmf/tex/latex/lm/t1lmtt.fd)
+[7{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathex.enc}] [8] [9 <./figures/simple.png> <./figures/Multilayere
+d.png>] [10] [11] [12] (./algorithms/simple.tex) (./algorithms/multilayer.tex)
+[13] [14] [15]) (./sections/04_results.tex (./generated/table_frequency.tex)
+[16] [17] (./generated/table_architectures.tex)
+(./generated/results_architectures.tex) [18] [19] [20 <./figures/02_architectur
+e_performance.png (PNG copy)> <./figures/03_partition_progress.png (PNG copy)>]
+ (./generated/table_baselines.tex) (./generated/results_baselines.tex)
+(./generated/table_ablation.tex) (./generated/results_ablation.tex)
+(./generated/table_thresholds.tex) [21 <./figures/04_workload.png (PNG copy)>]
+[22] [23 <./figures/05_baseline_comparison.png (PNG copy)>]
+(./generated/table_runtime.tex)) (./sections/05_conclusion.tex [24 <./figures/0
+6_roc_pr.png (PNG copy)>] [25 <./figures/07_ablation_deltas.png (PNG copy)> <./
+figures/08_threshold_sensitivity.png (PNG copy)>] [26 <./figures/09_runtime.png
+ (PNG copy)>] (./generated/results_conclusion.tex)) (./manuscript_marked.bbl
+[27] [28] [29] [30]) [31] (./manuscript_marked.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) )</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on manuscript_marked.pdf (31 pages, 3216358 bytes).
+Transcript written on manuscript_marked.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./manuscript_marked.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(./manuscript_clean.tex (./preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/lm/lmodern.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty) (./algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)) (./algorithmic.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(./generated/numbers.tex)) (/usr/share/texmf/tex/latex/lm/t1lmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./manuscript_marked.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./manuscript_marked.out) (./manuscript_marked.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd)
+(/usr/share/texmf/tex/latex/lm/omllmm.fd)
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd)
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
+.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts
+/enc/dvips/lm/lm-rm.enc}] (./sections/01_introduction.tex [2])
+(./sections/02_literature.tex [3] [4]) (./sections/03_methods.tex [5] [6]
+(./algorithms/preprocessing.tex) (/usr/share/texmf/tex/latex/lm/t1lmtt.fd)
+[7{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathex.enc}] [8] [9 <./figures/simple.png> <./figures/Multilayere
+d.png>] [10] [11] [12] (./algorithms/simple.tex) (./algorithms/multilayer.tex)
+[13] [14] [15]) (./sections/04_results.tex (./generated/table_frequency.tex)
+[16] [17] (./generated/table_architectures.tex)
+(./generated/results_architectures.tex) [18] [19] [20 <./figures/02_architectur
+e_performance.png (PNG copy)> <./figures/03_partition_progress.png (PNG copy)>]
+ (./generated/table_baselines.tex) (./generated/results_baselines.tex)
+(./generated/table_ablation.tex) (./generated/results_ablation.tex)
+(./generated/table_thresholds.tex) [21 <./figures/04_workload.png (PNG copy)>]
+[22] [23 <./figures/05_baseline_comparison.png (PNG copy)>]
+(./generated/table_runtime.tex)) (./sections/05_conclusion.tex [24 <./figures/0
+6_roc_pr.png (PNG copy)>] [25 <./figures/07_ablation_deltas.png (PNG copy)> <./
+figures/08_threshold_sensitivity.png (PNG copy)>]

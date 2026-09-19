@@ -1,0 +1,23 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cpu_logical": 9,
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "imbalanced-learn": "0.14.2",
+    "xgboost": "3.4.1",
+    "kmodes": "0.12.2",
+    "matplotlib": "3.10.8"
+  },
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "installed_R": false,
+  "implementation": "Python; original R archived",
+  "timestamp_utc": "2026-09-16",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor"
+}

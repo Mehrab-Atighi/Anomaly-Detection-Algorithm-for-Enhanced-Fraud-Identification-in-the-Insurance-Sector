@@ -1,0 +1,32 @@
+"","times","names_times","Dataset","modelnames","model_num","vote_num"
+"1",0.507651631037394,"Labeling ","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"2",0.000667703151702881,"Balancing Data1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"3",2.14576721191406e-07,"nn modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"4",0.00160116751988729,"ml modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"5",0.00385491450627645,"svm modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"6",0.000807436307271322,"xgb modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"7",0.000974265734354655,"rf modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"8",0.000727299849192301," nb modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"9",0.00478634834289551,"knn modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"10",0.00407435099283854,"adab modeling rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"11",0.00113431612650553,"calculate totam cm rond1","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"12",0.000485901037851969,"Balancing Data2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"13",2.50339508056641e-07,"nn modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"14",0.00284688472747803,"ml modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"15",0.00817681550979614,"svm modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"16",0.000725849469502767,"xgb modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"17",0.00124548276265462,"rf modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"18",0.000648784637451172," nb modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"19",0.00507116715113322,"knn modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"20",0.00421578089396159,"adab modeling rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"21",0.000450833638509115,"calculate totam cm rond2","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"22",0.000578351815541585,"Balancing Data3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"23",3.49680582682292e-07,"nn modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"24",0.00402461687723796,"ml modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"25",0.0162383675575256,"svm modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"26",0.00104273160298665,"xgb modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"27",0.00195201635360718,"rf modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"28",0.000665283203125," nb modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"29",0.00585843324661255,"knn modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"30",0.00581301848093669,"adab modeling rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3
+"31",0.000455530484517415,"calculate totam cm rond3","fraud_oracle.csv","ml_svm_xgb_nb_rf_knn_adab",4,3

@@ -1,0 +1,169 @@
+{
+  "rows": 15420,
+  "target_identical_rows": 15420,
+  "exact_predictors": 31,
+  "normalized_predictors": 32,
+  "normalization": "Match predictor names ignoring punctuation/case; remove thousands commas from values.",
+  "predictor_matches": {
+    "Month": {
+      "other_column": "Month",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "WeekOfMonth": {
+      "other_column": "WeekOfMonth",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "DayOfWeek": {
+      "other_column": "DayOfWeek",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Make": {
+      "other_column": "Make",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "AccidentArea": {
+      "other_column": "AccidentArea",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "DayOfWeekClaimed": {
+      "other_column": "DayOfWeekClaimed",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "MonthClaimed": {
+      "other_column": "MonthClaimed",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "WeekOfMonthClaimed": {
+      "other_column": "WeekOfMonthClaimed",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Sex": {
+      "other_column": "Sex",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "MaritalStatus": {
+      "other_column": "MaritalStatus",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Age": {
+      "other_column": "Age",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Fault": {
+      "other_column": "Fault",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "PolicyType": {
+      "other_column": "PolicyType",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "VehicleCategory": {
+      "other_column": "VehicleCategory",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "VehiclePrice": {
+      "other_column": "VehiclePrice",
+      "exact_rows": 0,
+      "normalized_rows": 15420
+    },
+    "PolicyNumber": {
+      "other_column": "PolicyNumber",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "RepNumber": {
+      "other_column": "RepNumber",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Deductible": {
+      "other_column": "Deductible",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "DriverRating": {
+      "other_column": "DriverRating",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Days:Policy-Accident": {
+      "other_column": "Days_Policy_Accident",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Days:Policy-Claim": {
+      "other_column": "Days_Policy_Claim",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "PastNumberOfClaims": {
+      "other_column": "PastNumberOfClaims",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "AgeOfVehicle": {
+      "other_column": "AgeOfVehicle",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "AgeOfPolicyHolder": {
+      "other_column": "AgeOfPolicyHolder",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "PoliceReportFiled": {
+      "other_column": "PoliceReportFiled",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "WitnessPresent": {
+      "other_column": "WitnessPresent",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "AgentType": {
+      "other_column": "AgentType",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "NumberOfSuppliments": {
+      "other_column": "NumberOfSuppliments",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "AddressChange-Claim": {
+      "other_column": "AddressChange_Claim",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "NumberOfCars": {
+      "other_column": "NumberOfCars",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "Year": {
+      "other_column": "Year",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    },
+    "BasePolicy": {
+      "other_column": "BasePolicy",
+      "exact_rows": 15420,
+      "normalized_rows": 15420
+    }
+  }
+}

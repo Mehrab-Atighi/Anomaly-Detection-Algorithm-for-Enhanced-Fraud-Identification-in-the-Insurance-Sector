@@ -1,0 +1,36 @@
+Final editorial and reproducibility build — 19 September 2026
+
+No model refitting was performed in this final editorial pass. All 9 core
+Python model modules, both input CSV files, all 545 result files and all 787
+original archive files match the preceding release byte-for-byte.
+
+Successfully executed:
+1. verify_results.py: independently recomputed metrics from 1,559,900 saved
+   prediction rows and checked all 1,280 metric rows, labels, splits and review masks.
+2. build_assets.py and build_preserved_assets.py: regenerated numerical text,
+   tables and plot inputs, copied exact original structural images.
+3. Plot_Article_ggplot2.R: rendered eight empirical figure families in four
+   formats; R 4.3.3 and ggplot2 3.4.4.
+4. verify_ggplot_outputs.py: reconciled 192 R/Python mean/SD groups and all
+   32 export hashes, plus checks for clipping at the final axis ranges.
+5. build_documents.py: clean/marked articles (31 pages each), response (3),
+   change map (2) and Persian report (3), with reference/layout log checks.
+6. package_submission.py: 40 cited references, 5 sections, 3 algorithms,
+   10 figures and no PDFs in the editable journal source ZIP.
+7. Extracted that source ZIP into a separate folder and compiled main.tex
+   and response_to_reviewer.tex without missing assets or reference errors.
+8. Rendered the five final PDFs and performed the visual review recorded in
+   visual_quality_report.json.
+
+The dated environment.json records the earlier MODEL execution environment;
+its installed_R=false field refers to that earlier phase. The final R plotting
+environment is recorded separately in R_ggplot2_sessionInfo.txt. Historical
+execution and invariant-test records were retained, not represented as new
+model-training runs in this editorial stage.
+
+No new iThenticate or Grammarly service run occurred. See the supplied
+similarity report and FINAL_EDITORIAL_REVIEW.md for the review scope.
+
+Final author-requested amendment: added the provided public GitHub repository
+to the article and response, synchronized availability notes, rebuilt documents
+and source ZIP, and verified clickable URLs. Code, data and results unchanged.

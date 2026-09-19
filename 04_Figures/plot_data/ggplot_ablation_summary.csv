@@ -1,0 +1,7 @@
+"Dataset","Metric","Mean","SD"
+"Carclaims","F1 change",0.0477117730080126,0.811924800458757
+"Insurance Claims","F1 change",1.82058400458879,2.23389292497965
+"Carclaims","AP change",0.486519784450913,0.51774265580415
+"Insurance Claims","AP change",0.97898505293475,2.1051705601784
+"Carclaims","Review-rate change",-1.08560311284047,0.70480664801684
+"Insurance Claims","Review-rate change",-2.16,3.04455798652831

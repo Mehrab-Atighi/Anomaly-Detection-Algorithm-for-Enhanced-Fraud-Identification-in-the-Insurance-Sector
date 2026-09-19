@@ -1,0 +1,7 @@
+"Dataset","Method","Mean","SD"
+"Carclaims","Simple-A",15.9373488572997,0.788072123259046
+"Insurance Claims","Simple-A",1.68585592609998,0.0992121566299462
+"Carclaims","Simple-B",17.6663764057,1.20802581196234
+"Insurance Claims","Simple-B",1.82835377369993,0.0869638822737358
+"Carclaims","Multilayer",10.8382006593002,0.786260018494317
+"Insurance Claims","Multilayer",1.30013745889964,0.0623543982577418

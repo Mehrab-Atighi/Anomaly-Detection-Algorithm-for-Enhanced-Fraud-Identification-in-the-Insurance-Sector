@@ -1,0 +1,52 @@
+{
+  "numeric": [
+    "months_as_customer",
+    "age",
+    "policy_deductable",
+    "policy_annual_premium",
+    "umbrella_limit",
+    "capital-gains",
+    "capital-loss",
+    "incident_hour_of_the_day",
+    "number_of_vehicles_involved",
+    "bodily_injuries",
+    "witnesses",
+    "total_claim_amount",
+    "injury_claim",
+    "property_claim",
+    "vehicle_claim",
+    "auto_year",
+    "policy_bind_date__year",
+    "policy_bind_date__month",
+    "policy_bind_date__weekday",
+    "incident_date__month",
+    "incident_date__weekday"
+  ],
+  "categorical": [
+    "policy_state",
+    "policy_csl",
+    "insured_sex",
+    "insured_education_level",
+    "insured_relationship",
+    "incident_type",
+    "collision_type",
+    "incident_severity",
+    "authorities_contacted",
+    "incident_state",
+    "incident_city",
+    "property_damage",
+    "police_report_available"
+  ],
+  "dropped": {
+    "policy_number": "identifier/high-cardinality",
+    "insured_zip": "identifier/high-cardinality",
+    "insured_occupation": "categorical Gini=0.9252",
+    "insured_hobbies": "categorical Gini=0.9477",
+    "incident_location": "identifier/high-cardinality",
+    "auto_make": "categorical Gini=0.9274",
+    "auto_model": "categorical Gini=0.9716",
+    "incident_date__year": "near-zero variance"
+  },
+  "encoded_predictors": 75,
+  "anomaly_seconds": 0.3861674209992998
+}

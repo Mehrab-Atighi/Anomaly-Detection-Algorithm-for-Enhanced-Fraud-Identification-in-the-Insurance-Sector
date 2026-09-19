@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\definecolor{revisionyellow}{RGB}{255,244,153}
+\newcommand{\reviewercomment}[1]{%
+  \vspace{4pt}\noindent\colorbox{revisionyellow}{%
+  \parbox{\dimexpr\linewidth-2\fboxsep}{\textbf{Reviewer comment:} #1}}}
+\newcommand{\response}{\noindent\textbf{Response:} }
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Response to Reviewer}\\[6pt]
+{\bfseries Manuscript: ``Anomaly Detection Algorithm for Enhanced Fraud
+Identification in the Insurance Sector''}\\[2pt]
+{\itshape Annals of Data Science --- Major Revision}
+\end{center}
+
+Dear Editor and Reviewer,
+
+We sincerely thank you for the careful and constructive assessment. The
+review helped us sharpen the manuscript's conceptual contribution, replace the
+chronological literature list with a systematic taxonomy, and present the
+existing experiments as an explicit component and threshold ablation. All
+new or substantially rewritten passages are identified by yellow revision
+markers in the highlighted manuscript; a clean manuscript is also provided.
+No numerical result has been invented or inferred from unavailable
+prediction-level data.
+
+\reviewercomment{The manuscript must more sharply delineate the core
+innovations of SAD. The novelty of its ``sequential'' and ``multilayer''
+structures is insufficiently highlighted; a comparative table versus
+state-of-the-art counterparts is recommended.}
+
+\response We have substantially revised the Abstract, Introduction, Literature
+Review, Methodology, and Conclusion. The revision now defines
+\emph{sequential} as partition-wise weak-to-strong supervision: anomaly
+consensus produces the first candidate set, verified labels initialize the
+supervised ensemble, and the ensemble is retrained after every later
+partition. It defines \emph{multilayer} as an ordered cascade: anomaly
+consensus first constructs a shortlist, EAD then acts as a second-stage gate,
+and only the surviving claims enter verification. We also state explicitly
+that SAD is neither a temporal sequence model nor a reinforcement-learning
+agent because it contains no state--action--reward formulation.
+
+The Introduction now contains a four-part contribution statement. In addition,
+new Table~1 (``Positioning of SAD relative to representative fraud-detection
+approaches'') compares SAD with supervised/cost-sensitive, unsupervised,
+reinforcement/active-verification, and hybrid/graph approaches in terms of
+learning signal, principal strength, and the limitation targeted by SAD. The
+formal threshold notation and corrected pseudocode make the stage ordering
+unambiguous.
+
+\reviewercomment{The literature review needs restructuring. The list-like
+survey should be reorganized into supervised, unsupervised,
+reinforcement-learning-based, and hybrid architectures, with the strengths,
+limitations, and research gaps of each class summarized explicitly.}
+
+\response We have completely replaced the chronological survey with the four
+requested categories:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item supervised approaches;
+  \item unsupervised approaches;
+  \item reinforcement- and active-learning-based approaches; and
+  \item hybrid and graph-based architectures.
+\end{enumerate}
+Each subsection now explains the corresponding learning signal, practical
+strengths, limitations, and relationship to costly fraud verification. A new
+``Comparative positioning and research gap'' subsection synthesizes the gap:
+an end-to-end process that begins with scarce labels, constrains verification
+workload, converts verified claims into supervised training data, and updates
+the ensemble as batches arrive. We also added and verified recent
+insurance-specific references from 2024--2026, including systematic-review,
+class-imbalance, interpretable boosting, graph-feature, and deep-learning work.
+
+\reviewercomment{The experimental evaluation is incomplete. Recent
+fraud-detection-specific baselines are missing, and no ablation study or
+validation on an independent second dataset is provided; adding these
+experiments would strengthen generalizability.}
+
+\response We agree that these additions are important and have addressed this
+comment to the fullest extent supported by the submitted research artifacts.
+
+First, the revised literature taxonomy and comparison table add recent,
+fraud-specific reference points (including Schrijver et al., 2024;
+Banulescu-Radu and Yankol-Schalck, 2024; Khalil et al., 2024; Vorobyev, 2024;
+Ding et al., 2025; and Yankol-Schalck, 2026). The empirical table already
+compares SAD with logistic regression, SVM, XGBoost, KNN, random forest,
+AdaBoost, naive Bayes, and an artificial neural network. We now distinguish
+these implemented baselines from recent literature comparators and do not
+claim numerical head-to-head results that were not run under the same data
+split.
+
+Second, we reorganized the existing architecture and threshold experiments as
+a formal component ablation. Simple-A omits EAD; Simple-B inserts EAD into the
+flat anomaly ensemble; and Multilayer places EAD after consensus as a separate
+gate. All three retain the same supervised-model set, partition schedule, and
+normal-sampling percentage. The revised interpretation reports concrete
+contrasts, including the accuracy difference at
+$(T_{ML},T_{AD})=(4,3)$ and the first-partition runtime reduction from 25.18
+minutes (Simple-B) to 1.78 minutes (Multilayer). We also recast the threshold
+grid as sensitivity analysis and explicitly avoid claiming monotonicity where
+the table does not show it.
+
+Third, the available source package contains only the Carclaims benchmark and
+does not include prediction-level outputs or access to a genuinely independent
+claims portfolio. A differently named copy of the same benchmark would not be
+independent validation. Rather than overstate generalizability, we have
+restricted every empirical claim to within-dataset evidence and added an
+``External validity and remaining experimental needs'' subsection. It specifies
+the proper next protocol: freeze preprocessing and thresholds on Carclaims,
+test them on a genuinely independent insurer/product/time-period dataset, and
+report repeated-seed intervals, fraud-class confusion matrices, PR-AUC, review
+rate, and investigation cost. We respectfully present this limitation
+transparently because manufacturing a second-dataset result would be
+scientifically inappropriate.
+
+\textbf{Additional corrections.} During revision we also corrected the sign of
+the Shannon-entropy definition, restricted SMOTE to training data, corrected
+the row-level scope of the pseudocode, replaced ``ML'' with ``LR'' in the
+results table, aligned figure captions with the stated partitions, clarified
+that the recorded target simulates expert feedback, and removed unsupported
+reinforcement-learning and deployment claims.
+
+We hope that these revisions make the novelty, evidence, and present limits of
+SAD substantially clearer. Thank you again for helping us improve the
+manuscript.
+
+Sincerely,\\
+Mehrab Atighi, Sayed Jamal Mirkamali, and Amir T. Payandeh Najafabadi
+
+\end{document}

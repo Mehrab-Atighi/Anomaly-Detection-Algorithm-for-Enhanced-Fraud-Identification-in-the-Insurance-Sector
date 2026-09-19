@@ -1,0 +1,44 @@
+[
+  {
+    "stage": "D1",
+    "operation": "fit_8_models",
+    "seconds": 0.5140310509996198,
+    "verified_n": 224,
+    "verified_fraud_n": 57
+  },
+  {
+    "stage": "D2",
+    "operation": "predict_8_models",
+    "seconds": 0.0440738280003643,
+    "verified_n": 224,
+    "verified_fraud_n": 57
+  },
+  {
+    "stage": "D2",
+    "operation": "fit_8_models",
+    "seconds": 0.6005238670004474,
+    "verified_n": 353,
+    "verified_fraud_n": 107
+  },
+  {
+    "stage": "D3",
+    "operation": "predict_8_models",
+    "seconds": 0.04042699699948571,
+    "verified_n": 353,
+    "verified_fraud_n": 107
+  },
+  {
+    "stage": "D3",
+    "operation": "fit_8_models",
+    "seconds": 0.7944551680002405,
+    "verified_n": 381,
+    "verified_fraud_n": 118
+  },
+  {
+    "stage": "D4",
+    "operation": "predict_8_models",
+    "seconds": 0.04155595599968365,
+    "verified_n": 381,
+    "verified_fraud_n": 118
+  }
+]

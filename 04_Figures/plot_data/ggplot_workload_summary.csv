@@ -1,0 +1,49 @@
+"Dataset","Method","Metric","Partition","Mean","SD"
+"Carclaims","Simple-A","Alerts",2,21.9325551232166,1.75989629714634
+"Insurance Claims","Simple-A","Alerts",2,32.0666666666667,5.15632178214157
+"Carclaims","Simple-B","Alerts",2,21.8417639429313,2.20024236679474
+"Insurance Claims","Simple-B","Alerts",2,32.7333333333333,4.22163738639668
+"Carclaims","Multilayer","Alerts",2,18.1171638564635,1.80355687304575
+"Insurance Claims","Multilayer","Alerts",2,31.4666666666667,7.14782190773465
+"Carclaims","Multilayer-static","Alerts",2,18.1171638564635,1.80355687304575
+"Insurance Claims","Multilayer-static","Alerts",2,31.4666666666667,7.14782190773465
+"Carclaims","Simple-A","Total review",2,29.749243406831,1.58172781704759
+"Insurance Claims","Simple-A","Total review",2,38.9666666666667,4.62000481000231
+"Carclaims","Simple-B","Total review",2,29.6692607003891,1.97840019504934
+"Insurance Claims","Simple-B","Total review",2,39.6666666666667,3.82325567424117
+"Carclaims","Multilayer","Total review",2,26.3186338089062,1.62327940813191
+"Insurance Claims","Multilayer","Total review",2,38.4666666666667,6.4160293093755
+"Carclaims","Multilayer-static","Total review",2,26.3186338089062,1.62327940813191
+"Insurance Claims","Multilayer-static","Total review",2,38.4666666666667,6.4160293093755
+"Carclaims","Simple-A","Alerts",3,17.4902723735409,1.1319728640319
+"Insurance Claims","Simple-A","Alerts",3,26.9,4.70106370941726
+"Carclaims","Simple-B","Alerts",3,17.4902723735409,2.24276222919875
+"Insurance Claims","Simple-B","Alerts",3,28.5,4.50308536203543
+"Carclaims","Multilayer","Alerts",3,14.9675745784695,2.73995131709701
+"Insurance Claims","Multilayer","Alerts",3,25.7,6.60050503118259
+"Carclaims","Multilayer-static","Alerts",3,18.1647211413748,2.30531343779148
+"Insurance Claims","Multilayer-static","Alerts",3,30.5,8.75912222898061
+"Carclaims","Simple-A","Total review",3,25.7717250324254,1.01078591356078
+"Insurance Claims","Simple-A","Total review",3,34.5,4.27525177946022
+"Carclaims","Simple-B","Total review",3,25.7846952010376,2.02189541544761
+"Insurance Claims","Simple-B","Total review",3,36.1,3.900142447541
+"Carclaims","Multilayer","Total review",3,23.5019455252918,2.47232114946258
+"Insurance Claims","Multilayer","Total review",3,33.5,5.87367006223537
+"Carclaims","Multilayer-static","Total review",3,26.3748378728923,2.07973686709383
+"Insurance Claims","Multilayer-static","Total review",3,37.9,7.96450458806656
+"Carclaims","Simple-A","Alerts",4,16.8287937743191,1.23510166744568
+"Insurance Claims","Simple-A","Alerts",4,24.8,5.00666222813829
+"Carclaims","Simple-B","Alerts",4,17.2827496757458,1.36999271321352
+"Insurance Claims","Simple-B","Alerts",4,25.9,4.09471203708718
+"Carclaims","Multilayer","Alerts",4,15.3826199740597,1.90616866980044
+"Insurance Claims","Multilayer","Alerts",4,25.5,8.28988674363059
+"Carclaims","Multilayer-static","Alerts",4,18.2295719844358,2.13241081427388
+"Insurance Claims","Multilayer-static","Alerts",4,32.6,8.6564041803357
+"Carclaims","Simple-A","Total review",4,25.1815823605707,1.11617576592114
+"Insurance Claims","Simple-A","Total review",4,32.7,4.59589188539311
+"Carclaims","Simple-B","Total review",4,25.5836575875486,1.24151684300108
+"Insurance Claims","Simple-B","Total review",4,33.6,3.71782493162632
+"Carclaims","Multilayer","Total review",4,23.8780804150454,1.71927454996024
+"Insurance Claims","Multilayer","Total review",4,33.4,7.47142705393168
+"Carclaims","Multilayer-static","Total review",4,26.4332036316472,1.91433908487304
+"Insurance Claims","Multilayer-static","Total review",4,39.8,7.67101326060935

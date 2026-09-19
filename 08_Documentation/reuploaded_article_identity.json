@@ -1,0 +1,16 @@
+{
+  "identical": true,
+  "archives": [
+    {
+      "name": "thesis article 1.rar",
+      "bytes": 2546688,
+      "sha256": "4180f9aa3bf91de199ccdb46f39c2c29527e010688cd758b919ef3027edae3dc"
+    },
+    {
+      "name": "thesis article 1(2).rar",
+      "bytes": 2546688,
+      "sha256": "4180f9aa3bf91de199ccdb46f39c2c29527e010688cd758b919ef3027edae3dc"
+    }
+  ],
+  "basis": "Complete submission v5.tex recovered from the revision archive; early RAR template also preserved."
+}

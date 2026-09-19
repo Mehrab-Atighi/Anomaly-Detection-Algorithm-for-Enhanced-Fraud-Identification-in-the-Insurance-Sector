@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "sections": [
+    "Introduction",
+    "LITERATURE REVIEW",
+    "METHODOLOGY",
+    "Real Data Application",
+    "CONCLUSION"
+  ],
+  "formal_algorithms": 3,
+  "cited_references": 40,
+  "paper_figures": 10,
+  "source_zip_files": 51,
+  "pdf_files_in_source_zip": 0,
+  "source_zip_sha256": "8bb3a27f458cbf0eb55d5d9bbaed759c5800d1b854a5aca8dd097e59f3243b20"
+}
